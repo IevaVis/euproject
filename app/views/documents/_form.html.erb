@@ -1,0 +1,22 @@
+<div class="col-md-6 offset-md-3">
+	<div class="documentupload-form">
+		<h2><%= t ".title" %></h2><br/>
+			<%= content_for(:the_links) do %>
+    		Accept <%= link_to "Terms of use", documents_path %> 
+    		and <%=link_to "Privacy Policy", documents_path %>
+			<% end %>
+			<%= simple_form_for @document, :html => { :multipart => true } do |f| %>
+				<div class="form-inputs">
+					<%= f.input :title, required: true, autofocus: true %>
+						<a title="Add tags!" data-toggle="popover" data-trigger="hover" data-content="Tags are keywords you assign to the document you are sharing. As a rule of thumb, keep your tags to two words or less. If you find yourself going over that limit, it may make more sense to create two separate tags—for example, rather than tagging something as 'Algebra performance task', you could tag it as 'algebra' and 'performance task'" class="explain-tags">How tags work?</a>
+					<%= f.input :tags, required: true %>
+					<%= f.input :doc_language, required: true, collection: ["English", "Portuguese", "Lithuanian", "Spanish", "Greek", "Bulgarian", "Croatian", "Czech", "Danish", "Dutch", "Estonian", "Finnish", "French", "German", "Hungarian", "Italian", "Latvian", "Maltese", "Polish", "Romanian", "Slovenian", "Swedish", "Other" ] %>
+					<%= f.input :is_public, as: :radio_buttons, collection: [['0', 'Public'], ['1', 'Private']], label_method: :second, value_method: :first %>
+					<%= f.input :terms, as: :boolean, checked_value: true, unchecked_value: false, :label => content_for(:the_links) %>
+				</div>
+				<div class="form-actions">
+					<%= f.button :submit, class: "btn-custom" %>
+				</div>
+			<% end %>
+	</div>
+</div>

@@ -1,0 +1,31 @@
+<div class="col-md-6 offset-md-3">
+
+  <div class="login-form">
+
+    <h2><%= t(".title") %></h2>
+
+<%= simple_form_for :session, url: session_path do |form| %>
+
+  <div class="form-group">
+      <%= form.hidden_field :role, value: params[:role] %>
+  </div>
+
+  <div class="text-field">
+    <%= form.input :email, type: 'email' %>
+  </div>
+
+  <div class="password-field">
+    <%= form.input :password %>
+  </div>
+
+  <div class="submit-actions">
+    <%= form.button :submit, class: "btn-custom" %>
+  </div>
+
+  <div class="other-links">
+    <%= link_to t(".forgot_password"), new_password_path %>
+  </div>
+<% end %>
+
+</div>
+</div>

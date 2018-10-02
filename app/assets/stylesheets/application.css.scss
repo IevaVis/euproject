@@ -1,0 +1,117 @@
+@import "bootstrap";
+@import "flag-icon";
+
+body {
+	background-color: #f5f5f5;
+}
+
+a {
+	color: rgba(0, 0, 0, 0.5);
+}
+
+a:hover {
+	color: rgba(0, 0, 0, 0.5);
+	font-weight: 500;
+}
+
+@mixin background-tile {
+	box-sizing: border-box;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 3px 3px 5px 6px #ccc;
+	padding: 1.5em 1.25em;
+}
+
+/*NAVBAR*/
+
+.homepage-logo {
+	height: 35px;
+	margin-left: -3%;
+}
+
+.nav-item-custom {
+	margin-right: 2px;
+}
+
+
+/*SIGN UP / LOG IN Forms*/
+
+.signup-form {
+	margin-top: 5%;
+	margin-bottom: 40px;
+	@include background-tile;
+
+	h2 {
+		margin-top: 0;
+	}
+
+}
+
+.login-form {
+	margin-top: 5%;
+	margin-bottom: 40px;
+	@include background-tile;
+
+	h2 {
+		margin-top: 0;
+	}
+
+}
+
+.btn-custom {
+	color: darken(#f7931e, 5%);
+	background-color: #fff;
+	border: 1px solid darken(#f7931e, 5%);
+	padding: 8px 20px;
+	border-radius: 5px;
+	&:hover {
+		text-decoration: none;
+		background-color: darken(#f7931e, 5%);
+		color: #fff;
+		transition: 0.5s;
+	}
+}
+
+.other-links {
+	margin-top: 4%;
+}
+
+/*INDEX page*/
+
+.index-info {
+	margin-bottom: 5%;
+}
+
+.jumbotron {
+	height: 500px;
+	background-image: url("/assets/Primaryclass.jpg");
+	background-size: cover;
+	opacity: 0.7;
+	
+}
+
+.explain-tags {
+		margin-top: 0;
+    font-size: 12px;
+    font-family: georgia,serif;
+    cursor: pointer;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+
+<div class="col-md-6 offset-md-3">
+
+	<div class="signup-form">
+
+		<h2><%= t ".title" %></h2><br/>
+<div class="form-inputs">
+<%= form.hidden_field :role, value: form.object.role || params[:role] %>
+<%= form.input :name, required: true, autofocus: true %>
+<%= form.input :country, required: true, collection: [ "Portugal", "Lithuania", "Spain", "Greece", "Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Hungary", "Ireland", "Italy", "Latvia", "Luxembourg", "Malta", "Netherlands", "Poland", "Romania", "Slovakia", "Slovenia", "Sweden", "United Kingdom", "Other"  ] %>
+<% if params[:role] == "teacher" || current_user&.teacher? %>
+<%= form.input :grade_of_teaching, collection: ["Primary", "Secondary", "University"] %>
+<% end %>
+
+<%= form.input :email, required: true %>
+<%= form.input :password, required: true %>
+
+</div>
+	<div class="form-actions">
+<%= form.button :submit, class: "btn-custom" %>
+</div>
+
+</div>
+
