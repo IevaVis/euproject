@@ -54,7 +54,7 @@
       <% end %>
     </ul>
     <ul class="navbar-nav navbar-right">
-      <% if current_user.teacher? %>
+      <% if signed_in? and current_user.teacher? %>
          <li class="nav-item-custom">
           <%= link_to t("global.menu.new_document"), new_document_path, class: 'btn-custom' %>
         </li>

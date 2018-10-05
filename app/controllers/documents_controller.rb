@@ -2,9 +2,18 @@ class DocumentsController < ApplicationController
 	before_action :set_document, only: [:show, :edit, :update, :destroy]
 	before_action :require_login, only: [:new, :create, :edit, :update, :destroy]
 
+
 	def index
-		@documents = Document.all.order("created_at DESC")
-	end
+		@documents = Document.all
+    @tags = @documents.map {|document| document.tags}.flatten.uniq
+    if params[:search]
+      @documents = Document.search(params[:search]).order("created_at DESC")
+    elsif params[:tag]
+      @documents = Document.tag_search(params[:tag])
+    else
+      @documents = Document.all.order("created_at DESC")
+    end
+  end
 
 	def new
 		@document = Document.new
@@ -12,10 +21,10 @@ class DocumentsController < ApplicationController
 
 	def create
 		@document = Document.new(valid_params)
-		@document.user = current_user.teacher
+		@document.user = current_user
 		if @document.save
 			flash[:success] = "Thank You! Your file is uploaded successfully!"
-			redirect_to document_path(@document)
+			redirect_to documents_path
 		else 
 			flash[:danger] = "Something went wrong. Try again"
 			render:new
@@ -44,12 +53,19 @@ class DocumentsController < ApplicationController
 	end
 
   private
+
 		def valid_params
-			params.require(:document).permit(:title, :tags, :doc_language, :is_public)
-		end
+      if !params[:document][:tags].blank?
+        params[:document][:tags] = params[:document][:tags].split(",")
+        params[:document][:tags].each_with_index do |tag, index|
+          params[:document][:tags][index] = tag.strip.titleize
+        end
+      end
+      params.require(:document).permit(:title, :doc_language, :is_public, :terms, :attachment, :tags => [])
+    end
 
 		def require_login
-			if !signed_in? && !current_user.teacher?
+			if !signed_in? or !current_user.teacher?
 				flash[:danger] = "Only logged in teachers can perform this action"
 				redirect_back(fallback_location: root_path)
 			end

@@ -9,6 +9,7 @@ class UsersController < Clearance::UsersController
 		@user = User.new(valid_params)
 		if @user.save
 			sign_in @user
+			flash[:success] = "You have signed up successfully!"
 			redirect_to root_path
 		else
 			flash[:alert] = @user.errors.full_messages.join(',')

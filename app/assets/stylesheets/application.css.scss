@@ -76,6 +76,13 @@ a:hover {
 	margin-top: 4%;
 }
 
+.explain-tags {
+    font-size: 12px;
+    font-family: georgia,serif;
+    cursor: pointer;
+
+}
+
 /*INDEX page*/
 
 .index-info {
@@ -90,13 +97,37 @@ a:hover {
 	
 }
 
-.explain-tags {
-		margin-top: 0;
-    font-size: 12px;
-    font-family: georgia,serif;
-    cursor: pointer;
+/*DOCUMENTS*/
+
+
+.document-space {
+	margin-top: 2%;
+	margin-right: 7%
 
 }
+
+.badge-custom {
+	background-color: rgb(247, 147, 30);
+	color: white;
+}
+
+.attachment-actions {
+  text-decoration: none;
+ 
+}
+
+.attachment-actions span {
+    display:block;
+    border-bottom:1px solid rgba(247, 147, 30, 0.5);
+    width: 100%;
+    padding-bottom: 4px;
+}
+
+.btn-custom2 {
+	background-color: rgba(247, 147, 30, 0.5)
+}
+
+
 
 
 
