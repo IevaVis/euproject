@@ -1,6 +1,7 @@
 class DocumentsController < ApplicationController
 	before_action :set_document, only: [:show, :edit, :update, :destroy]
 	before_action :require_login, only: [:new, :create, :edit, :update, :destroy]
+	before_action :require_login_for_viewing, only: [:index]
 
 
 	def index
@@ -10,6 +11,8 @@ class DocumentsController < ApplicationController
       @documents = Document.search(params[:search]).order("created_at DESC")
     elsif params[:tag]
       @documents = Document.tag_search(params[:tag])
+    elsif params[:doc_language]
+      @documents = Document.doc_language_search(params[:doc_language])
     else
       @documents = Document.all.order("created_at DESC")
     end
@@ -67,6 +70,13 @@ class DocumentsController < ApplicationController
 		def require_login
 			if !signed_in? or !current_user.teacher?
 				flash[:danger] = "Only logged in teachers can perform this action"
+				redirect_back(fallback_location: root_path)
+			end
+		end
+
+		def require_login_for_viewing
+			if !signed_in?
+				flash[:danger] = "You have to be logged in to view the library!"
 				redirect_back(fallback_location: root_path)
 			end
 		end

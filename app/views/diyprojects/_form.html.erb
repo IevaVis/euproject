@@ -1,0 +1,20 @@
+<%= render 'shared/errors', obj: @diyproject %>
+
+<div class="col-md-6 offset-md-3">
+	<div class="diyupload-form">
+		<h2><%= t ".title" %></h2><br/>
+			<%= simple_form_for @diyproject, :html => { :multipart => true } do |f| %>
+				<div class="form-inputs">
+					<%= f.input :title, required: true, autofocus: true %>
+					<%= f.input :description, required: true %>
+					<%= f.hint 'Select DIY Project Type' %>
+					<%= f.collection_radio_buttons :is_indoors, [[true, 'Indoors'] ,[false, 'Outdoors']], :first, :last %>
+					<%= f.hint 'Select age best suitable for this DIY activity' %>
+					<%= f.input :age, as: :radio_buttons, collection: [['from 6 to 9', 'from 6 to 9'], ['from 10 to 12', 'from 10 to 12'], ['other', 'Other']], label_method: :second, value_method: :first %>
+				</div>
+				<div class="form-actions">
+					<%= f.button :submit, class: "btn-custom" %>
+				</div>
+			<% end %>
+	</div>
+</div>

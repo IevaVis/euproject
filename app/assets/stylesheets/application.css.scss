@@ -34,20 +34,13 @@ a:hover {
 }
 
 
-/*SIGN UP / LOG IN Forms*/
+/*SIGN UP / LOG IN / UPLOAD Forms*/
 
-.signup-form {
-	margin-top: 5%;
-	margin-bottom: 40px;
-	@include background-tile;
 
-	h2 {
-		margin-top: 0;
-	}
-
-}
-
-.login-form {
+.login-form,
+.signup-form,
+.diyupload-form,
+.documentupload-form {
 	margin-top: 5%;
 	margin-bottom: 40px;
 	@include background-tile;
@@ -125,6 +118,10 @@ a:hover {
 
 .btn-custom2 {
 	background-color: rgba(247, 147, 30, 0.5)
+}
+
+.diy-search-form {
+	border: 1px solid black;
 }
 
 

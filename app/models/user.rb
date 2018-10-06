@@ -3,6 +3,7 @@ class User < ApplicationRecord
   enum role: [:teacher, :family, :student, :admin]
   validates :name, :country, presence: true
   has_many :documents
+  has_many :diyprojects
 
 end
 

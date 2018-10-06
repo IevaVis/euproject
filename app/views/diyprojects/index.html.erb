@@ -1,0 +1,27 @@
+<div class="container">	
+	<div class="row">
+		<div class="col-md-10">
+			<div class="row">
+			<% @diyprojects.each do |diyproject| %>
+				<div class="document-space col-md-5">
+		 			<h6 class="document-title"><%= diyproject.title %></h6>
+		 			<% if diyproject.is_indoors? %>
+		 				<small>Place: Indoors</small>
+		 			<% else %>
+		 				<small>Place: Outdoors</small>
+		 			<% end %>
+		 			<br/>
+		 			<small>Age: <%= diyproject.age %></small>
+		  		<div class="attachment-actions">
+		  			<%= link_to 'View more information and images', diyproject_path(diyproject) %>
+		  		<span></span>
+		  		</div>
+		  	</div>
+		  	<% end %>
+			</div>	
+		</div>
+		<div class="diy-search-form col-md-2">
+        <p class="btn btn-custom2">Search for DIY</p><br/>
+    </div>
+  </div>
+</div>

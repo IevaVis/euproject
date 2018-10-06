@@ -13,4 +13,12 @@ class Document < ApplicationRecord
   def self.tag_search(tag)
     where("? = ANY(tags)", "#{tag}")
   end
+
+  def self.doc_language_search(doc_language)
+  if doc_language
+    where('doc_language LIKE ?', "%#{doc_language}%")
+  else
+    all
+  end
+end
 end
