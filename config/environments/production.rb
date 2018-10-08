@@ -10,7 +10,7 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
-  # Iamges saved in amazon.
+  # Images saved in amazon.
   config.active_storage.service = :amazon
 
   # Full error reports are disabled and caching is turned on.
