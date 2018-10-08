@@ -4,6 +4,7 @@ class User < ApplicationRecord
   validates :name, :country, presence: true
   has_many :documents
   has_many :diyprojects
+  has_many :chatrooms
 
 end
 
