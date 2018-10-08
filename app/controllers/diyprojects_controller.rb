@@ -4,14 +4,13 @@ class DiyprojectsController < ApplicationController
 
 	def index
 		@diyprojects = Diyproject.all
-		if params[:age]
-      @diyprojects = Diyproject.age_search(params[:age])
-    elsif params[:place]
-    	@diyprojects = Diyproject.place_search(params[:place])
-    else
-      @diyproject = Diyproject.all
-    end
-
+  	@diyprojects = Diyproject.place(params[:place]) if params[:place].present?
+		@diyprojects = @diyprojects.age(params[:age]) if params[:age].present?
+		respond_to do |format|
+			format.html { 
+				render "index"
+			}
+		end
 	end
 
 	def new
