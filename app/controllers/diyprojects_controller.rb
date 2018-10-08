@@ -4,6 +4,14 @@ class DiyprojectsController < ApplicationController
 
 	def index
 		@diyprojects = Diyproject.all
+		if params[:age]
+      @diyprojects = Diyproject.age_search(params[:age])
+    elsif params[:place]
+    	@diyprojects = Diyproject.place_search(params[:place])
+    else
+      @diyproject = Diyproject.all
+    end
+
 	end
 
 	def new
@@ -45,7 +53,7 @@ class DiyprojectsController < ApplicationController
 
   private
 		def valid_params
-			params.require(:diyproject).permit(:title, :description, :is_indoors, :age)
+			params.require(:diyproject).permit(:title, :description, :place, :age)
 		end
 
 		def require_login

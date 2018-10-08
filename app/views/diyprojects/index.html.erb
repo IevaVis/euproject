@@ -5,11 +5,7 @@
 			<% @diyprojects.each do |diyproject| %>
 				<div class="document-space col-md-5">
 		 			<h6 class="document-title"><%= diyproject.title %></h6>
-		 			<% if diyproject.is_indoors? %>
-		 				<small>Place: Indoors</small>
-		 			<% else %>
-		 				<small>Place: Outdoors</small>
-		 			<% end %>
+		 				<small><%= diyproject.place %></small>
 		 			<br/>
 		 			<small>Age: <%= diyproject.age %></small>
 		  		<div class="attachment-actions">
@@ -21,7 +17,35 @@
 			</div>	
 		</div>
 		<div class="diy-search-form col-md-2">
-        <p class="btn btn-custom2">Search for DIY</p><br/>
+      <p class="btn btn-custom2">Search for DIY</p><br/>
+				<%= form_tag(diyprojects_path, method: "get") do %>
+					<div class="diy-search-title">
+        		<small>Place for DIY project:</small>
+      		</div>
+      		<div class="diy-search-options">
+						<%= radio_button_tag(:place, ["Indoors"]) %>
+						<%= label_tag(:place, "Indoors") %><br/>
+						<%= radio_button_tag(:place, ["Outdoors"]) %>
+						<%= label_tag(:place, "Outdoors") %>
+					</div>
+					<div class="diy-search-title">
+						<small>Age for DIY project:</small><br/>
+					</div>
+					<div class="diy-search-options">
+						<%= check_box_tag(:age, ["From 6 to 9"]) %>
+						<%= label_tag(:age, "From 6 to 9") %><br/>
+						<%= check_box_tag(:age, ["From 10 to 12"]) %>
+						<%= label_tag(:age, "From 10 to 12") %><br/>
+						<%= check_box_tag(:age, ["Other"]) %>
+						<%= label_tag(:age, "Other") %>
+					</div>
+					<div class="diy-search-submit">
+						<%= submit_tag("Search", :class => "btn btn-outline-secondary") %>
+					</div>
+					<div class="diy-search-clear">
+						<%= link_to "Clear Search", diyprojects_path %>
+					</div>
+				<% end %>
     </div>
   </div>
 </div>

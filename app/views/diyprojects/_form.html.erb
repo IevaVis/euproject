@@ -8,9 +8,9 @@
 					<%= f.input :title, required: true, autofocus: true %>
 					<%= f.input :description, required: true %>
 					<%= f.hint 'Select DIY Project Type' %>
-					<%= f.collection_radio_buttons :is_indoors, [[true, 'Indoors'] ,[false, 'Outdoors']], :first, :last %>
+					<%= f.input :place, as: :radio_buttons, collection: [['Indoors', 'Indoors'], ['Outdoors', 'Outdoors']] %>
 					<%= f.hint 'Select age best suitable for this DIY activity' %>
-					<%= f.input :age, as: :radio_buttons, collection: [['from 6 to 9', 'from 6 to 9'], ['from 10 to 12', 'from 10 to 12'], ['other', 'Other']], label_method: :second, value_method: :first %>
+					<%= f.input :age, as: :radio_buttons, collection: [['From 6 to 9', 'From 6 to 9'], ['From 10 to 12', 'From 10 to 12'], ['Other', 'Other']] %>
 				</div>
 				<div class="form-actions">
 					<%= f.button :submit, class: "btn-custom" %>

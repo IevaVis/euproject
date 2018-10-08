@@ -4,8 +4,9 @@ class CreateDiyprojects < ActiveRecord::Migration[5.2]
     	t.belongs_to :user
 	  	t.string :title
 	 		t.string :description
-    	t.boolean :is_indoors
+    	t.string :place
     	t.string :age
+    	t.timestamps
     end
   end
 end

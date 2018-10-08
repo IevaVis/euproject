@@ -15,10 +15,10 @@ class Document < ApplicationRecord
   end
 
   def self.doc_language_search(doc_language)
-  if doc_language
-    where('doc_language LIKE ?', "%#{doc_language}%")
-  else
-    all
+    if doc_language
+      where('doc_language LIKE ?', "%#{doc_language}%")
+    else
+      all
+    end
   end
-end
 end
