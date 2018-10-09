@@ -1,6 +1,5 @@
 <%= render 'shared/errors', obj: @chatroom %>
 
-<div class="col-md-6 offset-md-3">
 	<div class="chat-form">
 		<h2><%= t ".title" %></h2><br/>
 			<%= simple_form_for @chatroom, :html => { :multipart => true } do |f| %>
@@ -9,8 +8,7 @@
 					<%= f.input :description, as: :text, input_html: {rows: 5}, required: true %>
 				</div>
 				<div class="form-actions">
-					<%= f.button :submit, class: "btn-custom" %>
+					<%= f.button :submit, "Create a post", class: "create-chat-button" %>
 				</div>
 			<% end %>
 	</div>
-</div>

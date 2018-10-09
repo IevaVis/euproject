@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container-fluid">
 	<div class="row">
-		<div class="col-md-10">
+		<div class="col-md-8">
 			<div class="forum-title">
 				<h3><span class="fas fa-folder-open">Teacher Chat and Forum</h3></span>
 			</div>
@@ -18,9 +18,11 @@
 					</p>
 		 			</div>
 		 		</div>
-		 		
 		    <% end %>
 		  <% end %>
 		</div>
+		<div class="chat-form col-md-4">
+       <%= render 'form' %>
+    </div>
 	</div>
 </div>

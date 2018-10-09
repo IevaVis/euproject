@@ -3,7 +3,8 @@ class ChatroomsController < ApplicationController
 	before_action :require_teacher_login, only: [:index, :new, :show, :create, :edit, :update, :destroy]
 
 	def index
-		@chatrooms = Chatroom.all
+		@chatrooms = Chatroom.all.order('created_at DESC')
+		@chatroom = Chatroom.new
 	end
 
 	def new
