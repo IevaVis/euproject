@@ -52,7 +52,7 @@ class DiyprojectsController < ApplicationController
 
   private
 		def valid_params
-			params.require(:diyproject).permit(:title, :description, :place, :age)
+			params.require(:diyproject).permit(:title, :description, :place, :age,images: [])
 		end
 
 		def require_login

@@ -1,0 +1,36 @@
+<% obj.each do |diyproject| %>
+		<div class="card card-body bg-light">
+			<div class="clearfix">
+				<div class="float-left">
+					<h4><%= link_to diyproject.title.capitalize, diyproject_path(diyproject) %></h4>
+					<p><%= truncate(diyproject.description, length: 150) %></p>
+					<p>
+						<span class="quiet"><small>Activity is best for: 
+              <em><%= diyproject.place %></em><br/>
+              Best suitable for kids aged: <em><%= diyproject.age %></em><br/>Created <%= time_ago_in_words(diyproject.created_at) %> ago by <%= diyproject.user.name.capitalize %></small></span>
+					</p>
+      		<% if signed_in? && (current_user == diyproject.user) %>
+      			<div class="diyproject-actions">
+      				<%= link_to "Edit this project", edit_diyproject_path(diyproject), class: "btn btn-sm btn-warning" %>
+         			<%= link_to "Delete this project", diyproject_path(diyproject), method: :delete, data: { confirm: "Are you sure you want to delete this activity?" }, class: "btn btn-sm btn-danger" %>
+              <%= link_to "See more images", diyproject_path(diyproject), class: "btn btn-sm btn-success" %>
+              <%= link_to "Add Your image", diyproject_path(diyproject), class: "btn btn-sm btn-primary" %> 
+         		</div>
+            <% elsif signed_in? %>
+            <div class="diyproject-actions">
+            <%= link_to "See more images", diyproject_path(diyproject), class: "btn btn-sm btn-success" %>
+              <%= link_to "Add Your image", diyproject_path(diyproject), class: "btn btn-sm btn-primary" %> 
+            </div>
+          <% end %>
+        </div>
+        <div class="float-right">
+          <div class="diyproject-image">
+            <a href="/diyprojects/<%= diyproject.id %>">
+      	     <%= image_tag diyproject.images.first, class: "diy-index-image" %>
+            </a>
+          </div>
+        </div>
+      </div>
+		</div>
+  <br/>
+<% end %>

@@ -1,6 +1,7 @@
 class Diyproject < ApplicationRecord
 	validates :title, :description, :age,  presence: true
 	belongs_to :user
+	has_many_attached :images
 
   default_scope {where nil}
   scope :place, -> (name) { where('place iLIKE ?', "%" + name + "%") }

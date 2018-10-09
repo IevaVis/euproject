@@ -11,6 +11,7 @@
 					<%= f.input :place, as: :radio_buttons, collection: [['Indoors', 'Indoors'], ['Outdoors', 'Outdoors']] %>
 					<%= f.hint 'Select age best suitable for this DIY activity' %>
 					<%= f.input :age, as: :radio_buttons, collection: [['From 6 to 9', 'From 6 to 9'], ['From 10 to 12', 'From 10 to 12'], ['Other', 'Other']] %>
+					<%= f.file_field :images, multiple: true %>
 				</div>
 				<div class="form-actions">
 					<%= f.button :submit, class: "btn-custom" %>
