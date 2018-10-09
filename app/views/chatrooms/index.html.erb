@@ -1,0 +1,26 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-10">
+			<div class="forum-title">
+				<h3><span class="fas fa-folder-open">Teacher Chat and Forum</h3></span>
+			</div>
+				<% @chatrooms.each do |chat| %>
+				<div class="forum-post">
+					<% if signed_in? && current_user.teacher? %>
+					<div class="col-md-8 post-body">
+		 				<h6 class="post-title"><span class="fa fa-comments">
+		 				</span><%= link_to chat.title, chatroom_path(chat) %></h6>
+		 			<div class="post-description">
+		 				<%= truncate(chat.description, length: 200) %>
+		 			</div>
+		 			<p>
+						<span class="quiet"><small>Created <%= time_ago_in_words(chat.created_at) %> ago by <%= chat.user.name.capitalize %> | <%= chat.user.country %></small></span>
+					</p>
+		 			</div>
+		 		</div>
+		 		
+		    <% end %>
+		  <% end %>
+		</div>
+	</div>
+</div>

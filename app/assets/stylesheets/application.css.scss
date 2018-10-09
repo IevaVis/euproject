@@ -3,6 +3,7 @@
 
 body {
 	background-color: #f5f5f5;
+	font-family: arial,helvetica,clean,sans-serif;
 }
 
 a {
@@ -136,6 +137,48 @@ a:hover {
 .btn-warning {
 	color: #fff !important;
 }
+
+
+.diy-card {
+	margin-top: 1%;
+	background-color: #E8E8E8;
+}
+
+/*Chatrooms*/
+
+.fa-comments {
+	color: rgb(198, 59, 59);
+}
+
+.forum-post {
+	border-bottom: 1px solid rgb(235, 235, 235);
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+.forum-title {
+	margin-top: 1%;
+	background-color: rgb(198, 59, 59);
+}
+
+.forum-title h3 {
+	font-size: 16px;
+	color: #fff;
+	padding: 10px;
+}
+
+.fa-comments,
+.fa-folder-open:before {
+  margin-right: 5px;
+}
+
+
+.post-title a {
+	color: black !important;
+	font-weight: bold;
+	
+}
+
 
 
 

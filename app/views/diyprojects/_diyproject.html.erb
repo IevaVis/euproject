@@ -1,9 +1,9 @@
 <% obj.each do |diyproject| %>
-		<div class="card card-body bg-light">
+		<div class="card card-body diy-card">
 			<div class="clearfix">
 				<div class="float-left">
 					<h4><%= link_to diyproject.title.capitalize, diyproject_path(diyproject) %></h4>
-					<p><%= truncate(diyproject.description, length: 150) %></p>
+					<p><%= truncate(diyproject.description.capitalize, length: 150) %></p>
 					<p>
 						<span class="quiet"><small>Activity is best for: 
               <em><%= diyproject.place %></em><br/>
