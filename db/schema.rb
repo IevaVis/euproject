@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 2018_10_08_073049) do
   create_table "documents", force: :cascade do |t|
     t.bigint "user_id"
     t.string "title"
-    t.string "tags", array: true
+    t.text "tags", array: true
     t.string "doc_language"
     t.boolean "is_public"
     t.boolean "terms"

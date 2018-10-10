@@ -6,19 +6,14 @@ class Document < ApplicationRecord
 	validates_acceptance_of :terms, :allow_nil => false,
   :accept => true
 
-  def self.search(search)
-  	where("title ILIKE ?",  "%#{search}%" )
-  end
+
+  default_scope {where nil}
+  scope :doc_language, -> (name) { where('doc_language iLIKE ?', "%" + name + "%") }
+  scope :tags, -> (tags)  {where('documents.tags @> ARRAY[?]', [tags.capitalize])}
+
 
   def self.tag_search(tag)
     where("? = ANY(tags)", "#{tag}")
   end
 
-  def self.doc_language_search(doc_language)
-    if doc_language
-      where('doc_language LIKE ?', "%#{doc_language}%")
-    else
-      all
-    end
-  end
 end

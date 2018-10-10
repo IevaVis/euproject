@@ -4,19 +4,21 @@ class DocumentsController < ApplicationController
 	before_action :require_login_for_viewing, only: [:index]
 
 
+
 	def index
-		@documents = Document.all
-    @tags = @documents.map {|document| document.tags}.flatten.uniq
-    if params[:search]
-      @documents = Document.search(params[:search]).order("created_at DESC")
-    elsif params[:tag]
+  	@documents = Document.all
+		@tags = @documents.map {|document| document.tags}.flatten.uniq
+    if params[:tag]
       @documents = Document.tag_search(params[:tag])
-    elsif params[:doc_language]
-      @documents = Document.doc_language_search(params[:doc_language])
-    else
-      @documents = Document.all.order("created_at DESC")
     end
-  end
+  	@documents = Document.doc_language(params[:doc_language]) if params[:doc_language].present?
+		@documents = @documents.tags(params[:tags]) if params[:tags].present?
+		respond_to do |format|
+			format.html { 
+				render "index"
+			}
+		end
+	end
 
 	def new
 		@document = Document.new

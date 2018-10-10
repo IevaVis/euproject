@@ -1,0 +1,18 @@
+<% obj.each do |document| %>
+	<% if (signed_in? && current_user.teacher?) || document.is_public? %>
+		<div class="document-space col-md-5">
+				<h6 class="document-title"><%= document.title %></h6>
+				<small>Document language: <%= document.doc_language %></small>
+				<div class="document-tags">
+				<% document.tags.each do |tag| %>
+ 				<span><%= link_to "#{tag}", {controller: "documents", action: "index", tag: tag}, class: "badge badge-custom" %></span>
+  			<% end %>
+			</div>
+			<div class="attachment-actions">
+				<%= link_to 'View file', document.attachment %> ||
+				<%= link_to 'Download file', document.attachment, download: '' %>
+				<span></span>
+			</div>
+		</div>
+	<% end %>
+<% end %>
