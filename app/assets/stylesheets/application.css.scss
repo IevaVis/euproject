@@ -155,9 +155,9 @@ a:hover {
 }
 
 .forum-post {
-	border-bottom: 1px solid rgb(235, 235, 235);
-	padding-top: 7px;
-	padding-bottom: 7px;
+	border-bottom: 3px solid rgb(235, 235, 235);
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .forum-title {
@@ -187,6 +187,23 @@ a:hover {
 	background-color: rgb(198, 59, 59);
 	color: white;
 	
+}
+
+.chat-form {
+	width: 350px;
+}
+
+.chat-owner {
+	color: rgb(198, 59, 59);
+	font-weight: 900;
+	margin-left: 2px;
+
+}
+
+.time-created,
+.chat-owner-country,
+.chat-owner-registration {
+	font-size: 12px;
 }
 
 
