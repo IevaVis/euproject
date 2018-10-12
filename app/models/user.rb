@@ -5,6 +5,7 @@ class User < ApplicationRecord
   has_many :documents, dependent: :destroy
   has_many :diyprojects, dependent: :destroy
   has_many :chatrooms, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
 end
 

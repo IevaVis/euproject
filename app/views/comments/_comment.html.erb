@@ -1,0 +1,12 @@
+<div class="comment-fix">
+	<div class="row">
+		<div class="col-md-8 offset-md-2 card card-body bg-light">
+			<p><%= comment.body %></p>
+			<p>
+				<span class="quiet"><small>Created: <%= time_ago_in_words(comment.created_at) %> ago by <%= comment.user.name %></small></span>
+			</p>
+		</div>
+	</div>
+</div>
+<br/>
+		

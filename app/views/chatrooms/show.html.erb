@@ -1,0 +1,72 @@
+<div class="card card-body bg-light col-md-8 offset-md-2">
+  <div align="center">
+	<%= @chatroom.title %>
+  <%= simple_format(@chatroom.description) %>
+  <hr />
+  <div class="clearfix">
+    <div class="float-xl-right">
+      <p class="center">
+        <em>Created by:</em>
+      </p>
+      <p class="center">
+        <small><%= @chatroom.user.name.capitalize %></small><br/>
+        <small><%= time_ago_in_words(@chatroom.created_at) %> ago</small>
+      </p>
+    </div>
+  <div class="recipe-actions">
+    <% if signed_in? && (current_user == @chatroom.user) %>
+      <%= link_to "Edit", edit_chatroom_path(@chatroom), class: "btn btn-sm btn-warning" %>
+      <%= link_to "Delete", chatroom_path(@chatroom), method: :delete, data: { confirm: "Are you sure you want to delete this forum post?" }, class: "btn btn-sm btn-danger" %>
+    <% end %>
+      <%= link_to "Return to all posts", chatrooms_path, class: "btn btn-sm btn-primary" %>
+    </div>
+  </div>
+</div>
+</div>
+<br/>
+
+
+<% if signed_in? and current_user.teacher? %>
+  <div class="row">
+  <div class="col-md-8 offset-md-2">
+    <br/><br/><h3>Comments</h3>
+    <hr />
+    <%= form_with model: [@chatroom, @comment] do |f| %>
+      <div class="form-group row">
+        <div class="control-label col-md-2">
+          <%= f.label :body, 'Comment' %>
+        </div>
+        <div class="col-md-8">
+          <%= f.text_area :body, rows: 8, class: "form-control", placeholder: "Add comment here", autofocus: true %>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-2 offset-md-2">
+          <%= f.submit 'Submit Comment', class: "btn btn-primary btn-sm btn-xlarge" %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+<% end %> 
+
+
+<% if @chatroom.comments != 0 %>
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <br/><h6>Prior Comments: </h6>
+      <div id="comment-pane">
+        <% @comments.each do |comment| %>
+          <%= render 'comments/comment', comment: comment %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <h6>No comments yet</h6>
+    </div>
+  </div>
+<% end %>
+

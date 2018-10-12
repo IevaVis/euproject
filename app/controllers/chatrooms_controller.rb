@@ -22,6 +22,8 @@ class ChatroomsController < ApplicationController
 	end
 
 	def show
+		@comment = Comment.new
+		@comments = @chatroom.comments.order('created_at DESC')
 	end
 
 	def edit

@@ -10,9 +10,9 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require rails-ujs
+//= require jquery3
+//= require jquery_ujs
 //= require activestorage
-//= require jquery
 //= require popper
 //= require bootstrap
 //= require_tree .
@@ -22,3 +22,5 @@ $(document).ready(function() {
   $('[data-toggle="popover"]').popover(); 
 
 });
+
+
