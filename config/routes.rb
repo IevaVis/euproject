@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  get 'comments/create'
   resources :documents
   resources :diyprojects
   resources :chatrooms do
-    post 'comments', to: 'comments#create'
+    resources :comments, only: [:create, :destroy]
   end
   resources :passwords, controller: "clearance/passwords", only: [:create, :new]
   resource :session, controller: "sessions", only: [:create, :destroy]

@@ -8,6 +8,12 @@ class CommentsController < ApplicationController
   	@comment.save
   end
 
+  def destroy
+    @comment = @chatroom.comments.find(params[:id])
+    @comment_id = @comment.id
+    @comment.destroy
+  end
+
   private
 
   def valid_params
