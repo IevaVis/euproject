@@ -58,7 +58,7 @@ class DiyprojectsController < ApplicationController
 		def require_login
 			if !signed_in?
 				flash[:danger] = "You must be logged in to continue!"
-				redirect_back(fallback_location: root_path)
+				redirect_to root_path
 			end
 		end
 
