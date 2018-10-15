@@ -54,11 +54,6 @@
       <% end %>
     </ul>
     <ul class="navbar-nav navbar-right">
-      <% if signed_in? and current_user.teacher? %>
-         <li class="nav-item-custom">
-          <%= link_to t("global.menu.new_document"), new_document_path, class: 'btn-custom' %>
-        </li>
-        <% end %>
        <li class="nav-item">
           <%= link_to_unless_current flag_icon(:lt), locale: "lt" %>
           <%= link_to_unless_current flag_icon(:gb), locale: "en" %>
