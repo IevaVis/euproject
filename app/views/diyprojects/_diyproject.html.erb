@@ -11,15 +11,15 @@
 					</p>
       		<% if signed_in? && (current_user == diyproject.user) %>
       			<div class="diyproject-actions">
-      				<%= link_to "Edit this project", edit_diyproject_path(diyproject), class: "btn btn-sm btn-warning" %>
+               <%= link_to "See all images", diyproject_path(diyproject), class: "btn btn-sm btn-custom3" %>
+      				<%= link_to "Edit this project", edit_diyproject_path(diyproject), class: "btn btn-sm btn-custom4" %>
          			<%= link_to "Delete this project", diyproject_path(diyproject), method: :delete, data: { confirm: "Are you sure you want to delete this activity?" }, class: "btn btn-sm btn-danger" %>
-              <%= link_to "See more images", diyproject_path(diyproject), class: "btn btn-sm btn-success" %>
-              <%= link_to "Add Your image", diyproject_path(diyproject), class: "btn btn-sm btn-primary" %> 
+              <%= link_to "Add Your image", diyproject_path(diyproject), class: "btn btn-sm btn-custom5" %> 
          		</div>
             <% elsif signed_in? %>
             <div class="diyproject-actions">
-            <%= link_to "See more images", diyproject_path(diyproject), class: "btn btn-sm btn-success" %>
-              <%= link_to "Add Your image", diyproject_path(diyproject), class: "btn btn-sm btn-primary" %> 
+            <%= link_to "See more images", diyproject_path(diyproject), class: "btn btn-sm btn-custom3" %>
+              <%= link_to "Add image", diyproject_path(diyproject), class: "btn btn-sm btn-custom5" %> 
             </div>
           <% end %>
         </div>
@@ -30,6 +30,14 @@
             </a>
           </div>
         </div>
+      </div>
+        <div class="rating">
+          <% if current_user %>
+          Rate degree of difficulty!
+          <small class="rating-explain">1 - very easy, 5 - very hard</small>
+          <%= rating_for diyproject, "difficulty_degree" %>
+            <br>
+          <% end %>
       </div>
 		</div>
   <br/>

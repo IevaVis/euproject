@@ -29,6 +29,7 @@ gem 'simple_form'
 gem 'flag-icons-rails'
 gem 'figaro'
 gem "aws-sdk-s3", require: false
+gem 'ratyrate'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
