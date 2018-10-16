@@ -3,16 +3,23 @@
 	<div class="row">
 		<div class="col-md-8 offset-md-2 card card-body bg-light">
 			<p><%= comment.body %></p>
-			<p>
+			<% if comment.user.id != current_user.id %>
+				<p>
+					<span class="quiet"><small>Created: <%= time_ago_in_words(comment.created_at) %></small></span>
+					<%= link_to "Message #{comment.user.name}", conversations_path(sender_id: current_user.id, recipient_id: comment.user.id), method: "post" %>
+				<% else %>
 				<span class="quiet"><small>Created: <%= time_ago_in_words(comment.created_at) %> ago by <%= comment.user.name %></small></span>
 			</p>
+			<% end %>
 			<% if signed_in? and current_user == comment.user %>
-			<%= link_to 'Delete comment', chatroom_comment_path(@chatroom, comment), method: :delete, remote: true %>
+				<%= link_to 'Delete comment', chatroom_comment_path(@chatroom, comment), method: :delete, remote: true %>
 			<% end %>
 		</div>
 	</div>
 </div>
-</div>
 <br/>
+
+
+
 
 		

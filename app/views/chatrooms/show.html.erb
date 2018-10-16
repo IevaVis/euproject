@@ -9,7 +9,11 @@
         <em>Created by:</em>
       </p>
       <p class="center">
-        <small><%= @chatroom.user.name.capitalize %></small><br/>
+        <% if current_user.id != @chatroom.user_id %>
+        <small><%= link_to "Message #{@chatroom.user.name.capitalize}", conversations_path(sender_id: current_user.id, recipient_id: @chatroom.user.id), method: 'post' %></small><br/>
+        <% else %>
+        <%= @chatroom.user.name.capitalize %><br/>
+        <% end %>
         <small><%= time_ago_in_words(@chatroom.created_at) %> ago</small>
       </p>
     </div>

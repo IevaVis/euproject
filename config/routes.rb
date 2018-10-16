@@ -2,9 +2,15 @@ Rails.application.routes.draw do
   post '/rate' => 'rater#create', :as => 'rate'
   resources :documents
   resources :diyprojects
+
   resources :chatrooms do
     resources :comments, only: [:create, :destroy]
   end
+
+  resources :conversations do
+    resources :messages
+  end
+  
   resources :passwords, controller: "clearance/passwords", only: [:create, :new]
   resource :session, controller: "sessions", only: [:create, :destroy]
 

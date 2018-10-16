@@ -1,0 +1,33 @@
+
+
+<% if @over_ten %>
+	<%= link_to 'Show previous', '?m=all' %>
+<% end %>
+
+<div class="container">
+	<h1 style="text-align:center">Message <%= @conversation.recipient.name %></h1>
+<div class="well" id="messages">
+	<% @messages.each do |message| %>
+		<% if message.body %>
+			<% user = User.find(message.user_id) %>
+			<div class="text-muted"> [<%= message.message_time %>] <%= user.name %>:</div>
+			<div class="column">
+				<%= sanitize markdown_to_html(message.body) %>
+			</div>
+		<% end %>
+	<% end %>
+</div>
+
+
+	<%= form_for [@conversation, @message] do |f| %>
+		<div class="input-group mb-3">
+			<%= f.text_field :body, placeholder: "Your message", class: "form-control message-field" %>
+			<%= f.text_field :user_id, value: current_user.id, type: "hidden" %>
+			<div class="input-group-append">
+				<%= f.submit "Send message", class: "btn btn-secondary" %>
+			</div>
+		</div>
+	<% end %>
+</div>
+
+
