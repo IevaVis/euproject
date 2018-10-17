@@ -2,7 +2,9 @@ class User < ApplicationRecord
   include Clearance::User
   enum role: [:teacher, :family, :student, :admin]
   ratyrate_rater
-  validates :name, :country, presence: true
+  validates :name, :email, :country, presence: true
+  validates :email, format: { with: /\S+@\S+\.\S+/, message: "Not valid email" } 
+	validates :email, uniqueness: true 
   has_many :documents, dependent: :destroy
   has_many :diyprojects, dependent: :destroy
   has_many :chatrooms, dependent: :destroy

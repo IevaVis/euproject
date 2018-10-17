@@ -1,6 +1,6 @@
 class Diyproject < ApplicationRecord
 	ratyrate_rateable 'difficulty_degree'
-	validates :title, :description, :age,  presence: true
+	validates :title, :description, :age, :place,  presence: true
 	belongs_to :user
 	has_many_attached :images
 
