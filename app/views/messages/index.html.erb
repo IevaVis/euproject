@@ -6,14 +6,11 @@
 
 <div class="container">
 	<h1 style="text-align:center">Message <%= @conversation.recipient.name %></h1>
-<div class="well" id="messages">
+<div class="well" id="message-box">
 	<% @messages.each do |message| %>
 		<% if message.body %>
 			<% user = User.find(message.user_id) %>
-			<div class="text-muted"> [<%= message.message_time %>] <%= user.name %>:</div>
-			<div class="column">
-				<%= sanitize markdown_to_html(message.body) %>
-			</div>
+			 <%= render 'messages/message', message: message %>
 		<% end %>
 	<% end %>
 </div>

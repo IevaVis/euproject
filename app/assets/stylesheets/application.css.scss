@@ -253,10 +253,14 @@ img.raty-cancel {
 	font-weight: 700;
 }
 
-.well {
+#message-box {
 	height: 250px;
 	border: 1px solid #222222;
 	overflow-y: scroll;
+}
+
+.well {
+margin-left: 1%;
 }
 
 .message-field {

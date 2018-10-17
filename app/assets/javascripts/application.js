@@ -18,15 +18,8 @@
 //= require_tree .
 
 
-function scrollToBottom(){
-  if($('#messages').length > 0) {
-    $('#messages').scrollTop($('#messages')[0].scrollHeight);
-  }
-}
-
 $(document).ready(function() {
   $('[data-toggle="popover"]').popover(); 
-  scrollToBottom();
 
 });
 
