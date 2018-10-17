@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#"><%= image_tag "Logo.png", class: "homepage-logo" %></a>
+  <a class="navbar-brand" href="/"><%= image_tag "Logo.png", class: "homepage-logo" %></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -7,7 +7,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <%= link_to t("global.menu.home"), root_path, :class => 'nav-link' %><span class="sr-only">(current)</span>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">About Us</a>
@@ -16,9 +16,15 @@
         <a class="nav-link" href="http://createskills.eu/contact/">Contacts</a>
       </li>
       <% if signed_in? and current_user.teacher? %>
-      <li class="nav-item">
-        <%= link_to t("global.menu.chatroom"), chatrooms_path, class: 'nav-link' %>
-        </li>
+     <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= t ("global.menu.chatroom") %>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+             <%= link_to t(".forum"), chatrooms_path, class: 'dropdown-item' %>
+            <%= link_to t(".private"), conversations_path, class: 'dropdown-item' %>
+            </div>
+          </li>
         <% end %>
        <% if signed_in? %>
         <li class="nav-item">
@@ -39,8 +45,8 @@
              <%= link_to t(".teacher"), sign_in_path(role: "teacher"), class: 'dropdown-item' %>
             <%= link_to t(".family"), sign_in_path(role: "family"), class: 'dropdown-item' %>
             <%= link_to t(".student"), sign_in_path(role: "student"), class: 'dropdown-item' %>
-        </div>
-      </li>
+            </div>
+          </li>
          <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <%= t ("global.menu.new_member") %>
