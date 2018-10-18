@@ -35,11 +35,11 @@
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= t ("global.menu.my_profile") %>
+            <%= current_user.name %>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
              <%= link_to t(".edit_profile"), edit_user_path(current_user), class: 'dropdown-item' %>
-            <%= link_to t(".delete_profile"), current_user, method: :delete, class: 'dropdown-item' %>
+            <%= link_to t(".delete_profile"), current_user, method: :delete, data: { confirm: 'Are you sure you want to delete Your profile? All Your documents, DIY projects, forums posts will be permanently deleted.' }, class: 'dropdown-item' %>
             <div class="dropdown-divider"></div>
             <%= link_to t("global.menu.sign_out"), session_path, method: :delete, class: 'dropdown-item' %>
             </div>

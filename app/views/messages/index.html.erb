@@ -5,7 +5,7 @@
 <% end %>
 
 <div class="container">
-	<h1 style="text-align:center">Message <%= @conversation.recipient.name %></h1>
+	<h3 style="text-align:center">Message between <%= @conversation.recipient.name %> and <%= @conversation.sender.name %></h3>
 <div class="well" id="message-box">
 	<% @messages.each do |message| %>
 		<% if message.body %>
