@@ -4,35 +4,44 @@
 		<div class="col-md-9">
 			<%= form_tag(documents_path, :method => "get", id: "search-form", class: "input-group-append") do %>
     	<%= select_tag(:doc_language, options_for_select([["English"], ["Portuguese"], ["Lithuanian"], ["Spanish"], ["Greek"], ["Bulgarian"], ["Croatian"], ["Czech"], ["Danish"], ["Dutch"], ["Estonian"], ["Finnish"], ["French"], ["German"], ["Hungarian"], ["Italian"], ["Latvian"], ["Maltese"], ["Polish"], ["Romanian"], ["Slovenian"], ["Swedish"], ["Other"]]), id: "index-search", prompt: "Select document language", class: "form-control py-2") %>
-    	<%= text_field_tag :tags, params[:tags], placeholder: "Search Documents", id: "index-search", class: "form-control py-2"  %>
+    	<%= text_field_tag :tags, params[:tags], placeholder: "Search documents by keyword", id: "index-search", class: "form-control py-2"  %>
       <span class="input-group-append">
-       <div class="diy-search-submit">
-            <%= submit_tag("Search", :class => "btn btn-outline-secondary") %>
-          </div>
-       </div>
+        <div class="diy-search-submit">
+          <%= submit_tag("Search", :class => "btn btn-outline-secondary") %>
+        </div>
+      </span>
       <% end %>
+    </div>
   </div>
 
 
-	
-
-	<div class="row">
+	<div class="row documents">
 		<div class="col-md-10">
 			<div class="row">
 				<%= render 'document', obj: @documents %>
 			</div>	
   	</div>
-
-  	<div class="all-tags-block-outline col-md-1">
-      <div class="all-tags-block">
-        <p class="btn btn-custom2">Popular Library Tags</p><br/>
-          <% @tags.each do |tag| %>
-          <span><%= link_to "#{tag}", {controller: "documents", action: "index", tag: tag}, class: "badge badge-secondary" %></span>
-        <% end %>
+    <div class="right-side col-md-2">
+      <div class="row">
+        <div class="newdoc-button col-md-12">
+          <%= link_to 'New Document', new_document_path, class: "btn btn-lg btn-custom4" %>
+        </div>
+      </div>
+      <div class="row">
+  	    <div class="all-tags-block-outline col-md-1">
+          <div class="all-tags-block">
+            <p class="btn btn-custom2">Popular Library Tags</p><br/>
+              <% @tags.each do |tag| %>
+                <span><%= link_to "#{tag}", {controller: "documents", action: "index", tag: tag}, class: "badge badge-secondary" %></span>
+              <% end %>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+
 
 
 
