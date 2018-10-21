@@ -1,0 +1,30 @@
+lt:
+  simple_form:
+    "yes": 'Yes'
+    "no": 'No'
+    required:
+      text: 'required'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "Please review the problems below:"
+    options:
+      user:
+        grade_of_teaching:
+          preschool: "Priešmokyklinis"
+          primary: "Pradinis"
+          secondary: "Vidurinis"
+          university: "Universitetinis"
+          vocational_education: "Profesinis mokymas"
+      diyproject:
+        place:
+          indoors: "namuose"
+          outdoors: "lauke"
+    labels:
+      defaults:
+        email: "El paštas"
+        password: 'Slaptažodis'
+        
+  

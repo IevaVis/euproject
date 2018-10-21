@@ -3,7 +3,7 @@ class DiyprojectsController < ApplicationController
 	before_action :require_login, only: [:index, :new, :create, :edit, :update, :destroy]
 
 	def index
-		@diyprojects = Diyproject.all
+		@diyprojects = Diyproject.all.order('created_at DESC')
   	@diyprojects = Diyproject.place(params[:place]) if params[:place].present?
 		@diyprojects = @diyprojects.age(params[:age]) if params[:age].present?
 		respond_to do |format|
@@ -22,7 +22,7 @@ class DiyprojectsController < ApplicationController
 		@diyproject.user = current_user
 		if @diyproject.save
 			flash[:success] = "Thank You! Your project is uploaded successfully!"
-			redirect_to diyproject_path(@diyproject)
+			redirect_to diyprojects_path
 		else 
 			flash[:danger] = "Something went wrong. Try again."
 			render:new

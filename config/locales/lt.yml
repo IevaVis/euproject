@@ -1,0 +1,57 @@
+lt:
+  outdoors: "lauke"
+  indoors: "namuose"
+  From 6 to 9:  "nuo 6 iki 9 metų"
+  From 10 to 12: "nuo 10 iki 12 metų"
+  Other: kitas
+  global:
+    menu:
+      home: "Pradinis"
+      library: "Biblioteka"
+      chatroom: "Pokalbiai"
+      diyprojects: "Pasidaryk pats"
+      forum: "Forumas"
+      private: "Žinutės"
+      about_us: "Apie Projektą"
+      contacts: "Kontaktai"
+      new_member: "Naujas narys"
+      log_in: "Prisijungti"
+      teacher: "Mokytojas"
+      student: "Studentas"
+      family: "Tėvai"
+      sign_out: "Atsijungti"
+      delete_profile: "Ištrinti profilį"
+      edit_profile: "Redaguoti profilį"
+      my_uploads: "Mano dokumentai"
+      new-project: "Naujas projektas"
+      new_document: "Naujas Dokumentas"
+  diyprojects:
+    form:
+      title: "Įkelti naują 'Pasidaryk pats' projektą"
+    diyproject:
+      activity_is_best_for: "Geriausia atlikti"
+      best_suitable_for_kids_aged: "Tinkamas atlikti su vaikais"
+      see_all_images: "Daugiau nuotraukų"
+      edit_project: "Redaguoti"
+      delete_project: "Ištrinti"
+      add_your_image: "Pridėti nuotrauką"
+      rate_difficulty: "Įvertink sunkumą!"
+  models:
+  activerecord:
+    attributes:
+      user:
+        name: "Vardas"
+        country: "Šalis"
+        email: "El. paštas"
+        password: "Slaptažodis"
+        password_confirmation: "Slaptažodžio patvirtinimas"
+        grade_of_teaching: "Mokymo lygis"
+      diyproject:
+        title: "Pavadinimas"
+        description: "Aprašymas"
+        place: "Atlikimo vieta"
+        age: "Atlikimo amžius"
+ 
+ 
+ 
+  

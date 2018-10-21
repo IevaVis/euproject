@@ -30,4 +30,59 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  outdoors: "outdoors"
+  indoors: "indoors"
+  From 6 to 9: "from 6 to 9 years"
+  From 10 to 12: "from 10 to 12 years"
+  Other: "Other"
+  global:
+    menu:
+      home: "Home"
+      library: "Library"
+      chatroom: "ChatRoom"
+      diyprojects: "DIY Projects"
+      forum: "Forum"
+      private: "Private messages"
+      new_member: "New Member"
+      about_us: "About Us"
+      contacts: "Contacts"
+      log_in: "Log In"
+      teacher: "Teacher"
+      student: "Student"
+      family: "Parent"
+      sign_out: "Sign Out"
+      delete_profile: "Delete Profile"
+      edit_profile: "Edit Profile"
+      my_uploads: "My Uploads"
+      new-project: "Upload DIY"
+      new_document: "Upload Document"
+  diyprojects:
+    form:
+      title: "Upload New DIY Project"
+    diyproject:
+      activity_is_best_for: "Activity is best for"
+      best_suitable_for_kids_aged: "Best suitable for kids aged"
+      see_all_images: "See all images"
+      edit_project: "Edit project"
+      delete_project: "Delete project"
+      add_your_image: "Add Your image"
+      rate_difficulty: "Rate difficulty!"
+  models:
+  activerecord:
+    attributes:
+      user:
+        name: "Name"
+        country: "Country"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+        grade_of_teaching: "Grade of teaching"
+      diyproject:
+        title: "Title"
+        description: "Description"
+        place: "Place"
+        age: "Age"
+
+
+
+  

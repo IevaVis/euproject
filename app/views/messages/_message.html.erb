@@ -1,5 +1,11 @@
 <div class="well">
-	<div class="text-muted">[<%= message.message_time %>] <%= message.user.name %>:</div>
-		<em><%= sanitize markdown_to_html(message.body) %></em>
+	<div class="text-muted">[<%= message.message_time %>] <%= message.user.name %>:
+	</div>
+	<em><%= sanitize markdown_to_html(message.body) %></em>
+	<% if message.files.attached? %>
+		<% message.files.each do |file| %>
+			 <%= link_to "View #{file.filename}", file %>
+		<% end %>
+	<% end %>
 </div>
 		

@@ -10,10 +10,25 @@ en:
       # html: '<abbr title="required">*</abbr>'
     error_notification:
       default_message: "Please review the problems below:"
+    options:
+      user:
+        grade_of_teaching:
+          preschool: "Preschool"
+          primary: "Primary"
+          secondary: "Secondary"
+          university: "University"
+          vocational_education: "Vocational Education"
+      diyproject:
+        place:
+          indoors: "indoors"
+          outdoors: "outdoors"
+
     # Examples
-    # labels:
-    #   defaults:
-    #     password: 'Password'
+    labels:
+      defaults:
+        email: "Email"
+        password: 'Password'
+        
     #   user:
     #     new:
     #       email: 'E-mail to sign in.'

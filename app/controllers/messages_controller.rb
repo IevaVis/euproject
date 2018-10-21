@@ -4,23 +4,16 @@ class MessagesController < ApplicationController
 
 	def index
 		@messages = @conversation.messages
-
-		if @messages.length > 10
-			@over_ten = true
-			@messages = @messages[-10..-1]
-		end
-
-		if params[:m]
-			@over_ten = false
-			@messages = @conversation.messages
-		end
-
 		@message = @conversation.messages.new
 	end
 
 	def create
 		@message = @conversation.messages.new(message_params)
+		files = params[:message][:files]
 		if @message.save
+			if files
+				@message.files.attach
+			end
 			redirect_to conversation_messages_path(@conversation)
 		end
 	end
@@ -32,7 +25,7 @@ class MessagesController < ApplicationController
 	private
 
 	def message_params
-		params.require(:message).permit(:body, :user_id)
+		params.require(:message).permit(:body, :user_id, files: [])
 	end
 
 	def set_conversation

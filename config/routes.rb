@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
+  root "welcome#index"
   post '/rate' => 'rater#create', :as => 'rate'
   resources :documents
   resources :diyprojects
@@ -22,8 +25,9 @@ Rails.application.routes.draw do
 
   get "/sign_in" => "clearance/sessions#new", as: "sign_in"
   get "/sign_up" => "clearance/users#new", as: "sign_up"
-  root "welcome#index"
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+end
+  
 end
 
 

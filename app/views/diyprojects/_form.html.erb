@@ -8,7 +8,7 @@
 					<%= f.input :title, required: true, autofocus: true %>
 					<%= f.input :description, as: :text, input_html: {rows: 5}, required: true %>
 					<%= f.hint 'Select DIY Project Type' %>
-					<%= f.input :place, as: :radio_buttons, collection: [['Indoors', 'Indoors'], ['Outdoors', 'Outdoors']] %>
+					<%= f.input :place, as: :radio_buttons, collection: [:indoors , :outdoors] %>
 					<%= f.hint 'Select age best suitable for this DIY activity' %>
 					<%= f.input :age, as: :radio_buttons, collection: [['From 6 to 9', 'From 6 to 9'], ['From 10 to 12', 'From 10 to 12'], ['Other', 'Other']] %>
 					<%= f.file_field :images, multiple: true %>

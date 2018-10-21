@@ -1,5 +1,5 @@
 ---
-en:
+lt:
   clearance:
     models:
       clearance_mailer:
@@ -19,8 +19,9 @@ en:
     failure_when_not_signed_in: Please sign in to continue.
   helpers:
     label:
-      password:
-        email: Email address
+      password: 
+        email: El. paštas
+        password: Slaptažodis
       password_reset:
         password: Choose password
     submit:
@@ -29,12 +30,12 @@ en:
       password_reset:
         submit: Save this password
       session:
-        submit: Sign in
+        submit: Prisijungti
       user:
-        create: Create User
+        create: Registruotis
   layouts:
     application:
-      sign_in: Sign in
+      sign_in: Prisijungti
       sign_out: Sign out
   passwords:
     create:
@@ -49,9 +50,9 @@ en:
       title: Reset your password
   sessions:
     form:
-      forgot_password: Forgot password
-      title: Sign in
+      forgot_password: Pamiršau slaptažodį
+      title: Nario prisijungimas
   users:
     form:
-      sign_in: Sign in
-      title: Create User
+      sign_in: Prisijungti
+      title: Naujo nario registracija
