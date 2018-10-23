@@ -1,0 +1,22 @@
+<%= render "upload_image" %>
+
+<div class="container diyproject-showpage">
+<div align="center">
+	<div class="diy-title">
+	<h1><%= @diyproject.title %></h1>
+</div>
+<div class="diy-description">
+<%= @diyproject.description %>
+</div>
+</div>
+
+<% if @diyproject.images.attached? %>
+	<div class="card-columns">
+		<% @diyproject.images.each do |image| %>
+			<%= link_to image, 'data-lightbox': 'image' do %>
+  			<%= image_tag image.variant(resize: "400x400").processed, class: "card diy-image" %>
+  			<% end %>
+  <% end %>
+  </div>
+<% end %>
+</div>
