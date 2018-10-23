@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_many :diyprojects, dependent: :destroy
   has_many :chatrooms, dependent: :destroy
   has_many :comments, dependent: :destroy
-  
+  has_many :notifications, foreign_key: :receiver_id
   
 
 end

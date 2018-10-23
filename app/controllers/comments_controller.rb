@@ -5,7 +5,11 @@ class CommentsController < ApplicationController
   def create
   	@comment = @chatroom.comments.new(valid_params)
   	@comment.user = current_user
-  	@comment.save
+  	if @comment.save
+      (@chatroom.users.uniq - [current_user]).each do |user|
+        Notification.create(receiver: user, actor: current_user, action: "posted", notifiable: @comment)
+      end
+    end
   end
 
   def destroy
