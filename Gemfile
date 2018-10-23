@@ -31,6 +31,7 @@ gem 'figaro'
 gem "aws-sdk-s3", require: false
 gem 'ratyrate'
 gem 'kramdown'
+gem 'lightbox2-rails'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

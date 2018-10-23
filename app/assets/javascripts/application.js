@@ -15,6 +15,7 @@
 //= require activestorage
 //= require popper
 //= require bootstrap
+//= require lightbox
 //= require_tree .
 
 
