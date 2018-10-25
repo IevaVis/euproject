@@ -20,8 +20,11 @@
 
 
 $(document).ready(function() {
-  $('[data-toggle="popover"]').popover(); 
-
+  $('[data-toggle="popover"]').popover();
+  var messages = $('#message-box');
+  if (messages[0] !== undefined) {
+    messages.scrollTop(messages[0].scrollHeight);
+  }
 });
 
 
