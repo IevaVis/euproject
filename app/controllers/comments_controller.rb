@@ -7,8 +7,9 @@ class CommentsController < ApplicationController
   	@comment.user = current_user
   	if @comment.save
       (@chatroom.users.uniq - [current_user]).each do |user|
-        Notification.create(receiver: user, actor: current_user, action: "posted", notifiable: @comment)
+        Notification.create(receiver: user, actor: current_user, action: "posted", notifiable: @comment) 
       end
+      Notification.create(receiver: @chatroom.user, actor: current_user, action: "posted", notifiable: @comment)
     end
   end
 
