@@ -27,9 +27,6 @@ class Notifications
 
     $("[data-behavior='unread-count']").text(items.length)
 
-    if items.length == 0
-      items = "<a>No new notifications</a>"
-
     $("[data-behavior='notification-items']").html(items)
 
 jQuery ->

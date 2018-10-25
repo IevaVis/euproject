@@ -10,11 +10,14 @@ class MessageBroadcastJob < ApplicationJob
   private
 
   def render_message(message)
-  	MessagesController.render(
-  		partial: 'message',
-  		locals: { 
-  			message: message
-  		}
-  	)
+     {
+         template: MessagesController.render(
+             partial: 'message',
+             locals: {
+                 message: message[:template_version]
+             }
+         ),
+         json_version: message[:json_version].to_json
+     }
   end
 end
