@@ -1,9 +1,9 @@
 <% obj.each do |diyproject| %>
-	<div class="card card-body diy-card">
+	<div class="card card-body diy-card mb-3">
 		<div class="clearfix">
 			<div class="float-left col-md-8">
-				<h4><%= link_to diyproject.title.capitalize, diyproject_path(diyproject) %></h4>
-					<p><%= truncate(diyproject.description.capitalize, length: 150) %></p>
+				<h4 class="card-title"><%= link_to diyproject.title.capitalize, diyproject_path(diyproject) %></h4>
+					<p class="card-text"><%= truncate(diyproject.description.capitalize, length: 150) %></p>
 					<p>
 					<span class="quiet"><small><%= t(".activity_is_best_for") 
           %>: <em><%= t diyproject.place %></em><br/>
@@ -34,7 +34,7 @@
         <div class="float-right">
           <div class="diyproject-image">
             <a href="/diyprojects/<%= diyproject.id %>">
-      	     <%= image_tag diyproject.images.first.variant(resize: "300x200").processed, class: "diy-index-image" %>
+      	     <%= image_tag diyproject.images.first.variant(resize: "300x200").processed, class: "rounded" %>
             </a>
           </div>
         </div>

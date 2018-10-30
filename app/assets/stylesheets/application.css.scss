@@ -30,6 +30,11 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 300;
 }
 
+.pagination > li > a
+{
+  color: rgba(0, 0, 0, 0.5);
+}
+
 /*NAVBAR*/
 
 .homepage-logo {
@@ -41,6 +46,10 @@ h1, h2, h3, h4, h5, h6 {
 	margin-right: 2px;
 }
 
+.navbar {
+	margin-bottom: 3%;
+}
+
 
 /*SIGN UP / LOG IN / UPLOAD Forms*/
 
@@ -49,7 +58,6 @@ h1, h2, h3, h4, h5, h6 {
 .signup-form,
 .diyupload-form,
 .documentupload-form {
-	margin-top: 5%;
 	margin-bottom: 40px;
 	@include background-tile;
 
@@ -144,7 +152,6 @@ h1, h2, h3, h4, h5, h6 {
 /*DIYProject*/
 
 .diy-search-form {
-	margin-top: 5%;
 	padding-top: 10px;
 	padding-bottom: 10px;
 
@@ -154,17 +161,12 @@ h1, h2, h3, h4, h5, h6 {
 	text-decoration: underline;
 }
 
-.diy-index-image {
- border-radius: 4px;
-}
-
 .btn-warning {
 	color: #fff !important;
 }
 
 
 .diy-card {
-	margin-top: 1%;
 	background-color: #E8E8E8;
 }
 
@@ -196,7 +198,7 @@ img.raty-cancel {
 }
 
 .newdiy-button {
-	margin-top: 5%;
+	margin-bottom: 5%;
 }
 
 

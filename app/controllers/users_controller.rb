@@ -12,7 +12,6 @@ class UsersController < Clearance::UsersController
 			flash[:success] = "You have signed up successfully!"
 			redirect_to root_path
 		else
-			flash[:alert] = @user.errors.full_messages.join(',')
 			render template: "users/new"
 		end
 	end

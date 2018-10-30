@@ -32,6 +32,8 @@ gem "aws-sdk-s3", require: false
 gem 'ratyrate'
 gem 'kramdown'
 gem 'lightbox2-rails'
+gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate-bootstrap4'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

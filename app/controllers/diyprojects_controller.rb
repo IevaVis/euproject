@@ -3,7 +3,7 @@ class DiyprojectsController < ApplicationController
 	before_action :require_login, only: [:index, :new, :create, :edit, :update, :destroy]
 
 	def index
-		@diyprojects = Diyproject.all.order('created_at DESC')
+		@diyprojects = Diyproject.paginate(:page => params[:page], per_page: 5).order('created_at DESC')
   	@diyprojects = Diyproject.place(params[:place]) if params[:place].present?
 		@diyprojects = @diyprojects.age(params[:age]) if params[:age].present?
 		respond_to do |format|

@@ -22,7 +22,7 @@
 										Created <%= time_ago_in_words(chat.created_at) %> ago by:
 										</div> 
 										<div class="chat-owner-info">
-											<span class="far fa-envelope"></span><%= link_to(chat.user.name.capitalize, user_path(chat.user_id), class: "chat-owner") %>
+											<span class="far fa-envelope"></span><%= link_to(chat.user.name.capitalize, conversations_path(sender_id: current_user.id, recipient_id: chat.user.id), method: "post", class: "chat-owner") %>
 											<div class="chat-owner-country">
 											Country: <%= chat.user.country %>
 										</div>
