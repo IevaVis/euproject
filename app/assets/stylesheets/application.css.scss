@@ -35,6 +35,22 @@ h1, h2, h3, h4, h5, h6 {
   color: rgba(0, 0, 0, 0.5);
 }
 
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: gray;
+    border-color: gray;
+  }
+
 /*NAVBAR*/
 
 .homepage-logo {
