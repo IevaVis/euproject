@@ -4,8 +4,8 @@ class DiyprojectsController < ApplicationController
 
 	def index
 		@diyprojects = Diyproject.paginate(:page => params[:page], per_page: 5).order('created_at DESC')
-  	@diyprojects = Diyproject.place(params[:place]) if params[:place].present?
-		@diyprojects = @diyprojects.age(params[:age]) if params[:age].present?
+  	@diyprojects = Diyproject.place(params[:place]).paginate(:page => params[:page], per_page: 5).order('created_at DESC') if params[:place].present?
+		@diyprojects = @diyprojects.age(params[:age]).paginate(:page => params[:page], per_page: 5).order('created_at DESC') if params[:age].present?
 		respond_to do |format|
 			format.html { 
 				render "index"
