@@ -7,7 +7,10 @@
 					<p>
 					<span class="quiet"><small><%= t(".activity_is_best_for") 
           %>: <em><%= t diyproject.place %></em><br/>
-          <%= t(".best_suitable_for_kids_aged") %> : <em><%= t diyproject.age %></em><br/> <%= diyproject.created_at.strftime('%d-%m-%Y') %> || <%= diyproject.user.name.capitalize %></small></span>
+          <%= t(".best_suitable_for_kids_aged") %> : <em><%= t diyproject.age %></em></small></span>
+        </p>
+          <p class="text-muted">
+          <small><%= diyproject.created_at.strftime('%d-%m-%Y') %> || <%= diyproject.user.name.capitalize %></small>
 					</p>
       		<% if signed_in? && (current_user == diyproject.user) %>
       			<div class="diyproject-actions">
@@ -25,7 +28,7 @@
           <div class="rating">
             <% if current_user %>
               <%= t (".rate_difficulty") %>
-                <small class="rating-explain">1 - very easy, 5 - very hard</small>
+                <small class="text-muted">1 - very easy, 5 - very hard</small>
               <%= rating_for diyproject, "difficulty_degree" %>
             <br>
             <% end %>
