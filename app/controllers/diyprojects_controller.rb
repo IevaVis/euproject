@@ -30,6 +30,7 @@ class DiyprojectsController < ApplicationController
 	end
 
 	def show
+		
 	end
 
 	def edit

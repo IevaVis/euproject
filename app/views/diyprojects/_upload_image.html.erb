@@ -8,7 +8,7 @@
 			</p>
 
 				<%= simple_form_for @diyproject, :html => { :multipart => true } do |f| %>
-					<div class="form-inputs">
+					<div class="form-inputs" id="image-input">
 						<%= f.file_field :images, multiple: true %>
 					</div>
 					<div class="form-actions">
@@ -18,4 +18,11 @@
 			<%= link_to "Go back to DIY list", diyprojects_path %>
 	</div>
 </div>
+
+<script>
+	var image = $("#image-input")[0].length;
+if(image === 0){
+    alert("No file selected.");
+}
+	</script>
 
