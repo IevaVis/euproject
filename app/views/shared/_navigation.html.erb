@@ -1,4 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
   <a class="navbar-brand" href="/"><%= image_tag "Logo.png", class: "homepage-logo" %></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -72,7 +73,7 @@
       <% if signed_in? and current_user.teacher? %>
       <li class="nav-item btn-group dropleft" data-behavior="notifications">
         <a class="nav-link dropdown-toggle" href="#" data-behavior="notifications-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span class = "fas fa-bell">&nbsp;<span data-behavior="unread-count"></span>
+          <span class = "fas fa-bell"></span>&nbsp;<span data-behavior="unread-count"></span>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown" data-behavior="notification-items">
         </div>
@@ -83,15 +84,18 @@
           <%= t ("global.menu.language") %>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div align="center">
           <%= link_to flag_icon(:lt), locale: "lt", class: 'dropdown-item' %>
           <%= link_to flag_icon(:gb), locale: "en", class: 'dropdown-item' %>
           <%= link_to flag_icon(:es), locale: "es", class: 'dropdown-item' %>
           <%= link_to flag_icon(:gr), locale: "gr", class: 'dropdown-item' %>
           <%= link_to flag_icon(:pt), locale: "pt", class: 'dropdown-item' %>
         </div>
+      </div>
         </li>
     </ul>
   </div>
+</div>
 </nav>
 
     
