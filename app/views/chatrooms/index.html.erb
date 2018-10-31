@@ -31,11 +31,38 @@
 		 					</div>
 		 			</div>
 		 		</div>
-		    <% end %>
-		  	<% end %>
+		   <% end %>
+		 <% end %>
 		</div>
-		<div class="chat-form col-md-4">
-       <%= render 'form' %>
+		<div class="col-md-4">
+			<div class="chat-form">
+      	<%= render 'form' %>
+    	</div>
+    	<% if @chatrooms.exists? %>
+    	<div class="card-footer mb-4">
+    		<dl>
+    			<dt>Last post created by:</dt>
+    			<dd><%= Chatroom.last.user.name %> || <%= Chatroom.last.user.country %> </dd>
+    		</dl>
+    	</div>
+    	<% end %>
+    	<div class="card chatroom-statistics mb-3">
+    		<h6 class="card-header">Forum statistics</h6>
+    		<div class="card-body">
+    		<dl>
+    			<dt>Total posts:</dt>
+    			<dd><%= @chatrooms.count %></dd>
+    		</dl>
+    		<dl>
+    			<dt>Total comments:</dt>
+    			<dd><%= @comments.count %></dd>
+    		</dl>
+    		<dl>
+    			<dt>Total forum users:</dt>
+    			<dd><%= Chatroom.distinct.count(:user_id) + Comment.distinct.count(:user_id) %></dd>
+    		</dl>
+    	</div>
+    	</div>
     </div>
 	</div>
 </div>

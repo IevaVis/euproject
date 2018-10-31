@@ -5,6 +5,8 @@ class ChatroomsController < ApplicationController
 	def index
 		@chatrooms = Chatroom.all.order('created_at DESC')
 		@chatroom = Chatroom.new
+		@comments = Comment.all
+
 	end
 
 	def new
