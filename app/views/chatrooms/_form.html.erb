@@ -1,7 +1,9 @@
 <%= render 'shared/errors', obj: @chatroom %>
 
 	<div class="chat-form">
-		<h2><%= t ".title" %></h2><br/>
+		<div class="new-forum-post">
+		<h3><%= t ".new_forum_post" %></h3>
+	</div><br/>
 			<%= simple_form_for @chatroom, :html => { :multipart => true } do |f| %>
 				<div class="form-inputs">
 					<%= f.input :title, required: true, autofocus: true %>

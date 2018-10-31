@@ -180,11 +180,6 @@ h1, h2, h3, h4, h5, h6 {
 	color: #fff !important;
 }
 
-
-/*.diy-card {
-	background-color: #E8E8E8;
-}*/
-
 .rating {
 	margin-top: 5%;
 }
@@ -226,12 +221,11 @@ img.raty-cancel {
 	padding-bottom: 10px;
 }
 
-.forum-title {
-	margin-top: 1%;
+.forum-title, .new-forum-post {
 	background-color: rgb(198, 59, 59);
 }
 
-.forum-title h3 {
+.forum-title h3, .new-forum-post h3 {
 	font-size: 16px;
 	color: #fff;
 	padding: 10px;
