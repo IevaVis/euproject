@@ -18,17 +18,14 @@
 		 							</div>
 		 						</div>
 		 						<div class="col-md-4 float-right">
-		 							<div class="time-created">
-										Created <%= time_ago_in_words(chat.created_at) %> ago by:
-										</div> 
 										<div class="chat-owner-info">
 											<span class="far fa-envelope"></span><%= link_to(chat.user.name.capitalize, conversations_path(sender_id: current_user.id, recipient_id: chat.user.id), method: "post", class: "chat-owner") %>
 											<div class="chat-owner-country">
 											Country: <%= chat.user.country %>
 										</div>
-										<div class="chat-owner-registration">
-											Joined: <%= chat.user.created_at.strftime("%d/%m/%Y") %>
-										</div>
+										<small class="text-muted">
+											Post created: <%= chat.created_at.strftime("%d/%m/%Y") %>
+										</small>
  										</div>
 								</div>
 		 					</div>
