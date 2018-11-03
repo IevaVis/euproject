@@ -1,23 +1,32 @@
+
 <div id="comment-<%= comment.id %>">
-<div class="comment-fix">
-	<div class="row">
-		<div class="col-md-8 offset-md-2 card card-body bg-light">
-			<p><%= comment.body %></p>
-			<% if comment.user.id != current_user.id %>
-				<p>
-					<span class="quiet"><small>Created: <%= time_ago_in_words(comment.created_at) %></small></span>
+	<div class="card mb-2">
+		<div class="card-header text-muted">
+			<div class="float-left">
+    		<%= comment.user.name %><br/>
+    		<small>Posted: <%= comment.created_at.strftime("%d-%m-%Y") %></small>
+    	</div>
+    	<div class="float-right">
+    		<% if comment.user.id != current_user.id %>
 					<%= link_to "Message #{comment.user.name}", conversations_path(sender_id: current_user.id, recipient_id: comment.user.id), method: "post" %>
-				<% else %>
-				<span class="quiet"><small>Created: <%= time_ago_in_words(comment.created_at) %> ago by <%= comment.user.name %></small></span>
-			</p>
-			<% end %>
-			<% if signed_in? and current_user == comment.user %>
+				<% elsif signed_in? and current_user == comment.user %>
 				<%= link_to 'Delete comment', chatroom_comment_path(@chatroom, comment), method: :delete, remote: true %>
-			<% end %>
-		</div>
+				<% end %>
+    	</div>
+ 		</div>
+ 		<div class="card-body">
+    	<em><%= simple_format(comment.body) %></em>
+ 		</div>
 	</div>
 </div>
-<br/>
+
+
+
+				
+
+
+
+
 
 
 

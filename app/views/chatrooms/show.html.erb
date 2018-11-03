@@ -1,76 +1,93 @@
-<div class="card card-body bg-light col-md-8 offset-md-2">
-  <div align="center">
-	<%= @chatroom.title %>
-  <%= simple_format(@chatroom.description) %>
-  <hr />
-  <div class="clearfix">
-    <div class="float-xl-right">
-      <p class="center">
-        <em>Created by:</em>
-      </p>
-      <p class="center">
-        <% if current_user.id != @chatroom.user_id %>
-        <small><%= link_to "Message #{@chatroom.user.name.capitalize}", conversations_path(sender_id: current_user.id, recipient_id: @chatroom.user.id), method: 'post' %></small><br/>
+
+<div class="container">
+  <h2 class="h4 text-white forum-title mb-0 p-4 rounded-top"><%= @chatroom.title %></h2>
+<div class="table-responsive-lg">
+  <table class="table table-striped table-bordered">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Author</th>
+        <th scope="col">Post</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr>
+        <td class="author-col">
+          <% if current_user.id != @chatroom.user_id %>
+        <div><%= @chatroom.user.name %> <small><%= link_to "Send a message", conversations_path(sender_id: current_user.id, recipient_id: @chatroom.user.id), method: 'post' %></small></div>
         <% else %>
-        <%= @chatroom.user.name.capitalize %><br/>
+        <%= @chatroom.user.name.capitalize %>
         <% end %>
-        <small><%= time_ago_in_words(@chatroom.created_at) %> ago</small>
-      </p>
-    </div>
-  <div class="recipe-actions">
-    <% if signed_in? && (current_user == @chatroom.user) %>
-      <%= link_to "Edit", edit_chatroom_path(@chatroom), class: "btn btn-sm btn-warning" %>
-      <%= link_to "Delete", chatroom_path(@chatroom), method: :delete, data: { confirm: "Are you sure you want to delete this forum post?" }, class: "btn btn-sm btn-danger" %>
-    <% end %>
-      <%= link_to "Return to all posts", chatrooms_path, class: "btn btn-sm btn-primary" %>
-    </div>
+        </td>
+        <td class="post-col d-lg-flex justify-content-lg-between">
+          <div><span class="font-weight-bold">Posted:</span> <%= @chatroom.created_at.strftime("%d-%m-%Y") %></div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <div><span class="font-weight-bold">Joined:</span><br><%= @chatroom.user.created_at.strftime("%d-%m-%Y") %></div>
+          <div><span class="font-weight-bold">Posts:</span><br><%= @chatroom.user.chatrooms.count %></div>
+        </td>
+        <td>
+          <p><%= simple_format(@chatroom.description) %></p>
+          <% if signed_in? && (current_user == @chatroom.user) %>
+          <%= link_to "Delete", chatroom_path(@chatroom), method: :delete, data: { confirm: "Are you sure you want to delete this forum post?" }, class: "btn btn-sm btn-danger" %>
+          <% end %>
+           <% if signed_in? && (current_user == @chatroom.user) && !@chatroom.comments.exists? %>
+          <%= link_to "Edit", edit_chatroom_path(@chatroom), class: "btn btn-sm btn-warning" %>
+          <% end %>
+        </td>
+      </tr>
+
+      </tbody>
+    </table>
   </div>
 </div>
-</div>
-<br/>
+
+<% if @chatroom.comments != 0 %>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <em><h6 class="previous-comments">Previous comments:</h6></em>
+        <div id="comment-pane">
+          <% @comments.each do |comment| %>
+            <%= render 'comments/comment', comment: comment %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% else %>
+  <div class="container">    
+    <div class="row">
+      <div class="col-12">
+        <em><h6 class="previous-comments">No comments yet</h6></em>
+      </div>
+    </div>
+  </div>
+<% end %>
+
 
 
 <% if signed_in? and current_user.teacher? %>
-  <div class="row">
-  <div class="col-md-8 offset-md-2">
-    <br/><br/><h3>Comments</h3>
-    <hr />
-    <%= form_with model: [@chatroom, @comment] do |f| %>
-      <div class="form-group row">
-        <div class="control-label col-md-2">
-          <%= f.label :body, 'Comment' %>
-        </div>
-        <div class="col-md-8">
-          <%= f.text_area :body, rows: 8, class: "form-control", placeholder: "Add comment here", autofocus: true %>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+      <em><strong><label for="comment">Reply to this post:</label></strong></em>
+        <%= form_with model: [@chatroom, @comment] do |f| %>
+        <%= f.text_area :body, rows: 8, class: "form-control mb-3", placeholder: "Add your comment here", autofocus: true %>
+        <%= f.submit 'Submit Comment', class: "btn btn-secondary btn-sm mb-5" %>
+        <% end %>
       </div>
-      <div class="form-group row">
-        <div class="col-md-2 offset-md-2">
-          <%= f.submit 'Submit Comment', class: "btn btn-primary btn-sm btn-xlarge" %>
-        </div>
-      </div>
-      <% end %>
     </div>
   </div>
 <% end %> 
 
 
-<% if @chatroom.comments != 0 %>
-  <div class="row">
-    <div class="col-md-8 offset-md-2">
-      <br/><h6>Prior Comments: </h6>
-      <div id="comment-pane">
-        <% @comments.each do |comment| %>
-          <%= render 'comments/comment', comment: comment %>
-        <% end %>
-      </div>
-    </div>
-  </div>
-<% else %>
-  <div class="row">
-    <div class="col-md-8 offset-md-2">
-      <h6>No comments yet</h6>
-    </div>
-  </div>
-<% end %>
+
+  
+
+
 
