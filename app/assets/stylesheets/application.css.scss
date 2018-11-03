@@ -72,7 +72,8 @@ h1, h2, h3, h4, h5, h6 {
 .login-form,
 .signup-form,
 .diyupload-form,
-.documentupload-form {
+.documentupload-form,
+.new-post-form {
 	margin-bottom: 40px;
 	@include background-tile;
 
@@ -262,9 +263,7 @@ img.raty-cancel {
 
 }
 
-.time-created,
-.chat-owner-country,
-.chat-owner-registration {
+.chat-owner-country {
 	font-size: 12px;
 }
 
@@ -274,10 +273,13 @@ img.raty-cancel {
 	font-weight: 700;
 }
 
-.previous-comments {
-	font-weight: 700;
-
+.author-col {
+  min-width: 12em;
 }
+
+
+/*Private messaging */
+
 
 #message-box {
 	height: 250px;
@@ -294,12 +296,6 @@ margin-left: 1%;
 }
 
 
-.author-col {
-  min-width: 12em;
-}
-/*.post-col {
-  min-width: 22em;
-}*/
 
 
 

@@ -50,25 +50,15 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <em><h6 class="previous-comments">Previous comments:</h6></em>
         <div id="comment-pane">
           <% @comments.each do |comment| %>
             <%= render 'comments/comment', comment: comment %>
-            <% end %>
-          </div>
+          <% end %>
         </div>
-      </div>
-    </div>
-  <% else %>
-  <div class="container">    
-    <div class="row">
-      <div class="col-12">
-        <em><h6 class="previous-comments">No comments yet</h6></em>
       </div>
     </div>
   </div>
 <% end %>
-
 
 
 <% if signed_in? and current_user.teacher? %>
