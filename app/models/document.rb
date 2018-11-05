@@ -8,6 +8,7 @@ class Document < ApplicationRecord
   validate :attachment_type
 
 
+
   default_scope {where nil}
   scope :doc_language, -> (name) { where('doc_language iLIKE ?', "%" + name + "%") }
   scope :tags, -> (tags)  {where('documents.tags @> ARRAY[?]', [tags.capitalize])}
@@ -21,11 +22,11 @@ class Document < ApplicationRecord
 
   def attachment_type
     if attachment.attached? == false
-      errors.add(:attachment, "is missing")
+      errors[:attachment] << "is missing"
     end
-      if !attachment.content_type.in?(%(image/jpg image/jpeg image/png application/pdf application/zip application/vnd.openxmlformats-officedocument.wordprocessingml.document))
-        errors.add(:attachment, 'must be a PDF, DOC, JPG or PNG file')
-      end
+    if attachment.attached? and !attachment.content_type.in?(%(image/jpg image/jpeg image/png application/pdf application/zip application/vnd.openxmlformats-officedocument.wordprocessingml.document))
+      errors.add(:attachment, 'must be a PDF, DOC, JPG or PNG file')
+    end
   end
 
 
