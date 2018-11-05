@@ -19,8 +19,8 @@ class Diyproject < ApplicationRecord
 			errors[:images] << "are missing"
 		end
 		images.each do |image|
-			if !image.content_type.in?(%(image/jpeg image/png'))
-				errors[:images] << 'needs to be a JPEG og PNG'
+			if !image.content_type.in?(%(image/jpg image/jpeg image/png'))
+				errors[:images] << 'needs to be a JPG og PNG'
 			end
 		end
 	end

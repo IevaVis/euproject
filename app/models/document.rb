@@ -5,6 +5,7 @@ class Document < ApplicationRecord
 	validates :is_public, inclusion: [true, false]
 	validates_acceptance_of :terms, :allow_nil => false,
   :accept => true
+  validate :attachment_type
 
 
   default_scope {where nil}
@@ -15,5 +16,17 @@ class Document < ApplicationRecord
   def self.tag_search(tag)
     where("? = ANY(tags)", "#{tag}")
   end
+
+  private
+
+  def attachment_type
+    if attachment.attached? == false
+      errors.add(:attachment, "is missing")
+    end
+      if !attachment.content_type.in?(%(image/jpg image/jpeg image/png application/pdf application/zip application/vnd.openxmlformats-officedocument.wordprocessingml.document))
+        errors.add(:attachment, 'must be a PDF, DOC, JPG or PNG file')
+      end
+  end
+
 
 end
