@@ -1,34 +1,35 @@
-<div class= "jumbotron" >
-  <div class="short-info">
-    <h1>Social Learning For STEM In Primary Education</h1>
+
+<div class="container">
+  <div class= "jumbotron">
+    <div class="container">
+      <h1 class="short-info mb-1">Social Learning For STEM In Primary Education</h1>
+      <h6 class="mb-3">Supports teachers, students and their parents in creating unique teaching methods and resources of STEM.<br/> Shares and implements it within communities of interest.</h6>
+      <div class="btn-group">
+        <button class="btn btn-custom5 shadow p-2 mb-1 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Log In
+        </button>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+           <%= link_to t("global.menu.teacher"), sign_in_path(role: "teacher"), class: 'dropdown-item' %>
+          <%= link_to t("global.menu.family"), sign_in_path(role: "family"), class: 'dropdown-item' %>
+          <%= link_to t("global.menu.student"), sign_in_path(role: "student"), class: 'dropdown-item' %>
+        </div>
+      </div>
+      <div class="btn-group">
+        <button class="btn btn-custom5 shadow p-2 mb-1 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Sign Up
+        </button>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to t("global.menu.teacher"), sign_up_path(role: "teacher"), class: 'dropdown-item' %>
+          <%= link_to t("global.menu.family"), sign_up_path(role: "family"), class: 'dropdown-item' %>
+          <%= link_to t("global.menu.student"), sign_up_path(role: "student"), class: 'dropdown-item' %>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
+
 <div class="container">
-      <div class="row no-gutters bg-light p-4 mb-4">
-        <div class="col-12 col-lg-6 mb-4 mb-lg-0">
-          <div class="row">
-            <div class="col-12 col-sm-6 text-center">
-              <img src="assets/whatwedo.jpeg" style="width:250px; height:250px;"  class="img-fluid rounded-circle mb-4 mb-lg-0">
-            </div>
-            <div class="col-12 col-sm-6">
-              <h2>What we do</h2>
-              <p>This project is dedicated for sharing knowledge and experience between teachers, parents and students studying or interested in education field. Through hands-on activities and based on the logic of the Social Learning Theory, “CREATEskills” will contribute to the development of the 21st century skills among students. </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-lg-6">
-          <div class="row">
-            <div class="col-12 col-sm-6 text-center">
-              <img src="assets/whoweare.jpeg", style="width:250px; height:250px" class="img-fluid rounded-circle mb-4 mb-lg-0">
-            </div>
-            <div class="col-12 col-sm-6">
-              <h2>Who we are</h2>
-              <p>The “CREATEskills” project is designed to develop and implement innovative practices, tools and methodologies in primary schools for the establishment of STEM studio (Science, Technology, Engineering and Mathematics) classrooms, improving the quality and relevance of the learning process in primary education.</p>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="row mb-4">
         <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-3">
           <div class="card">
@@ -63,6 +64,30 @@
             <div class="card-header">DIY photo gallery</div>
             <div class="card-body">
               <p class="card-text">Photo Gallery for parents from all EU countries to share their home activities and Do It Yourself (DIY) projects. List of activities and DIY projects available for parents to experiment at home with their children and siblings.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="row no-gutters bg-light p-4 mb-4">
+        <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+          <div class="row">
+            <div class="col-12 col-sm-6 text-center">
+              <img src="assets/whatwedo.jpeg" style="width:220px; height:220px;"  class="img-fluid rounded-circle mb-4 mb-lg-0">
+            </div>
+            <div class="col-12 col-sm-6">
+              <h2>What we do</h2>
+              <p>This project is dedicated for sharing knowledge and experience between teachers, parents and students studying or interested in education field. Through hands-on activities and based on the logic of the Social Learning Theory, “CREATEskills” will contribute to the development of the 21st century skills among students. </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="row">
+            <div class="col-12 col-sm-6 text-center">
+              <img src="assets/whoweare.jpeg", style="width:220px; height:220px" class="img-fluid rounded-circle mb-4 mb-lg-0">
+            </div>
+            <div class="col-12 col-sm-6">
+              <h2>Who we are</h2>
+              <p>The “CREATEskills” project is designed to develop and implement innovative practices, tools and methodologies in primary schools for the establishment of STEM studio (Science, Technology, Engineering and Mathematics) classrooms, improving the quality and relevance of the learning process in primary education.</p>
             </div>
           </div>
         </div>
