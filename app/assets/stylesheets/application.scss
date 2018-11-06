@@ -13,7 +13,6 @@ a {
 
 a:hover {
 	color: rgba(0, 0, 0, 0.5);
-	font-weight: 500;
 }
 
 @mixin background-tile {
@@ -159,7 +158,7 @@ i.fab {
 .badge-custom {
 	background-color: rgb(247, 147, 30);
 	color: white;
-	margin-right: 5px;
+	margin-right: 3px;
 }
 
 .attachment-actions {
