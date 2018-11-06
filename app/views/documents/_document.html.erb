@@ -4,6 +4,8 @@
 			<h6 class="document-title"><%= document.title %></h6>
 			<small>Document language: <%= document.doc_language %></small>
 			<br/>
+			<small>Uploaded by: <%= document.user.name %></small>
+			<br/>
 			<% document.tags.each do |tag| %>
  					<%= link_to "#{tag}", {controller: "documents", action: "index", tag:tag}, class: "badge badge-custom" %>
 			<% end %>
