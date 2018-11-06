@@ -11,10 +11,10 @@
         <%= link_to t("global.menu.home"), root_path, :class => 'nav-link' %><span class="sr-only">(current)</span>
       </li>
       <li class="nav-item">
-        <%= link_to t("global.menu.about_us"), 'http://www.createskills.eu', class: 'nav-link' %>
+        <%= link_to t("global.menu.about_us"), 'http://www.createskills.eu', class: 'nav-link', :target => :_blank %>
       </li>
        <li class="nav-item">
-        <%= link_to t("global.menu.contacts"), 'http://www.createskills.eu/contact/', class: 'nav-link' %>
+        <%= link_to t("global.menu.contacts"), 'http://www.createskills.eu/contact/', class: 'nav-link', :target => :_blank %>
       </li>
       <% if signed_in? and current_user.teacher? %>
      <li class="nav-item dropdown">
@@ -59,7 +59,7 @@
           </li>
          <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <%= t ("global.menu.new_member") %>
+          <%= t ("global.menu.sign_in") %>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
         <%= link_to t("global.menu.teacher"), sign_up_path(role: "teacher"), class: 'dropdown-item' %>

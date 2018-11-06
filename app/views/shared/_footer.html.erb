@@ -10,9 +10,9 @@
     <p class="text-center">&copy; CREATEskills, 2018</p>
     <ul class="list-inline text-center">
       <li class="list-inline-item">
-        <a class="mr-3" href="http://www.createskills.eu">About Us</a>
-        <a class="mr-3" href="http://www.createskills.eu/contact/">Contacts</a>
-        <a href="/about">Terms of use & Privacy policy</a>
+        <%= link_to t("global.menu.about_us"), 'http://www.createskills.eu', class: 'mr-3', :target => :_blank %>
+        <%= link_to t("global.menu.contacts"), 'http://www.createskills.eu/contact/', class: 'mr-3', :target => :_blank %>
+        <a href="#">Terms of use & Privacy policy</a>
       </li>
     </ul>
   </div>

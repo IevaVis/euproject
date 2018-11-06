@@ -14,7 +14,7 @@ lt:
       private: "Žinutės"
       about_us: "Apie Projektą"
       contacts: "Kontaktai"
-      new_member: "Naujas narys"
+      sign_in: "Registruotis"
       log_in: "Prisijungti"
       teacher: "Mokytojas"
       student: "Studentas"
