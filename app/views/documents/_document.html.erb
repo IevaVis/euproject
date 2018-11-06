@@ -5,7 +5,7 @@
 			<small>Document language: <%= document.doc_language %></small>
 			<div class="document-tags">
 				<% document.tags.each do |tag| %>
- 					<span><%= link_to "#{tag}", {controller: "documents", action: "index", tag: tag}, class: "badge badge-custom" %></span>
+ 					<%= link_to "#{tag}", {controller: "documents", action: "index", tag: tag}, class: "badge badge-custom" %>
   			<% end %>
 			</div>
 			<div class="attachment-actions">
