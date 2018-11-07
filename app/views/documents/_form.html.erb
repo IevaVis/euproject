@@ -9,8 +9,8 @@
 			<%= simple_form_for @document, :html => { :multipart => true } do |f| %>
 				<div class="form-inputs">
 					<%= f.input :title, required: true, autofocus: true %>
-						<a title="Add tags!" data-toggle="popover" data-trigger="hover" data-content="Tags are keywords you assign to the document you are sharing. As a rule of thumb, keep your tags to two words or less. If you find yourself going over that limit, it may make more sense to create two separate tags—for example, rather than tagging something as 'Algebra performance task', you could tag it as 'algebra' and 'performance task'" class="explain-tags">How tags work?</a>
-					<%= f.input :tags, required: true %>
+						<a title="Add keywords!" data-toggle="popover" data-trigger="hover" data-content="Keywords are words you assign to the document you are sharing. As a rule of thumb, keep your keywords to two words or less. If you find yourself going over that limit, it may make more sense to create two separate keywords — for example, rather than tagging something as 'Algebra performance task', you could tag it as 'algebra' and 'performance task'" class="explain-tags">How keywords work?</a>
+					<%= f.input :tags, required: true, label: :Keywords %>
 					<%= f.input :doc_language, required: true, collection: ["English", "Portuguese", "Lithuanian", "Spanish", "Greek", "Bulgarian", "Croatian", "Czech", "Danish", "Dutch", "Estonian", "Finnish", "French", "German", "Hungarian", "Italian", "Latvian", "Maltese", "Polish", "Romanian", "Slovenian", "Swedish", "Other" ] %>
 					<%= f.file_field :attachment %><br/>
 					<%= f.hint 'Select Document Type' %>

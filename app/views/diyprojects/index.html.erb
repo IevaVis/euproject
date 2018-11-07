@@ -39,11 +39,24 @@
 						</div>
 						<div class="diy-search-submit">
 							<%= submit_tag("Search", :class => "btn btn-sm btn-outline-secondary") %>
-							<%= link_to "Clear", diyprojects_path, class: "btn btn-sm btn-outline-secondary" %>
+							<%= link_to "Clear", diyprojects_path, class: "btn btn-sm btn-outline-warning" %>
 						</div>
 					</div>
 				<% end %>
     	</div>
+
+    	<div class="row">
+    		<div class="card diy-tips col-md-12 ml-3">
+    			<div class="card-body">
+              <small><p class="card-text text-muted">Click on the image to get usefull tips about uploading a new DIY project</p></small><br/>
+              <%= link_to "/assets/Tips.png", 'data-lightbox': 'image' do %>
+              <img class="card img-bottom" src="/assets/Tips.png">
+              <% end %>
+              </img>
+            </div>
+    		</div>
+    	</div>
+
   	</div>
 	</div>
 	<%= will_paginate @diyprojects, list_classes: %w(pagination justify-content-center) %>
