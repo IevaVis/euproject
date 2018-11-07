@@ -66,7 +66,7 @@ class DocumentsController < ApplicationController
           params[:document][:tags][index] = tag.strip.titleize
         end
       end
-      params.require(:document).permit(:title, :doc_language, :is_public, :terms, :attachment, :tags => [])
+      params.require(:document).permit(:title, :description, :doc_language, :is_public, :terms, :attachment, :tags => [])
     end
 
 		def require_login

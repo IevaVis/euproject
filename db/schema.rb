@@ -88,6 +88,7 @@ ActiveRecord::Schema.define(version: 2018_10_22_112204) do
     t.bigint "user_id"
     t.string "title"
     t.text "tags", array: true
+    t.text "description"
     t.string "doc_language"
     t.boolean "is_public"
     t.boolean "terms"

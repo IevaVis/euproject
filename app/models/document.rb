@@ -1,11 +1,14 @@
 class Document < ApplicationRecord
 	belongs_to :user
 	has_one_attached :attachment
-	validates :title, :tags, presence: true
+	validates :title, presence: true
+  validates :description, presence: true
 	validates :is_public, inclusion: [true, false]
 	validates_acceptance_of :terms, :allow_nil => false,
   :accept => true
+  validates :doc_language, presence: true
   validate :attachment_type
+
 
 
 
