@@ -3,6 +3,9 @@
 <div class="col-md-6 offset-md-3">
 	<div class="diyupload-form">
 		<h2><%= t ".title" %></h2><br/>
+		<%= content_for(:the_links) do %>
+    		Accept <%= link_to "Terms of use", documents_path %> 
+			<% end %>
 			<%= simple_form_for @diyproject, :html => { :multipart => true } do |f| %>
 				<div class="form-inputs">
 					<%= f.input :title, required: true, autofocus: true %>
@@ -12,6 +15,7 @@
 					<%= f.hint 'Select age best suitable for this DIY activity' %>
 					<%= f.input :age, as: :radio_buttons, collection: [['From 6 to 9', 'From 6 to 9'], ['From 10 to 12', 'From 10 to 12'], ['Other', 'Other']] %>
 					<%= f.file_field :images, multiple: true %>
+					<%= f.input :terms, as: :boolean, checked_value: true, unchecked_value: false, :label => content_for(:the_links) %>
 				</div>
 				<div class="form-actions">
 					<%= f.button :submit, class: "btn-custom" %>

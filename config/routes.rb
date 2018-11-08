@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
   root "welcome#index"
+  get "/terms" => "welcome#terms", as: "terms"
   post '/rate' => 'rater#create', :as => 'rate'
   resources :documents
   resources :diyprojects

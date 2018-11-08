@@ -43,7 +43,7 @@ class UsersController < Clearance::UsersController
 	private
 
 	def valid_params
-		params.require(:user).permit(:name, :country, :email, :password, :role, :grade_of_teaching)
+		params.require(:user).permit(:name, :country, :email, :password, :role, :grade_of_teaching, :terms)
 	end
 
 	def require_login

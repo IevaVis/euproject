@@ -4,6 +4,9 @@
 	<div class="signup-form">
 
 		<h2><%= t ".title" %></h2><br/>
+		<%= content_for(:the_links) do %>
+    		Accept <%= link_to "Terms of use & Privacy policy", terms_path %> 
+			<% end %>
 <div class="form-inputs">
 <%= form.hidden_field :role, value: form.object.role || params[:role] %>
 <%= form.input :name, required: true, autofocus: true %>
@@ -14,6 +17,7 @@
 
 <%= form.input :email, required: true %>
 <%= form.input :password, required: true %>
+<%= form.input :terms, as: :boolean, checked_value: true, unchecked_value: false, :label => content_for(:the_links) %>
 
 </div>
 	<div class="form-actions">

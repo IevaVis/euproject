@@ -7,6 +7,8 @@ class User < ApplicationRecord
   validates :email, uniqueness: {case_sensitive: false}
   validates :country, presence: true
   validates :password, length: { minimum: 5 }, allow_nil: true
+  validates_acceptance_of :terms, :allow_nil => false,
+  :accept => true
   has_many :documents, dependent: :destroy
   has_many :diyprojects, dependent: :destroy
   has_many :chatrooms, dependent: :destroy

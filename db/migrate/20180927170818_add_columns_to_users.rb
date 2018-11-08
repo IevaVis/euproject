@@ -5,6 +5,7 @@ class AddColumnsToUsers < ActiveRecord::Migration[5.2]
 	 		t.string :name
 	 		t.string :country
 	 		t.string :grade_of_teaching, default: "none"
+	 		t.boolean :terms
  		end
   end
 end

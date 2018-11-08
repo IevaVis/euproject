@@ -6,6 +6,7 @@ class CreateDiyprojects < ActiveRecord::Migration[5.2]
 	 		t.string :description
     	t.string :place
     	t.string :age
+      t.boolean :terms
     	t.timestamps
     end
   end

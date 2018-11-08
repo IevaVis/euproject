@@ -5,6 +5,8 @@ class Diyproject < ApplicationRecord
 	validates :title, presence: true, length: { maximum: 50}
 	validates :description, presence: true, length: { maximum: 500}
 	validates :age, :place,  presence: true
+	validates_acceptance_of :terms, :allow_nil => false,
+  :accept => true
 	validate :image_type
 
 

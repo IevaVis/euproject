@@ -1,8 +1,8 @@
 class Document < ApplicationRecord
 	belongs_to :user
 	has_one_attached :attachment
-	validates :title, presence: true
-  validates :description, presence: true
+	validates :title, presence: true, length: { maximum: 50}
+  validates :description, presence: true, length: { maximum: 250}
 	validates :is_public, inclusion: [true, false]
 	validates_acceptance_of :terms, :allow_nil => false,
   :accept => true
