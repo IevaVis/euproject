@@ -19,7 +19,7 @@
 			<%= f.file_field :files, multiple: true, accept: 'application/pdf, application/zip,application/vnd.openxmlformats-officedocument.wordprocessingml.document' %>
 			
 			<div class="input-group-append">
-				<%= f.submit "Send message", class: "btn btn-secondary" %>
+				<%= f.submit "Send message", class: "btn btn-secondary", data: { disable_with: false } %>
 			</div>
 		</div>
 	<% end %>
