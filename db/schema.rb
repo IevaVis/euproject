@@ -165,6 +165,7 @@ ActiveRecord::Schema.define(version: 2018_10_22_112204) do
     t.string "name"
     t.string "country"
     t.string "grade_of_teaching", default: "none"
+    t.boolean "terms"
     t.index ["email"], name: "index_users_on_email"
     t.index ["remember_token"], name: "index_users_on_remember_token"
   end

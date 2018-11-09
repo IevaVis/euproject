@@ -15,7 +15,11 @@ class MessagesController < ApplicationController
 			if files
 				@message.files.attach
 			end
-      # Notification.create(receiver: @message.user, actor: @message.user, action: "sent", notifiable: @message)
+			if @conversation.sender == current_user
+      	Notification.create(receiver: @conversation.recipient, actor: @conversation.sender, action: "sent", notifiable: @message)
+    	elsif @conversation.recipient == current_user
+    		Notification.create(receiver: @conversation.sender, actor: @conversation.recipient, action: "sent", notifiable: @message)
+    	end
 			redirect_to conversation_messages_path(@conversation)
 		end
 	end
