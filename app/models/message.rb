@@ -2,7 +2,7 @@ class Message < ApplicationRecord
   belongs_to :conversation
   belongs_to :user
   validates_presence_of :conversation_id, :user_id
-  validates :body, presence: true, unless: :files
+  validates :body, presence: true, unless: Proc.new { |message| message.files.present? }
   has_many_attached :files
   validate :file_type
 
@@ -20,6 +20,11 @@ class Message < ApplicationRecord
     )
   }
 
+  # def check_empty_message
+  #   if self.body.blank? && self.files
+  #
+  #   end
+  # end
 
   def message_time
     created_at.strftime("%d-%m-%y at %l:%M %p")
