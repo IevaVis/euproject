@@ -11,7 +11,7 @@
 				<%= f.input :title, required: true, autofocus: true %>
 				<%= f.input :description, required: true %>
 					<a title="Add keywords!" data-toggle="popover" data-trigger="hover" data-content="Keywords are words you assign to the document you are sharing. As a rule of thumb, keep your keywords to two words or less. If you find yourself going over that limit, it may make more sense to create two separate keywords — for example, rather than tagging something as 'Algebra performance task', you could tag it as 'algebra' and 'performance task'" class="explain-tags">How keywords work?</a>
-				<%= f.input :tags, required: true %>
+				<%= f.input :tags, input_html: {value: f.object.tags.join(', ') || ''}, required: true %>
 				<%= f.input :doc_language, required: true, collection: ["English", "Portuguese", "Lithuanian", "Spanish", "Greek", "Bulgarian", "Croatian", "Czech", "Danish", "Dutch", "Estonian", "Finnish", "French", "German", "Hungarian", "Italian", "Latvian", "Maltese", "Polish", "Romanian", "Slovenian", "Swedish", "Other" ] %>
 				<%= f.file_field :attachment %><br/>
 				<%= f.hint 'Select Document Type' %>
