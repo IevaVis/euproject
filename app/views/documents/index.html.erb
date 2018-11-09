@@ -23,11 +23,13 @@
 			</div>	
   	</div>
     <div class="right-side col-md-2">
+      <% if current_user.teacher? %>
       <div class="row">
         <div class="newdoc-button col-md-12">
           <%= link_to 'New Document', new_document_path, class: "btn btn-lg btn-custom4" %>
         </div>
       </div>
+      <% end %>
       <div class="row">
   	    <div class="all-tags-block-outline col-md-1 mb-5">
           <div class="all-tags-block">

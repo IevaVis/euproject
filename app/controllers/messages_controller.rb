@@ -15,6 +15,7 @@ class MessagesController < ApplicationController
 			if files
 				@message.files.attach
 			end
+      # Notification.create(receiver: @message.user, actor: @message.user, action: "sent", notifiable: @message)
 			redirect_to conversation_messages_path(@conversation)
 		end
 	end

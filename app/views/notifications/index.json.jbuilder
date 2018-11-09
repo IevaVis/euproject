@@ -7,5 +7,8 @@ json.array! @notifications do |notification|
 
 	end
 
-	json.url chatroom_path(notification.notifiable.chatroom, anchor: dom_id(notification.notifiable))
+	json.url chatroom_path(notification.notifiable.chatroom, anchor: dom_id(notification.notifiable)) 
+
 end
+
+

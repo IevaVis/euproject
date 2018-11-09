@@ -32,7 +32,7 @@ class DocumentsController < ApplicationController
 			redirect_to documents_path
 		else 
 			flash[:danger] = "Something went wrong. Try again"
-			render:new
+			render :new
 		end
 	end
 
