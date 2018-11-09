@@ -3,24 +3,53 @@
 <div class="col-md-6 offset-md-3">
 	<div class="documentupload-form">
 		<h2><%= t ".title" %></h2><br/>
-			<%= content_for(:the_links) do %>
-    		Accept <%= link_to "Terms of use", documents_path %> 
-			<% end %>
-			<%= simple_form_for @document, :html => { :multipart => true } do |f| %>
-				<div class="form-inputs">
-					<%= f.input :title, required: true, autofocus: true %>
-					<%= f.input :description, required: true %>
-						<a title="Add keywords!" data-toggle="popover" data-trigger="hover" data-content="Keywords are words you assign to the document you are sharing. As a rule of thumb, keep your keywords to two words or less. If you find yourself going over that limit, it may make more sense to create two separate keywords — for example, rather than tagging something as 'Algebra performance task', you could tag it as 'algebra' and 'performance task'" class="explain-tags">How keywords work?</a>
-					<%= f.input :tags, required: true %>
-					<%= f.input :doc_language, required: true, collection: ["English", "Portuguese", "Lithuanian", "Spanish", "Greek", "Bulgarian", "Croatian", "Czech", "Danish", "Dutch", "Estonian", "Finnish", "French", "German", "Hungarian", "Italian", "Latvian", "Maltese", "Polish", "Romanian", "Slovenian", "Swedish", "Other" ] %>
-					<%= f.file_field :attachment %><br/>
-					<%= f.hint 'Select Document Type' %>
-					<%= f.collection_radio_buttons :is_public, [[true, 'Public'] ,[false, 'Private']], :first, :last %>
-					<%= f.input :terms, as: :boolean, checked_value: true, unchecked_value: false, :label => content_for(:the_links) %>
-				</div>
-				<div class="form-actions">
-					<%= f.button :submit, class: "btn-custom" %>
-				</div>
-			<% end %>
+		<%= content_for(:the_links) do %>
+    	Accept <a href = "#" data-toggle ="modal" data-target = "#exampleModalLong"> Terms of use </a>
+		<% end %>
+		<%= simple_form_for @document, :html => { :multipart => true } do |f| %>
+			<div class="form-inputs">
+				<%= f.input :title, required: true, autofocus: true %>
+				<%= f.input :description, required: true %>
+					<a title="Add keywords!" data-toggle="popover" data-trigger="hover" data-content="Keywords are words you assign to the document you are sharing. As a rule of thumb, keep your keywords to two words or less. If you find yourself going over that limit, it may make more sense to create two separate keywords — for example, rather than tagging something as 'Algebra performance task', you could tag it as 'algebra' and 'performance task'" class="explain-tags">How keywords work?</a>
+				<%= f.input :tags, required: true %>
+				<%= f.input :doc_language, required: true, collection: ["English", "Portuguese", "Lithuanian", "Spanish", "Greek", "Bulgarian", "Croatian", "Czech", "Danish", "Dutch", "Estonian", "Finnish", "French", "German", "Hungarian", "Italian", "Latvian", "Maltese", "Polish", "Romanian", "Slovenian", "Swedish", "Other" ] %>
+				<%= f.file_field :attachment %><br/>
+				<%= f.hint 'Select Document Type' %>
+				<%= f.collection_radio_buttons :is_public, [[true, 'Public'] ,[false, 'Private']], :first, :last %>
+				<%= f.input :terms, as: :boolean, checked_value: true, unchecked_value: false, :label => content_for(:the_links) %>
+			</div>
+			<div class="form-actions">
+				<%= f.button :submit, class: "btn-custom" %>
+			</div>
+		<% end %>
 	</div>
+</div>
+
+
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Accept Terms of Use</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        1. I confirm that I have read, understand and agree to the above terms of using this platform. 
+        <br/>
+
+				2. I agree that regarding the terms of using this platform, this information will be shared with other users for educational purposes and not commercial.
+				<br/>
+
+				3. I agree that regarding the terms of using this platform I am taking all responsibility for the uploaded content and used language.
+				<br/>
+
+				4. I agree that regarding the terms of using this platform I am taking all responsibility for the uploaded content.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>

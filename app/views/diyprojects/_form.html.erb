@@ -4,22 +4,50 @@
 	<div class="diyupload-form">
 		<h2><%= t ".title" %></h2><br/>
 		<%= content_for(:the_links) do %>
-    		Accept <%= link_to "Terms of use", documents_path %> 
-			<% end %>
-			<%= simple_form_for @diyproject, :html => { :multipart => true } do |f| %>
-				<div class="form-inputs">
-					<%= f.input :title, required: true, autofocus: true %>
-					<%= f.input :description, as: :text, input_html: {rows: 5}, required: true %>
-					<%= f.hint 'Select DIY Project Type' %>
-					<%= f.input :place, as: :radio_buttons, collection: [:indoors , :outdoors] %>
-					<%= f.hint 'Select age best suitable for this DIY activity' %>
-					<%= f.input :age, as: :radio_buttons, collection: [['From 6 to 9', 'From 6 to 9'], ['From 10 to 12', 'From 10 to 12'], ['Other', 'Other']] %>
-					<%= f.file_field :images, multiple: true %>
-					<%= f.input :terms, as: :boolean, checked_value: true, unchecked_value: false, :label => content_for(:the_links) %>
-				</div>
-				<div class="form-actions">
-					<%= f.button :submit, class: "btn-custom" %>
-				</div>
-			<% end %>
+    		Accept <a href = "#" data-toggle ="modal" data-target = "#exampleModalLong"> Terms of use </a>
+		<% end %>
+		<%= simple_form_for @diyproject, :html => { :multipart => true } do |f| %>
+			<div class="form-inputs">
+				<%= f.input :title, required: true, autofocus: true %>
+				<%= f.input :description, as: :text, input_html: {rows: 5}, required: true %>
+				<%= f.hint 'Select DIY Project Type' %>
+				<%= f.input :place, as: :radio_buttons, collection: [:indoors , :outdoors] %>
+				<%= f.hint 'Select age best suitable for this DIY activity' %>
+				<%= f.input :age, as: :radio_buttons, collection: [['From 6 to 9', 'From 6 to 9'], ['From 10 to 12', 'From 10 to 12'], ['Other', 'Other']] %>
+				<%= f.file_field :images, multiple: true %>
+				<%= f.input :terms, as: :boolean, checked_value: true, unchecked_value: false, :label => content_for(:the_links) %>
+			</div>
+			<div class="form-actions">
+				<%= f.button :submit, class: "btn-custom" %>
+			</div>
+		<% end %>
 	</div>
+</div>
+
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Accept Terms of Use</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        1. I confirm that I have read, understand and agree to the above terms of using this platform. 
+        <br/>
+
+				2. I agree that regarding the terms of using this platform, this information will be shared with other users for educational purposes and not commercial.
+				<br/>
+
+				3. I agree that regarding the terms of using this platform I am taking all responsibility for the uploaded content and used language.
+				<br/>
+
+				4. I agree that regarding the terms of using this platform I am taking all responsibility for the uploaded content.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
