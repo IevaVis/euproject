@@ -6,10 +6,8 @@
     	<%= select_tag(:doc_language, options_for_select([["English"], ["Portuguese"], ["Lithuanian"], ["Spanish"], ["Greek"], ["Bulgarian"], ["Croatian"], ["Czech"], ["Danish"], ["Dutch"], ["Estonian"], ["Finnish"], ["French"], ["German"], ["Hungarian"], ["Italian"], ["Latvian"], ["Maltese"], ["Polish"], ["Romanian"], ["Slovenian"], ["Swedish"], ["Other"]]), id: "index-search", prompt: "Select document language", class: "form-control py-2") %>
     	<%= text_field_tag :tags, params[:tags], placeholder: "Search documents by keyword", id: "index-search", class: "form-control py-2"  %>
       <span class="input-group-append">
-        <div class="diy-search-submit">
           <%= submit_tag("Search", :class => "btn btn-outline-secondary") %>
-          <%= link_to "Clear", documents_path, class: "btn btn-sm btn-outline-warning" %>
-        </div>
+          <%= link_to "Clear", documents_path, class: "btn btn-sm btn-outline-warning ml-1" %>
       </span>
       <% end %>
     </div>
