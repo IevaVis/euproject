@@ -7,6 +7,7 @@ class Document < ApplicationRecord
 	validates_acceptance_of :terms, :allow_nil => false,
   :accept => true
   validates :doc_language, presence: true
+  validates :tags, presence: true
   validate :attachment_type
 
 
