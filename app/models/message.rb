@@ -13,7 +13,8 @@ class Message < ApplicationRecord
               {
                    from: self.user.name,
                    body: self.body,
-                   created_at: self.message_time
+                   created_at: self.message_time,
+                   conversation_id: self.conversation_id
           },
           template_version: self
       }
