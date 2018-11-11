@@ -6,13 +6,13 @@ class DocumentsController < ApplicationController
 
 
 	def index
-  	@documents = Document.all
+  	@documents = Document.all.order('created_at DESC')
 		@tags = @documents.map {|document| document.tags}.flatten.uniq
     if params[:tag]
-      @documents = Document.tag_search(params[:tag])
+      @documents = Document.tag_search(params[:tag]).order('created_at DESC')
     end
-  	@documents = Document.doc_language(params[:doc_language]) if params[:doc_language].present?
-		@documents = @documents.tags(params[:tags]) if params[:tags].present?
+  	@documents = Document.doc_language(params[:doc_language]).order('created_at DESC') if params[:doc_language].present?
+		@documents = @documents.tags(params[:tags]).order('created_at DESC') if params[:tags].present?
 		respond_to do |format|
 			format.html { 
 				render "index"

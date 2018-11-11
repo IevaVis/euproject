@@ -9,6 +9,7 @@ class Document < ApplicationRecord
   validates :doc_language, presence: true
   validates :tags, presence: true
   validate :attachment_type
+  validate :max_tag_size
 
 
 
@@ -23,6 +24,14 @@ class Document < ApplicationRecord
   end
 
   private
+
+  
+def max_tag_size
+ errors[:documents] << ": add minimum 1 and maximum 5 keywords separated by commas" if tags.count > 5
+ self.tags.each do |tag|
+  errors[:documents] << ": Keywords have to be 15 characters maximum each and each keyword has to be separated by comma" if tag.length > 15
+ end
+end
 
   def attachment_type
     if attachment.attached? == false
