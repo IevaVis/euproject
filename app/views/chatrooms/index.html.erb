@@ -19,7 +19,11 @@
 		 						</div>
 		 						<div class="col-md-4 float-right">
 										<div class="chat-owner-info">
+											<% if current_user != chat.user %>
 											<span class="far fa-envelope"></span><%= link_to(chat.user.name.capitalize, conversations_path(sender_id: current_user.id, recipient_id: chat.user.id), method: "post", class: "chat-owner") %>
+											<% else %>
+											<%= chat.user.name.capitalize %>
+											<% end %>
 											<div class="chat-owner-country">
 											Country: <%= chat.user.country %>
 										</div>
@@ -36,36 +40,36 @@
 		</div>
 		<div class="col-md-4">
 			<div class="new-forum-post">
-		<h3><%= t ".new_forum_post" %></h3>
-	</div><br/>
+				<h3><%= t ".new_forum_post" %></h3>
+			</div><br/>
 			<div class="chat-form">
-      	<%= render 'form' %>
-    	</div>
-    	<% if @chatrooms.exists? %>
-    	<div class="card-footer mb-4">
-    		<dl>
-    			<dt>Last post created by:</dt>
-    			<dd><%= Chatroom.last.user.name %> || <%= Chatroom.last.user.country %> </dd>
-    		</dl>
-    	</div>
-    	<% end %>
-    	<div class="card chatroom-statistics mb-3">
-    		<h6 class="card-header">Forum statistics</h6>
-    		<div class="card-body">
-    		<dl>
-    			<dt>Total posts:</dt>
-    			<dd><%= @chatrooms.count %></dd>
-    		</dl>
-    		<dl>
-    			<dt>Total comments:</dt>
-    			<dd><%= @comments.count %></dd>
-    		</dl>
-    		<dl>
-    			<dt>Total forum users:</dt>
-    			<dd><%= Chatroom.distinct.count(:user_id) + Comment.distinct.count(:user_id) %></dd>
-    		</dl>
-    	</div>
-    	</div>
+		  	<%= render 'form' %>
+			</div>
+			<% if @chatrooms.exists? %>
+				<div class="card-footer mb-4">
+				<dl>
+					<dt>Last post created by:</dt>
+					<dd><%= Chatroom.last.user.name %> || <%= Chatroom.last.user.country %> </dd>
+				</dl>
+				</div>
+			<% end %>
+  	<div class="card chatroom-statistics mb-3">
+  		<h6 class="card-header">Forum statistics</h6>
+  			<div class="card-body">
+  				<dl>
+  					<dt>Total posts:</dt>
+  						<dd><%= @chatrooms.count %></dd>
+  				</dl>
+  				<dl>
+  					<dt>Total comments:</dt>
+  						<dd><%= @comments.count %></dd>
+  				</dl>
+  				<dl>
+  					<dt>Total forum users:</dt>
+  						<dd><%= Chatroom.distinct.count(:user_id) + Comment.distinct.count(:user_id) %></dd>
+  				</dl>
+  			</div>
+  		</div>
     </div>
 	</div>
 </div>
