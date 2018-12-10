@@ -28,7 +28,7 @@ class ChatroomsController < ApplicationController
 	def show
 		add_breadcrumb "Forum Post & Comments", :chatroom_path
 		@comment = Comment.new
-		@comments = @chatroom.comments.order('created_at DESC')
+		@comments = @chatroom.comments
 	end
 
 	def edit
