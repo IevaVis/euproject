@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
 scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
   root "welcome#index"
   get "/terms" => "welcome#terms", as: "terms"
@@ -14,8 +15,9 @@ scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
   resources :conversations do
     resources :messages
   end
-  
+
   resources :passwords, controller: "clearance/passwords", only: [:create, :new]
+  
   resource :session, controller: "sessions", only: [:create, :destroy]
 
   resources :users, controller: "users" do

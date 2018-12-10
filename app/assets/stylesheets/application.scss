@@ -194,10 +194,6 @@ i.fab {
 	color: #fff !important;
 }
 
-.rating {
-	margin-top: 5%;
-}
-
 img.raty-cancel {
   display: none;
 }
@@ -311,6 +307,27 @@ margin-left: 1%;
 .unread-count {
 	color: rgba(198, 59, 59, 0.8)
 }
+
+/*Conversations index*/
+
+.recent_heading h4 {
+  color: #05728f;
+  font-size: 21px;
+  margin: auto;
+}
+
+.conversation_people{
+	background-color: gray;
+	width: 400px;
+}
+
+.chat_img img {
+	width: 50px;
+	margin: 3px;
+	float: left;
+}
+
+
 
 
 

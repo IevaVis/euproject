@@ -29,12 +29,12 @@ en:
       password_reset:
         submit: Save this password
       session:
-        submit: Sign in
+        submit: Log in
       user:
         create: Create User
   layouts:
     application:
-      sign_in: Sign in
+      sign_in: Log in
       sign_out: Sign out
   passwords:
     create:
@@ -50,7 +50,7 @@ en:
   sessions:
     form:
       forgot_password: Forgot password
-      title: Sign in
+      title: Log in
   users:
     form:
       sign_in: Sign in

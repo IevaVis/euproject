@@ -14,12 +14,12 @@ App.chat = App.cable.subscriptions.create("ChatChannel", {
   	if (messages[0] !== undefined) {
       messages.scrollTop(messages[0].scrollHeight);
     }
-    if (!window.location.href.endsWith('messages')) {
-      var template = "<a class='dropdown-item' href='/conversations/" + message_json['conversation_id'] + "/messages'>New message from " + message_json['from'] + "</a>"
-      var count = parseInt($("[data-behavior='unread-count']").text());
-      count += 1;
-      $("[data-behavior='unread-count']").text(count);
-      $("[data-behavior='notification-items']").append(template);
-    }
+    // if (!window.location.href.endsWith('messages')) {
+    //   var template = "<a class='dropdown-item' href='/conversations/" + message_json['conversation_id'] + "/messages'>New message from " + message_json['from'] + "</a>"
+    //   var count = parseInt($("[data-behavior='unread-count']").text());
+    //   count += 1;
+    //   $("[data-behavior='unread-count']").text(count);
+    //   $("[data-behavior='notification-items']").append(template);
+    // }
   }
 });

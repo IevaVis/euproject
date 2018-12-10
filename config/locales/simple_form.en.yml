@@ -28,6 +28,7 @@ en:
       defaults:
         email: "Email"
         password: 'Password'
+
         
     #   user:
     #     new:

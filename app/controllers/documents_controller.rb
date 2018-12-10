@@ -2,10 +2,11 @@ class DocumentsController < ApplicationController
 	before_action :set_document, only: [:show, :edit, :update, :destroy]
 	before_action :require_login, only: [:new, :create, :edit, :update, :destroy]
 	before_action :require_login_for_viewing, only: [:index]
-
+	add_breadcrumb "Home", :root_path
 
 
 	def index
+		add_breadcrumb "Library", documents_path
   	@documents = Document.all.order('created_at DESC')
 		@tags = @documents.map {|document| document.tags}.flatten.uniq
     if params[:tag]

@@ -3,7 +3,7 @@ class User < ApplicationRecord
   enum role: [:teacher, :family, :student, :admin]
   ratyrate_rater
   before_save {email.downcase!}
-  validates :name, presence: true, length: { maximum: 10 }
+  validates :name, presence: true, length: { maximum: 15 }
   validates :email, uniqueness: {case_sensitive: false}
   validates :country, presence: true
   validates :password, length: { minimum: 5 }, allow_nil: true

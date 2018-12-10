@@ -1,6 +1,8 @@
 class DiyprojectsController < ApplicationController
 	before_action :set_diyproject, only: [:show, :edit, :update, :destroy]
 	before_action :require_login, only: [:index, :new, :create, :edit, :update, :destroy]
+	add_breadcrumb "Home", :root_path
+	add_breadcrumb "DIY List", :diyprojects_path
 
 	def index
 		@diyprojects = Diyproject.paginate(:page => params[:page], per_page: 15).order('created_at DESC')
@@ -30,7 +32,7 @@ class DiyprojectsController < ApplicationController
 	end
 
 	def show
-		
+		add_breadcrumb "DIY images", :diyproject_path
 	end
 
 	def edit

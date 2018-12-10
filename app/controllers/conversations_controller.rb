@@ -24,9 +24,10 @@ private
 
 
 	def require_login
-		if !signed_in? or !current_user.teacher?
+		if !signed_in? and !current_user.teacher? 
 			flash[:danger] = "Only logged in teachers can perform this action"
 			redirect_back(fallback_location: root_path)
 		end
 	end
+
 end

@@ -4,9 +4,10 @@
     <div class="container">
       <h1 class="short-info mb-1">Social Learning For STEM In Primary Education</h1>
       <h6 class="mb-3">Supports teachers, students and their parents in creating unique teaching methods and resources of STEM.<br/> Shares and implements it within communities of interest.</h6>
+      <% if !signed_in? %>
       <div class="btn-group">
         <button class="btn btn-custom5 shadow p-2 mb-1 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Log In
+          <%= t ".log_in" %>
         </button>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
            <%= link_to t("global.menu.teacher"), sign_in_path(role: "teacher"), class: 'dropdown-item' %>
@@ -16,7 +17,7 @@
       </div>
       <div class="btn-group">
         <button class="btn btn-custom5 shadow p-2 mb-1 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Sign Up
+          <%= t ".sign_up" %>
         </button>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <%= link_to t("global.menu.teacher"), sign_up_path(role: "teacher"), class: 'dropdown-item' %>
@@ -24,6 +25,7 @@
           <%= link_to t("global.menu.student"), sign_up_path(role: "student"), class: 'dropdown-item' %>
         </div>
       </div>
+      <% end %>
     </div>
   </div>
 </div>
@@ -31,11 +33,11 @@
 
 <div class="container">
       <div class="row mb-4">
-        <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-3">
+        <div class="col-12 col-md-6 col-lg-4 col-xl-4 mb-3">
           <div class="card">
             <div class="card-header">Virtual Library</div>
             <div class="card-body">
-              <p class="card-text">A place dedicated to keep research studies, articles and other sorts of information regarding STEM learning. Where teachers can upload/download teaching tools and materials. All material from the library is free of charge and available to all interested parties.</p>
+              <p class="card-text">A place dedicated to keep relevant documents, research studies, articles and other sorts of information regarding STEM learning. Where teachers can upload/download (free of charge) teaching tools and materials.</p>
               <%= link_to "/assets/Documents.png", 'data-lightbox': 'image' do %>
               <img class="card img-bottom" src="/assets/Documents.png">
               <% end %>
@@ -43,11 +45,11 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-3">
+        <div class="col-12 col-md-6 col-lg-4 col-xl-4 mb-3">
           <div class="card">
-            <div class="card-header">Teachers' forum</div>
+            <div class="card-header">Virtual Teacher’s Chat Room</div>
             <div class="card-body">
-              <p class="card-text">Teachers' forum is a “social” place where teachers from all European countries can get answers to their questions or engage in the discussions of teaching theories and methods for STEM learning of young students.</p>
+              <p class="card-text">Where teachers from all EU can directly connect with each other not only to share teaching materials and practices but also their thoughts, ideas and experiences. Where teachers can engage in the discussions of teaching theories and methods for STEM learning of young students.</p>
               <%= link_to "/assets/Forum.jpg", 'data-lightbox': 'image' do %>
               <img class="card img-bottom" src="/assets/Forum.jpg">
               <% end %>
@@ -55,15 +57,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-3">
-          <div class="card">
-            <div class="card-header">Virtual teacher’s room</div>
-            <div class="card-body">
-              <p class="card-text">Virtual teacher’s room is dedicated to share materials, practices, experiences. This is the place where teachers from all EU can directly connect with each other and share their thoughts, ideas, experiences, teaching material.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-3">
+        <div class="col-12 col-md-6 col-lg-4 col-xl-4 mb-3">
           <div class="card">
             <div class="card-header">DIY photo gallery</div>
             <div class="card-body">

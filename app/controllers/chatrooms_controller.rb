@@ -1,6 +1,8 @@
 class ChatroomsController < ApplicationController
 	before_action :set_chatroom, only: [:show, :edit, :update, :destroy]
 	before_action :require_teacher_login, only: [:index, :new, :show, :create, :edit, :update, :destroy]
+	add_breadcrumb "Home", :root_path
+	add_breadcrumb "Teachers' Forum", :chatrooms_path
 
 	def index
 		@chatrooms = Chatroom.all.order('created_at DESC')
@@ -24,6 +26,7 @@ class ChatroomsController < ApplicationController
 	end
 
 	def show
+		add_breadcrumb "Forum Post & Comments", :chatroom_path
 		@comment = Comment.new
 		@comments = @chatroom.comments.order('created_at DESC')
 	end

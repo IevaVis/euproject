@@ -4,14 +4,14 @@
 	<div class="diyupload-form">
 		<h2><%= t ".title" %></h2><br/>
 			<p>
-				If You liked this DIY project and You made it at home with Your kids, upload an image of the final result of the project and share it with other website's users!<br/>N.B. Please do not upload any image with children in it! Such images will be deleted by our administrators without any aditional notice.
+				If You liked this DIY project and You made it at home with Your kids, upload an image of the final result of the project and share it with other website's users!<br/>N.B. Please do not upload any image with children in it! Such images will be deleted by our administrators without any additional notice.
 			</p>
 
 				<%= simple_form_for @diyproject, :html => { :multipart => true } do |f| %>
-					<div class="form-inputs" id="image-input">
+					<div class="form-inputs" name="diy-image" id="diy-image">
 						<%= f.file_field :images, multiple: true %>
 					</div>
-					<div class="form-actions">
+					<div class="form-actions" id="upload-button">
 						<%= f.button :submit, class: "btn-custom" %>
 					</div>
 				<% end %>
@@ -20,9 +20,21 @@
 </div>
 
 <script>
-	var image = $("#image-input")[0].length;
-if(image === 0){
-    alert("No file selected.");
+
+manageButton();
+
+$('input[type="file"]').change(function() { 
+manageButton();
+});
+
+function manageButton(){
+  if($('input[type="file"]').val() == ""){
+     $("#upload-button").hide();
+  }else {
+     $("#upload-button").show();
+  }
 }
-	</script>
+
+</script>
+
 

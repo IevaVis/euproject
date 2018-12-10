@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
 	before_action :set_conversation
 	before_action :require_login
+	before_action :require_conversation_users
 
 	def index
 		@messages = @conversation.messages
@@ -41,6 +42,13 @@ class MessagesController < ApplicationController
 	def require_login
 		if !signed_in? or !current_user.teacher?
 			flash[:danger] = "Only logged in teachers can perform this action"
+			redirect_back(fallback_location: root_path)
+		end
+	end
+
+	def require_conversation_users
+		if (current_user != @conversation.recipient) and (current_user != @conversation.sender)
+			flash[:danger] = "Conversation not found"
 			redirect_back(fallback_location: root_path)
 		end
 	end

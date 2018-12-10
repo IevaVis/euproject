@@ -3,32 +3,30 @@ lt:
   clearance:
     models:
       clearance_mailer:
-        change_password: Change your password
+        change_password: Pakeisti slaptažodį
   clearance_mailer:
     change_password:
-      closing: If you didn't request this, ignore this email. Your password has
-        not been changed.
-      link_text: Change my password
-      opening: "Someone, hopefully you, requested we send you a link to change
-        your password:"
+      closing: Jeigu jūs neužsakėte šio elektroninio laiško, tiesiog ištrinkite jį. Jūsų slaptažodis nebuvo pakeistas.
+      link_text: Pakeisti slaptažodį
+      opening: "Kažkas, greičiausiai Jūs, užsakėte šį laišką dėl slaptažodžio atnaujinimo:"
   flashes:
-    failure_after_create: Bad email or password.
-    failure_after_update: Password can't be blank.
+    failure_after_create: Neteisingas slaptažodis arba el. paštas.
+    failure_after_update: Slaptažodis negali būti tuščias.
     failure_when_forbidden: Please double check the URL or try submitting
       the form again.
-    failure_when_not_signed_in: Please sign in to continue.
+    failure_when_not_signed_in: Reikalingas prisijungimas.
   helpers:
     label:
       password: 
         email: El. paštas
         password: Slaptažodis
       password_reset:
-        password: Choose password
+        password: Pasirinkite slaptažodį
     submit:
       password:
-        submit: Reset password
+        submit: Atkurti slaptažodį
       password_reset:
-        submit: Save this password
+        submit: Išsaugoti slaptažodį
       session:
         submit: Prisijungti
       user:
@@ -39,15 +37,13 @@ lt:
       sign_out: Sign out
   passwords:
     create:
-      description: You will receive an email within the next few minutes. It
-        contains instructions for changing your password.
+      description: Kelių minučių laikotarpyje gausite elektroninį laišką į savo pašto dėžutę su instrukcijomis kaip pasikeisti slaptažodį.
     edit:
-      description: Your password has been reset. Choose a new password below.
-      title: Change your password
+      description: Pasirinkite naują slaptažodį
+      title: Pasikeisti slaptažodį
     new:
-      description: To be emailed a link to reset your password, please enter
-        your email address.
-      title: Reset your password
+      description: Įveskite savo elektroninio pašto adresą, kuriuo registravotės platformoje, kad galėtume atsiųsti Jums slaptažodžio pakeitimo instrukcijas.
+      title: Atkurti slaptažodį
   sessions:
     form:
       forgot_password: Pamiršau slaptažodį
