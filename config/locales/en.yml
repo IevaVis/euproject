@@ -35,16 +35,16 @@ en:
   From 6 to 9: "from 6 to 9 years"
   From 10 to 12: "from 10 to 12 years"
   Other: "Other"
-  the_links: "I accept to terms of use & Privacy policy"
+  the_links: "I accept Terms of use & Privacy policy"
   global:
     menu:
       home: "Home"
       library: "Virtual Library"
-      chatroom: "Virtual Teacher’s Chat Room"
+      chatroom: "Virtual Teachers' Room"
       diyprojects: "DIY Photo Gallery"
       forum: "Forum"
       private: "Private messages"
-      sign_in: "Sign In"
+      sign_up: "Register new user"
       about_us: "About Us"
       contacts: "Contacts"
       log_in: "Log In"
@@ -68,10 +68,14 @@ en:
       delete_project: "Delete project"
       add_your_image: "Add Your image"
       rate_difficulty: "Rate difficulty!"
+  documents:
+    index:
+      new_document: "New document"
+      popular_keywords: "Popular keywords"
   welcome:
     index:
       log_in: "Log In"
-      sign_up: "Sign Up"
+      sign_up: "Register new user"
   models:
   activerecord:
     attributes:
@@ -82,7 +86,6 @@ en:
         password: "Password"
         password_confirmation: "Password confirmation"
         grade_of_teaching: "Grade of teaching"
-        # the_links: "Terms of use & Privacy policy"
       diyproject:
         title: "Title"
         description: "Description"

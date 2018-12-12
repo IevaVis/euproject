@@ -25,14 +25,14 @@
       <% if current_user.teacher? %>
       <div class="row">
         <div class="newdoc-button col-md-12">
-          <%= link_to 'New Document', new_document_path, class: "btn btn-lg btn-custom4" %>
+          <%= link_to t(".new_document"), new_document_path, class: "btn btn-lg btn-custom4" %>
         </div>
       </div>
       <% end %>
       <div class="row">
   	    <div class="all-tags-block-outline col-md-1 mb-5">
           <div class="all-tags-block">
-            <p class="btn btn-custom2">Popular Keywords</p><br/>
+            <p class="btn btn-custom2"><%= t(".popular_keywords")%></p><br/>
               <% @tags.each do |tag| %>
                 <span><%= link_to "#{tag}", {controller: "documents", action: "index", tag: tag}, class: "badge badge-secondary" %></span>
               <% end %>

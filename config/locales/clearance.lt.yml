@@ -31,6 +31,7 @@ lt:
         submit: Prisijungti
       user:
         create: Registruotis
+        update: Atnaujinti informaciją
   layouts:
     application:
       sign_in: Prisijungti
@@ -52,3 +53,6 @@ lt:
     form:
       sign_in: Prisijungti
       title: Naujo nario registracija
+    edit:
+      title: Redaguoti nario informaciją
+   

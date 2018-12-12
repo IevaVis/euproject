@@ -9,14 +9,12 @@
       <li class="nav-item active">
         <%= link_to t("global.menu.home"), root_path, :class => 'nav-link' %><span class="sr-only">(current)</span>
       </li>
-      <% if !signed_in? %>
       <li class="nav-item">
-        <%= link_to t("global.menu.about_us"), 'http://www.createskills.eu', class: 'nav-link', :target => :_blank %>
+        <%= link_to t("global.menu.about_us"), about_path, class: 'nav-link' %>
       </li>
        <li class="nav-item">
-        <%= link_to t("global.menu.contacts"), 'http://www.createskills.eu/contact/', class: 'nav-link', :target => :_blank %>
+        <%= link_to t("global.menu.contacts"), contacts_path, class: 'nav-link' %>
       </li>
-      <% end %>
       <% if signed_in? and current_user.teacher? %>
      <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

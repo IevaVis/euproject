@@ -1,10 +1,8 @@
 <div class="container">
 	<div class="recent_heading">
 		<h4>Recent conversations</h4>
-	</div>
-	<div class="clearfix conversation_people">
-		<div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png"> </div>
-			<% @conversations.each do |conversation| %>
+	</div>	
+		<% @conversations.each do |conversation| %>
 				<% if !conversation.sender.nil? and !conversation.recipient.nil? %>
 					<% if conversation.sender_id == current_user.id || conversation.recipient_id == current_user.id %>
 						<% if conversation.sender_id == current_user.id %>
@@ -13,17 +11,27 @@
 							<% recipient = User.find(conversation.sender_id) %>
 						<% end %>
 						<% unless current_user.id == recipient %>
+						<div class="clearfix conversation_people">
+		<div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png"></div>
 							<div class="conversation-user"><%= link_to recipient.name, conversation_messages_path(conversation) %>
 								<% if !conversation.unread_message_count(current_user).zero? %>
         					<small class="unread-count">(<%= link_to 'New messages!', conversation_messages_path(conversation), class: "unread-count" %> <%= conversation.unread_message_count(current_user) %>)</small></span>
       					<% end %>
+      					<br/>
+      				<%= conversation.last_message.body %>
 							</div>
+
+							</div>
+
 					<% end %> 
+
 				<% end %>
+
 			<% end %>
+
 		<% end %>
-	</div>
-	</div>
-	</div>
+
+</div>
+
 
 	

@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
   root "welcome#index"
   get "/terms" => "welcome#terms", as: "terms"
+  get "/about" => "welcome#about", as: "about"
+  get "/contacts" => "welcome#contacts", as: "contacts"
   post '/rate' => 'rater#create', :as => 'rate'
   resources :documents
   resources :diyprojects

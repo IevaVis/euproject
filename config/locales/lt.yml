@@ -30,6 +30,10 @@ lt:
     index:
       log_in: "Prisijungti"
       sign_up: "Registruotis"
+  documents:
+    index:
+      new_document: "Naujas dokumentas"
+      popular_keywords: "Populiariausi raktažodžiai"
   diyprojects:
     form:
       title: "Įkelti naują 'Pasidaryk pats' projektą"
