@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
+# scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
   root "welcome#index"
   get "/terms" => "welcome#terms", as: "terms"
   get "/about" => "welcome#about", as: "about"
@@ -37,7 +37,7 @@ scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
   get "/sign_in" => "clearance/sessions#new", as: "sign_in"
   get "/sign_up" => "clearance/users#new", as: "sign_up"
 
-end
+# end
   
 end
 
