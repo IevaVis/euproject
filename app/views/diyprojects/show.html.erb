@@ -45,5 +45,6 @@
 	<hr>
 </div>
 
-
+<% if (signed_in? and current_user.family?) and (current_user != @diyproject.user) %>
 <%= render "upload_image" %>
+<% end %>

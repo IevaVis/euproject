@@ -6,10 +6,26 @@
 </head>
 <body>
   <div class='container'>
-  	<h1><strong><%= @diyproject.title %></strong>
-  	</h1>
-  	<h2>Description:</h2>
-  	<p><%= @diyproject.description %></p>
+  	<h1><%= @diyproject.title %></h1>
+  
+  	<div class="diy-description">
+		<p><strong>Description</strong></p><%= simple_format(@diyproject.description) %>
+	</div>
+	<div class="diy-objective">
+		<p><strong>Objective</strong></p><%= simple_format(@diyproject.objective) %>
+	</div>
+	<div class="diy-duration">
+		<p><strong>Duration</strong></p><%= simple_format(@diyproject.duration) %>
+	</div>
+	<div class="diy-results">
+		<p><strong>Results and tips</strong></p><%= simple_format(@diyproject.results_and_tips) %>
+	</div>
+	<div class="diy-materials">
+		<p><strong>Materials</strong></p><%= simple_format(@diyproject.results_and_tips) %>
+	</div>
+	<div class="diy-links">
+		<p><strong>Links and resources</strong></p><%= simple_format(@diyproject.links_and_resources) %>
+	</div>
   </div>
 </body>
 </html>
