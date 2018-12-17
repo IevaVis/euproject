@@ -1,6 +1,8 @@
 class ConversationsController < ApplicationController
 	before_action :require_login
 
+
+
 	def index
 		@conversations = Conversation.all
 		@conversations = Conversation.includes(:last_message)
@@ -10,7 +12,7 @@ class ConversationsController < ApplicationController
 		if Conversation.between(params[:sender_id], params[:recipient_id]).present?
 			@conversation = Conversation.between(params[:sender_id], params[:recipient_id]).first
 		else
-			@conversation = Conversation.create!(conversation_params)
+			@conversation = Conversation.create!(conversation_params) if @conversation.messages.exists?
 		end
 		redirect_to conversation_messages_path(@conversation)
 	end

@@ -16,6 +16,7 @@ class DiyprojectsController < ApplicationController
 	end
 
 	def new
+		add_breadcrumb "Upload new DIY project", :new_diyproject_path
 		@diyproject = Diyproject.new
 	end
 
@@ -33,6 +34,10 @@ class DiyprojectsController < ApplicationController
 
 	def show
 		add_breadcrumb "DIY images", :diyproject_path
+		respond_to do |format|
+   		format.html
+   		format.pdf {render template: 'diyprojects/report', pdf: 'Report'}
+  	end
 	end
 
 	def edit
@@ -55,7 +60,13 @@ class DiyprojectsController < ApplicationController
 
   private
 		def valid_params
-			params.require(:diyproject).permit(:title, :description, :place, :age, :terms, images: [])
+			if !params[:diyproject][:tags].blank?
+        params[:diyproject][:tags] = params[:diyproject][:tags].split(",")
+        params[:diyproject][:tags].each_with_index do |tag, index|
+          params[:diyproject][:tags][index] = tag.strip.titleize
+        end
+      end
+				params.require(:diyproject).permit(:title, :description, :place, :age, :terms, :objective, :duration, :materials, :results_and_tips, :links_and_resources, :tags => [], images: [])
 		end
 
 		def require_login

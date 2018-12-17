@@ -1,22 +1,49 @@
-<%= render "upload_image" %>
-
 <div class="container diyproject-showpage">
-<div align="center">
-	<div class="diy-title">
-	<h1><%= @diyproject.title %></h1>
-</div>
-<div class="diy-description">
-<%= simple_format(@diyproject.description) %>
-</div>
-</div>
-
-<% if @diyproject.images.attached? %>
-	<div class="card-columns">
-		<% @diyproject.images.each do |image| %>
-			<%= link_to image, 'data-lightbox': 'image' do %>
-  			<%= image_tag image.variant(resize: "400x400").processed, class: "card diy-image" %>
+	<div align="center">
+		<div class="diy-title">
+			<h1><%= @diyproject.title %></h1>
+			<small class="diy-links">
+				Place: <%= @diyproject.place %> / Age: <%= @diyproject.age %>
+			</small><br/>
+				<%= link_to 'Create and Download DIY project as a PDF document', diyproject_path(@diyproject, :format => :pdf) %>
+		</div>
+		<br/>
+	</div>
+	<% if @diyproject.images.attached? %>
+		<div class="card-columns">
+			<% @diyproject.images.each do |image| %>
+				<%= link_to image, 'data-lightbox': 'image' do %>
+  				<%= image_tag image.variant(resize: "400x400").processed, class: "card diy-image" %>
   			<% end %>
   		<% end %>
   	</div>
 	<% end %>
+	<div class="diy-description">
+		<p><strong>Description</strong></p><%= simple_format(@diyproject.description) %>
+	</div>
+	<div class="diy-objective">
+		<p><strong>Objective</strong></p><%= simple_format(@diyproject.objective) %>
+	</div>
+	<div class="diy-duration">
+		<p><strong>Duration</strong></p><%= simple_format(@diyproject.duration) %>
+	</div>
+	<div class="diy-results">
+		<p><strong>Results and tips</strong></p><%= simple_format(@diyproject.results_and_tips) %>
+	</div>
+	<div class="diy-materials">
+		<p><strong>Materials</strong></p><%= simple_format(@diyproject.results_and_tips) %>
+	</div>
+	<div class="diy-links">
+		<p><strong>Links and resources</strong></p><%= simple_format(@diyproject.links_and_resources) %>
+	</div>
+	<div class="diy-keywords">
+		<p><strong>Keywords</strong></p>
+		<% @diyproject.tags.each do |tag| %>
+ 			<%= link_to "#{tag}", {controller: "diyprojects", action: "index", tag:tag}, class: "badge badge-custom" %>
+		<% end %>
+	</div>
+	<hr>
 </div>
+
+
+<%= render "upload_image" %>

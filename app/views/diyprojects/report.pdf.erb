@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PDF</title>
+  <%= wicked_pdf_stylesheet_link_tag "pdf" %>
+</head>
+<body>
+  <div class='container'>
+  	<h1><strong><%= @diyproject.title %></strong>
+  	</h1>
+  	<h2>Description:</h2>
+  	<p><%= @diyproject.description %></p>
+  </div>
+</body>
+</html>
