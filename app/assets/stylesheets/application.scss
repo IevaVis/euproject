@@ -96,6 +96,12 @@ i.fab {
 
 }
 
+/*Emails to users*/
+
+.logo {
+	width: 50px;
+}
+
 .btn-custom {
 	color: darken(#f7931e, 5%);
 	background-color: #fff;
@@ -311,6 +317,10 @@ margin-left: 1%;
 
 /*Conversations index*/
 
+.conversations-container {
+	margin-bottom: 25%;
+}
+
 .recent_heading h4 {
   color: #05728f;
   font-size: 21px;
@@ -332,10 +342,6 @@ margin-left: 1%;
 	border-radius: 35%;
 }
 
-.logo {
-	width: 50px;
-	text-align: left;
-}
 
 
 

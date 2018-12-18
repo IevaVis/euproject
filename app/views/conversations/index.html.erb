@@ -1,4 +1,4 @@
-<div class="container mb-5">
+<div class="container conversations-container">
 	<div class="recent_heading mb-2">
 		<h4>Recent conversations</h4>
 	</div>	
@@ -14,8 +14,9 @@
 						<% unless current_user.id == recipient %>
 						<div class="clearfix conversation_people">
 							<div class="chat_img"> <%= link_to image_tag("/assets/teacher-icon.png"), conversation_messages_path(conversation) %></div>
-							<div class="small text-muted float-right"><%= conversation.messages.last.created_at.strftime("%F")%></div>
-							<div class="conversation-user"><%= recipient.name %>
+							<div class="small text-muted float-right"><%= conversation.messages.last.created_at.strftime("%F")%>
+							</div>
+							<div class="conversation-user ml-5"><%= recipient.name %>
 								<% if !conversation.unread_message_count(current_user).zero? %>
         					<small class="unread-count">(<%= link_to 'New messages!', conversation_messages_path(conversation), class: "unread-count" %> <%= conversation.unread_message_count(current_user) %>)</small></span>
       					<% end %>
