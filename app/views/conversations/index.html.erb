@@ -3,6 +3,7 @@
 		<h4>Recent conversations</h4>
 	</div>	
 		<% @conversations.each do |conversation| %>
+			<% if conversation.messages.exists? %>
 				<% if !conversation.sender.nil? and !conversation.recipient.nil? %>
 					<% if conversation.sender_id == current_user.id || conversation.recipient_id == current_user.id %>
 						<% if conversation.sender_id == current_user.id %>
@@ -19,7 +20,6 @@
         					<small class="unread-count">(<%= link_to 'New messages!', conversation_messages_path(conversation), class: "unread-count" %> <%= conversation.unread_message_count(current_user) %>)</small></span>
       					<% end %>
       					<br/>
-      				<% if conversation.messages.exists? %>
       				<%= link_to conversation.last_message.body.truncate(40), conversation_messages_path(conversation) %>
       				<% end %>
 							</div>
