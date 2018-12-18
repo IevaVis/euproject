@@ -318,15 +318,18 @@ margin-left: 1%;
 }
 
 .conversation_people{
-	background-color: gray;
+	background-color: #F0F0F0;
 	width: 400px;
-	border: 1px solid black;
+	border: 2px solid #E0E0E0;
+	padding: 4px;
+	border-radius: 4px;
 }
 
 .chat_img img {
-	width: 50px;
+	width: 40px;
 	margin: 3px;
 	float: left;
+	border-radius: 35%;
 }
 
 .logo {

@@ -1,5 +1,5 @@
-<div class="container">
-	<div class="recent_heading">
+<div class="container mb-5">
+	<div class="recent_heading mb-2">
 		<h4>Recent conversations</h4>
 	</div>	
 		<% @conversations.each do |conversation| %>
@@ -12,14 +12,15 @@
 						<% end %>
 						<% unless current_user.id == recipient %>
 						<div class="clearfix conversation_people">
-							<div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png"></div>
-							<div class="conversation-user"><%= link_to recipient.name, conversation_messages_path(conversation) %>
+							<div class="chat_img"> <%= link_to image_tag("/assets/teacher-icon.png"), conversation_messages_path(conversation) %></div>
+							<div class="small text-muted float-right"><%= conversation.messages.last.created_at.strftime("%F")%></div>
+							<div class="conversation-user"><%= recipient.name %>
 								<% if !conversation.unread_message_count(current_user).zero? %>
         					<small class="unread-count">(<%= link_to 'New messages!', conversation_messages_path(conversation), class: "unread-count" %> <%= conversation.unread_message_count(current_user) %>)</small></span>
       					<% end %>
       					<br/>
       				<% if conversation.messages.exists? %>
-      				<%= conversation.last_message.body %>
+      				<%= link_to conversation.last_message.body.truncate(40), conversation_messages_path(conversation) %>
       				<% end %>
 							</div>
 
