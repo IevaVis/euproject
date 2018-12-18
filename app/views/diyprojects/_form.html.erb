@@ -19,7 +19,7 @@
 				<%= f.hint 'Select DIY Project Type' %>
 				<%= f.input :place, as: :radio_buttons, collection: [:indoors , :outdoors] %>
 				<%= f.hint 'Select age best suitable for this DIY activity' %>
-				<%= f.input :age, as: :radio_buttons, collection: [['From 6 to 9', 'From 6 to 9'], ['From 10 to 12', 'From 10 to 12'], ['Other', 'Other']] %>
+				<%= f.input :age, as: :radio_buttons, collection: [['From 6 to 9', 'From 6 to 9'], ['From 10 to 12', 'From 10 to 12'], ['All ages', 'All ages']] %>
 				<%= f.file_field :images, multiple: true %>
 				<%= f.input :terms, as: :boolean, checked_value: true, unchecked_value: false, :label => content_for(:the_links) %>
 			</div>

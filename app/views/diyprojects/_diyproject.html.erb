@@ -3,15 +3,12 @@
 		<div class="clearfix">
 			<div class="float-left col-md-8">
 				<h4 class="card-title"><%= link_to diyproject.title.capitalize, diyproject_path(diyproject) %></h4>
-					<p class="card-text"><%= truncate(diyproject.description.capitalize, length: 150) %></p>
+					<p class="card-text"><%= truncate(diyproject.description.capitalize, length: 100, omission: '...') %></p>
 					<p>
 					<span class="quiet"><small><%= t(".activity_is_best_for") 
           %>: <em><%= t diyproject.place %></em><br/>
           <%= t(".best_suitable_for_kids_aged") %> : <em><%= t diyproject.age %></em></small></span>
         </p>
-          <p class="text-muted">
-          <small><%= diyproject.created_at.strftime('%d-%m-%Y') %> || <%= diyproject.user.name.capitalize %></small>
-					</p>
       		<% if signed_in? && (current_user == diyproject.user) %>
       			<div class="diyproject-actions mb-3">
                <%= link_to t(".see_all_images"), diyproject_path(diyproject), class: "btn btn-sm btn-custom3" %>

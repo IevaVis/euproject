@@ -2,10 +2,7 @@
 	<div align="center">
 		<div class="diy-title">
 			<h1><%= @diyproject.title %></h1>
-			<small class="diy-links">
-				Place: <%= @diyproject.place %> / Age: <%= @diyproject.age %>
-			</small><br/>
-				<%= link_to 'Create and Download DIY project as a PDF document', diyproject_path(@diyproject, :format => :pdf) %>
+				<%= link_to 'Download DIY project as a PDF document', diyproject_path(@diyproject, :format => :pdf), class: "btn btn-custom5" %>
 		</div>
 		<br/>
 	</div>
@@ -27,11 +24,17 @@
 	<div class="diy-duration">
 		<p><strong>Duration</strong></p><%= simple_format(@diyproject.duration) %>
 	</div>
+	<div class="diy-place">
+		<p><strong>Place</strong></p><%= simple_format(@diyproject.place) %>
+	</div>
+	<div class="diy-age">
+		<p><strong>Age</strong></p><%= simple_format(@diyproject.age) %>
+	</div>
 	<div class="diy-results">
 		<p><strong>Results and tips</strong></p><%= simple_format(@diyproject.results_and_tips) %>
 	</div>
 	<div class="diy-materials">
-		<p><strong>Materials</strong></p><%= simple_format(@diyproject.results_and_tips) %>
+		<p><strong>Materials</strong></p><%= simple_format(@diyproject.materials) %>
 	</div>
 	<div class="diy-links">
 		<p><strong>Links and resources</strong></p><%= simple_format(@diyproject.links_and_resources) %>

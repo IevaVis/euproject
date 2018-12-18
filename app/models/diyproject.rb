@@ -2,15 +2,15 @@ class Diyproject < ApplicationRecord
 	ratyrate_rateable 'difficulty_degree'
 	belongs_to :user
 	has_many_attached :images
-	validates :title, presence: true, length: { maximum: 50}
-	validates :description, presence: true, length: { maximum: 500}
+	validates :title, presence: true, length: { maximum: 100}
+	validates :description, presence: true, length: { maximum: 1000}
 	validates :age, :place,  presence: true
 	validates_acceptance_of :terms, :allow_nil => false,
   :accept => true
   validates :objective, presence: true, length: { maximum: 500}
-  validates :duration, presence: true, length: { maximum: 20}
+  validates :duration, presence: true, length: { maximum: 50}
   validates :materials, presence: true, length: { maximum: 500}
-  validates :results_and_tips, presence: true, length: { maximum: 500}
+  validates :results_and_tips, presence: true, length: { maximum: 1000}
   validates :links_and_resources, presence: true, length: { maximum: 500}
   validates :tags, presence: true
   validate :max_tag_size
