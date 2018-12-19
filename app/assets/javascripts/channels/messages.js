@@ -1,4 +1,4 @@
-App.chat = App.cable.subscriptions.create("ChatChannel", {
+App.messages = App.cable.subscriptions.create("MessagesChannel", {
   connected: function() {
 
   },
@@ -6,12 +6,12 @@ App.chat = App.cable.subscriptions.create("ChatChannel", {
 
   },
   received: function(data) {
-  	var messages = $('#message-box');
+    var messages = $('#message-box');
     var message_template = data['message']['template'];
     var message_json = JSON.parse(data['message']['json_version']);
 
-  	messages.append(message_template);
-  	if (messages[0] !== undefined) {
+    messages.append(message_template);
+    if (messages[0] !== undefined) {
       messages.scrollTop(messages[0].scrollHeight);
     }
     // if (!window.location.href.endsWith('messages')) {

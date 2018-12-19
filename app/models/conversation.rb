@@ -12,5 +12,9 @@ class Conversation < ApplicationRecord
 	def unread_message_count(current_user)
     self.messages.where("user_id != ? AND read = ?", current_user.id, false).count
   end
+
+  def self.accessible_by(user)
+    where(user: user.id)
+  end
   
 end

@@ -1,10 +1,9 @@
 @import "bootstrap";
 @import "flag-icon";
-@import url(http://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400,500); 
 @import 'lightbox';
 
 body {
-	font-family: 'Lora', serif;
+	font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 a {
@@ -21,11 +20,6 @@ a:hover {
 	border-radius: 5px;
 	box-shadow: 3px 3px 5px 6px #ccc;
 	padding: 1.5em 1.25em;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Ubuntu', sans-serif;
-	font-weight: 300;
 }
 
 .pagination > li > a
@@ -340,6 +334,16 @@ margin-left: 1%;
 	margin: 3px;
 	float: left;
 	border-radius: 35%;
+}
+
+.conv-user-name {
+	color: black;
+	font-weight: 700;
+}
+
+.conv-user-name:hover {
+	text-decoration: none;
+	color: black;
 }
 
 

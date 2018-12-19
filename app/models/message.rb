@@ -21,12 +21,6 @@ class Message < ApplicationRecord
     )
   }
 
-  # def check_empty_message
-  #   if self.body.blank? && self.files
-  #
-  #   end
-  # end
-
   def message_time
     created_at.strftime("%d-%m-%y at %l:%M %p")
   end

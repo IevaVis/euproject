@@ -16,7 +16,8 @@
 							<div class="chat_img"> <%= link_to image_tag("/assets/teacher-icon.png"), conversation_messages_path(conversation) %></div>
 							<div class="small text-muted float-right"><%= conversation.messages.last.created_at.strftime("%F")%>
 							</div>
-							<div class="conversation-user ml-5"><%= recipient.name %>
+							<div class="conversation-user ml-5">
+								<%= link_to recipient.name, conversation_messages_path(conversation), class: "conv-user-name" %>
 								<% if !conversation.unread_message_count(current_user).zero? %>
         					<small class="unread-count">(<%= link_to 'New messages!', conversation_messages_path(conversation), class: "unread-count" %> <%= conversation.unread_message_count(current_user) %>)</small></span>
       					<% end %>

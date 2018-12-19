@@ -37,6 +37,8 @@ lt:
   diyprojects:
     form:
       title: "Įkelti naują 'Pasidaryk pats' projektą"
+    index:
+      new_project: "Sukurti DIY"
     diyproject:
       activity_is_best_for: "Geriausia atlikti"
       best_suitable_for_kids_aged: "Tinkamas atlikti su vaikais"

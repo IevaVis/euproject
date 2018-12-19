@@ -4,8 +4,7 @@ class ConversationsController < ApplicationController
 
 
 	def index
-		@conversations = Conversation.all
-		@conversations = Conversation.includes(:last_message)
+		@conversations = Conversation.all.includes(:last_message)
 	end
 
 	def create

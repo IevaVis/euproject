@@ -60,6 +60,8 @@ en:
   diyprojects:
     form:
       title: "Upload New DIY Project"
+    index:
+      new_project: "Create DIY project"
     diyproject:
       activity_is_best_for: "Activity is best for"
       best_suitable_for_kids_aged: "Best suitable for kids aged"

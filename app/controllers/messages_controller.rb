@@ -11,6 +11,7 @@ class MessagesController < ApplicationController
 
 	def create
 		@message = @conversation.messages.new(message_params)
+		@message.user = current_user
 		files = params[:message][:files]
 		if @message.save
 			if files
@@ -24,6 +25,8 @@ class MessagesController < ApplicationController
 			redirect_to conversation_messages_path(@conversation)
 		end
 	end
+
+
 
 	def new
 		@message = @conversation.messages.new
