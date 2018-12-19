@@ -297,8 +297,19 @@ img.raty-cancel {
 	overflow-y: scroll;
 }
 
-.well {
+.message-container {
 margin-left: 1%;
+background-color: #E8E8E8;
+width: 400px;
+border-radius: 4px;
+}
+
+.message-info {
+	margin-left: 20px;
+}
+
+.message-body {
+	margin: 10px;
 }
 
 .message-field {
