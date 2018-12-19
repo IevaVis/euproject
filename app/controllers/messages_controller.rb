@@ -4,7 +4,7 @@ class MessagesController < ApplicationController
 	before_action :require_conversation_users
 
 	def index
-		@messages = @conversation.messages
+		@messages = @conversation.messages.order(created_at: :asc)
 		@messages.where("user_id != ? AND read = ?", current_user.id, false).update_all(read: true)
 		@message = @conversation.messages.new
 	end
