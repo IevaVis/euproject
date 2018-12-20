@@ -1,4 +1,8 @@
 en:
+  helpers:
+    submit:
+      document:
+        create: "Upload document"
   simple_form:
     "yes": 'Yes'
     "no": 'No'

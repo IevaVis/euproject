@@ -31,9 +31,16 @@ lt:
       log_in: "Prisijungti"
       sign_up: "Registruotis"
   documents:
+    form:
+      title: "Įkelti naują dokumentą"
     index:
       new_document: "Naujas dokumentas"
       popular_keywords: "Populiariausi raktažodžiai"
+      search_title: "Dokumentų paieška"
+      language: "Pasirinkite kalbą"
+      enter_keyword: "Įrašykite raktažodį, pvz.: matematika"
+      new_document: "Įkelti naują dokumentą"
+      clear: "Anuliuoti paiešką"
   diyprojects:
     form:
       title: "Įkelti naują 'Pasidaryk pats' projektą"
@@ -62,6 +69,12 @@ lt:
         description: "Aprašymas"
         place: "Atlikimo vieta"
         age: "Atlikimo amžius"
+      document:
+        title: "Pavadinimas"
+        description: "Aprašymas"
+        tags: "Raktažodžiai"
+        doc_language: "Dokumento kalba"
+
  
  
  

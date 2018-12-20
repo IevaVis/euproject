@@ -74,8 +74,11 @@ en:
     index:
       new_document: "New document"
       popular_keywords: "Popular keywords"
-      language: "hello"
-
+      search_title: "Search for documents"
+      language: "Choose Language"
+      enter_keyword: "Enter keyword, f.ex.: mathematics"
+      new_document: Upload new document
+      clear: "Clear search"
   welcome:
     index:
       log_in: "Log In"
@@ -95,6 +98,8 @@ en:
         description: "Description"
         place: "Place"
         age: "Age"
+
+      
 
 
 

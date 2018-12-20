@@ -80,7 +80,8 @@ i.fab {
 .documentupload-form,
 .new-post-form,
 .diy-search-form,
-.reset-password-form {
+.reset-password-form,
+.document-search-form {
 	margin-bottom: 40px;
 	@include background-tile;
 
@@ -141,14 +142,9 @@ i.fab {
 	margin-top: 2%;
 }
 
-.newdoc-button {
-	margin-bottom: 5%;
-}
-
 .form-control {
 	margin-right: 2%;
 }
-
 
 .document-space {
 	margin-top: 2%;
@@ -185,10 +181,6 @@ i.fab {
 	padding-top: 10px;
 	padding-bottom: 10px;
 
-}
-
-.search-form-title {
-	font-family: Ubuntu;
 }
 
 .btn-warning {
