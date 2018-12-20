@@ -3,9 +3,12 @@ lt:
     submit:
       document:
         create: "Įkelti dokumentą"
+      diyprojects:
+        create: "Sukurti naują projektą"
   simple_form:
-    "yes": 'Yes'
-    "no": 'No'
+    placeholders:
+      diyproject:
+        tags: "Įrašykite mažiausiai 1, daugiausiai 5 raktažodžius. Raktažodžiai privalo būti atskirti kableiais, pvz.: dekoravimas, piešimas"
     required:
       text: 'required'
       mark: '*'
@@ -24,8 +27,12 @@ lt:
           vocational_education: "Profesinis mokymas"
       diyproject:
         place:
-          indoors: "namuose"
-          outdoors: "lauke"
+          indoors: "Namuose"
+          outdoors: "Lauke"
+        age:
+          from_6_to_9: "Nuo 6 iki 9 metų"
+          from_10_to_12: "Nuo 10 to 12 metų"
+          all_ages: "Tinkamas visiems"
     labels:
       defaults:
         email: "El paštas"

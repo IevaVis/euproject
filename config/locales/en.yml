@@ -30,8 +30,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  outdoors: "outdoors"
-  indoors: "indoors"
+  outdoors: "Outdoors"
+  indoors: "Indoors"
   From 6 to 9: "From 6 to 9 years"
   From 10 to 12: "From 10 to 12 years"
   All ages: "All ages"
@@ -57,6 +57,8 @@ en:
       my_uploads: "My Uploads"
       new-project: "Upload DIY"
       new_document: "Upload Document"
+      terms: "Terms of use & Privacy policy"
+      language: "Language"
   diyprojects:
     form:
       title: "Upload New DIY Project"
@@ -79,6 +81,10 @@ en:
       enter_keyword: "Enter keyword, f.ex.: mathematics"
       new_document: Upload new document
       clear: "Clear search"
+    document:
+      uploaded_by: "Uploaded by"
+      view_file: "View file"
+      download_file: "Download file"
   welcome:
     index:
       log_in: "Log In"
@@ -98,6 +104,13 @@ en:
         description: "Description"
         place: "Place"
         age: "Age"
+        objective: "Objective"
+        duration: "Duration"
+        materials: "Materials"
+        results_and_tips: "Results and tips"
+        links_and_resources: "Links and resources"
+        tags: "Keywords"
+
 
       
 

@@ -26,6 +26,8 @@ lt:
       my_uploads: "Mano dokumentai"
       new-project: "Naujas projektas"
       new_document: "Naujas Dokumentas"
+      terms: "Naudojimosi taisyklės & Privatumo politika"
+      language: "Kalba"
   welcome:
     index:
       log_in: "Prisijungti"
@@ -41,6 +43,10 @@ lt:
       enter_keyword: "Įrašykite raktažodį, pvz.: matematika"
       new_document: "Įkelti naują dokumentą"
       clear: "Anuliuoti paiešką"
+    document:
+      uploaded_by: "Dokumentą įkėlė"
+      view_file: "Peržiūrėti"
+      download_file: "Atsisiųsti"
   diyprojects:
     form:
       title: "Įkelti naują 'Pasidaryk pats' projektą"
@@ -69,12 +75,18 @@ lt:
         description: "Aprašymas"
         place: "Atlikimo vieta"
         age: "Atlikimo amžius"
+        objective: "Tikslas"
+        duration: "Trukmė"
+        materials: "Priemonės"
+        results_and_tips: "Rezultatai ir patarimai"
+        links_and_resources: "Šaltiniai"
+        tags: "Raktažodžiai"
       document:
         title: "Pavadinimas"
         description: "Aprašymas"
         tags: "Raktažodžiai"
         doc_language: "Dokumento kalba"
-
+        
  
  
  

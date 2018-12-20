@@ -2,19 +2,20 @@
 	<% if (signed_in? && current_user.teacher?) || document.is_public? %>
 		<div class="document-space col-5 mb-1">
 			<h6 class="document-title"><%= document.title %></h6>
-			<small><%= document.description %></small>
-			<div class="text-muted">
-			<small>Document language: <%= document.doc_language %></small>
+			
+	
+			<span class="small text-muted"><%= Document.human_attribute_name("description") %>:</span> <small><%= document.description %></small><br/>
+			<span class="small text-muted"><%= Document.human_attribute_name("doc_language")%>:</span> <small><%= document.doc_language %></small>
 			<br/>
-			<small>Uploaded by: <%= document.user.name %></small>
+			<span class="small text-muted"><%= t(".uploaded_by") %></span><small> <%= document.user.name %></small>
 			<br/>
-			</div>
+			
 			<% document.tags.each do |tag| %>
  					<%= link_to "#{tag}", {controller: "documents", action: "index", tag:tag}, class: "badge badge-custom" %>
 			<% end %>
 			<div class="attachment-actions">
-				<%= link_to 'View file', document.attachment %> ||
-				<%= link_to 'Download file', document.attachment, download: '' %>
+				<%= link_to t('.view_file'), document.attachment %> ||
+				<%= link_to t('.download_file'), document.attachment, download: '' %>
 				<span></span>
 			</div>
 		</div>
