@@ -74,6 +74,8 @@ en:
     index:
       new_document: "New document"
       popular_keywords: "Popular keywords"
+      language: "hello"
+
   welcome:
     index:
       log_in: "Log In"

@@ -1,8 +1,8 @@
 
 
-<div class="container">
+<div class="container messages-index">
 	<h3 style="text-align:center">Message between <%= @conversation.recipient.name %> and <%= @conversation.sender.name %></h3>
-<div class="well" id="message-box" data-conversation-id="<%= @conversation.id %>">
+<div id="message-box" data-conversation-id="<%= @conversation.id %>">
 	<% @messages.each do |message| %>
 		<% if message.body %>
 			<% user = User.find(message.user_id) %>
@@ -14,12 +14,13 @@
 	<%= form_for [@conversation, @message] do |f| %>
 		<div class="input-group mb-3">
 			<%= f.text_field :body, placeholder: "Your message", class: "form-control message-field" %>
-			<%= f.text_field :user_id, value: current_user.id, type: "hidden" %>
-			<%= f.file_field :files, multiple: true, accept: 'application/pdf, application/zip,application/vnd.openxmlformats-officedocument.wordprocessingml.document' %>
-			
+			<%= f.text_field :user_id, value: current_user.id, type: "hidden" %>	
 			<div class="input-group-append">
 				<%= f.submit "Send message", class: "btn btn-secondary", data: { disable_with: false } %>
 			</div>
+		</div>
+		<div class="message-file mb-5">
+			<%= f.file_field :files, multiple: true, accept: 'application/pdf, application/zip,application/vnd.openxmlformats-officedocument.wordprocessingml.document' %>
 		</div>
 	<% end %>
 	<div class="mb-5">

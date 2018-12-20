@@ -3,7 +3,7 @@
 	<div class="row">
 		<div class="col-md-9">
 			<%= form_tag(documents_path, :method => "get", id: "search-form", class: "input-group-append") do %>
-    	<%= select_tag(:doc_language, options_for_select([["English"], ["Portuguese"], ["Lithuanian"], ["Spanish"], ["Greek"], ["Bulgarian"], ["Croatian"], ["Czech"], ["Danish"], ["Dutch"], ["Estonian"], ["Finnish"], ["French"], ["German"], ["Hungarian"], ["Italian"], ["Latvian"], ["Maltese"], ["Polish"], ["Romanian"], ["Slovenian"], ["Swedish"], ["Other"]]), id: "index-search", prompt: "Select document language", class: "form-control py-2") %>
+    	<%= select_tag(:doc_language, options_for_select([["English"], ["Portuguese"], ["Lithuanian"], ["Spanish"], ["Greek"], ["Bulgarian"], ["Croatian"], ["Czech"], ["Danish"], ["Dutch"], ["Estonian"], ["Finnish"], ["French"], ["German"], ["Hungarian"], ["Italian"], ["Latvian"], ["Maltese"], ["Polish"], ["Romanian"], ["Slovenian"], ["Swedish"], ["Other"]]), id: "index-search", :prompt =>t(".language"), class: "form-control py-2") %>
     	<%= text_field_tag :tags, params[:tags], placeholder: "Search documents by keyword", id: "index-search", class: "form-control py-2"  %>
       <span class="input-group-append">
           <%= submit_tag("Search", :class => "btn btn-outline-secondary") %>
