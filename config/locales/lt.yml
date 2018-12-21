@@ -1,9 +1,13 @@
 lt:
+  helpers:
+    placeholder:
+      comment:
+        body: "Jūsų komentaras.."
   outdoors: "Lauke"
   indoors: "Namuose"
   From 6 to 9:  "Nuo 6 iki 9 metų"
   From 10 to 12: "Nuo 10 iki 12 metų"
-  All ages: Tinkamas visiems
+  All ages: "Tinkamas visiems"
   the_links: "Sutinku su taisyklės & privatumo politika"
   global:
     menu:
@@ -32,6 +36,33 @@ lt:
     index:
       log_in: "Prisijungti"
       sign_up: "Registruotis"
+  chatrooms:
+    index:
+      forum_title: "Mokytojų pokalbiai"
+      new_forum_post: "Sukurti naują įrašą"
+      last_post_author: "Paskutinį įrašą sukūrė"
+      forum_statistics: "Forumo statistika"
+      total_posts: "Iš viso irašų"
+      total_comments: "Iš viso komentarų"
+      total_users: "Forumo narių skaičius"
+      post_created: "Įrašas sukurtas"
+      user_country: "Šalis"
+    show:
+      author: "Autorius"
+      post: "Įrašas"
+      send_a_message: "Siųsti žinutę"
+      posted: "Sukurta"
+      joined: "Užsiregistravęs"
+      posts: "Įrašų"
+      delete: "Ištrinti"
+      edit: "Redaguoti"
+      reply: "Komentuoti šį įrašą"
+  comments:
+    comment:
+      commented: "Komentaro autorius"
+      posted: "Sukurta"
+      delete: "Ištrinti komentarą"
+      message: "Siųsti žinutę komentaro autoriui"
   documents:
     form:
       title: "Įkelti naują dokumentą"
@@ -87,6 +118,9 @@ lt:
         tags: "Raktažodžiai"
         doc_language: "Dokumento kalba"
         is_public: "Pažymėkite, jei norite, jog dokumentas būtų privatus ir matomas tik prisijungusiems mokytojams"
+      chatroom:
+        title: "Pavadinimas"
+        description: "Aprašymas"
         
  
  

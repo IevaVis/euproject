@@ -2,7 +2,7 @@
 	<div class="row">
 		<div class="col-md-8">
 			<div class="forum-title">
-				<h3><span class="fas fa-folder-open"></span>Teacher Chat and Forum</h3>
+				<h3><span class="fas fa-folder-open"></span><%= t ".forum_title" %></h3>
 			</div>
 			<% @chatrooms.each do |chat| %>
 				<div class="forum-post">
@@ -25,10 +25,10 @@
 											<%= chat.user.name.capitalize %>
 											<% end %>
 											<div class="chat-owner-country">
-											Country: <%= chat.user.country %>
+											<%= t ".user_country" %>: <%= chat.user.country %>
 										</div>
 										<small class="text-muted">
-											Post created: <%= chat.created_at.strftime("%d/%m/%Y") %>
+											<%= t ".post_created" %>: <%= chat.created_at.strftime("%d/%m/%Y") %>
 										</small>
  										</div>
 								</div>
@@ -48,24 +48,24 @@
 			<% if @chatrooms.exists? %>
 				<div class="card-footer mb-4">
 				<dl>
-					<dt>Last post created by:</dt>
+					<dt><%= t ".last_post_author" %>:</dt>
 					<dd><%= Chatroom.last.user.name %> || <%= Chatroom.last.user.country %> </dd>
 				</dl>
 				</div>
 			<% end %>
   	<div class="card chatroom-statistics mb-3">
-  		<h6 class="card-header">Forum statistics</h6>
+  		<h6 class="card-header"><%= t ".forum_statistics" %></h6>
   			<div class="card-body">
   				<dl>
-  					<dt>Total posts:</dt>
+  					<dt><%= t ".total_posts" %>:</dt>
   						<dd><%= @chatrooms.count %></dd>
   				</dl>
   				<dl>
-  					<dt>Total comments:</dt>
+  					<dt><%= t ".total_comments" %>:</dt>
   						<dd><%= @comments.count %></dd>
   				</dl>
   				<dl>
-  					<dt>Total forum users:</dt>
+  					<dt><%= t ".total_users" %>:</dt>
   						<dd><%= Chatroom.distinct.count(:user_id) + Comment.distinct.count(:user_id) %></dd>
   				</dl>
   			</div>

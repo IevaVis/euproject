@@ -22,6 +22,7 @@ class DocumentsController < ApplicationController
 	end
 
 	def new
+		add_breadcrumb "Upload new document"
 		@document = Document.new
 	end
 

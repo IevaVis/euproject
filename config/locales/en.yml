@@ -30,6 +30,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  helpers:
+    placeholder:
+      comment:
+        body: "Comment here.."
   outdoors: "Outdoors"
   indoors: "Indoors"
   From 6 to 9: "From 6 to 9 years"
@@ -91,6 +95,33 @@ en:
     index:
       log_in: "Log In"
       sign_up: "Register new user"
+  chatrooms:
+    index:
+      forum_title: "Teachers' Forum and Chat"
+      new_forum_post: "New Forum Post"
+      last_post_author: "Last post created by"
+      forum_statistics: "Forum statistics"
+      total_posts: "Total posts"
+      total_comments: "Total comments"
+      total_users: "Total forum users"
+      post_created: "Post created"
+      user_country: "Country"
+    show:
+      author: "Author"
+      post: "Post"
+      send_a_message: "Send a message"
+      posted: "Posted"
+      joined: "Joined"
+      posts: "Posts"
+      delete: "Delete"
+      edit: "Edit"
+      reply: "Reply to this post"
+  comments:
+    comment: 
+      commented: "Commented by"
+      posted: "Posted"
+      delete: "Delete comment"
+      message: "Send private message to comment author"
   models:
   activerecord:
     attributes:
@@ -118,6 +149,9 @@ en:
         tags: "Keywords"
         doc_language: "Document language"
         is_public: "Document is private - if you select this checkbox the document will only be visible to logged in teachers"
+      chatroom:
+        title: "Post title"
+        description: "Post description"
           
 
 

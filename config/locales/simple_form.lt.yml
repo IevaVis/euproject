@@ -3,9 +3,10 @@ lt:
     submit:
       document:
         create: "Įkelti dokumentą"
-        public: "Public"
       diyproject:
         create: "Sukurti naują projektą"
+      chatroom:
+        create: "Sukurti įrašą"
   simple_form:
     placeholders:
       diyproject:
@@ -40,7 +41,7 @@ lt:
       defaults:
         email: "El paštas"
         password: 'Slaptažodis'
-      
+
       
 
         

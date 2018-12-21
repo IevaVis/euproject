@@ -3,14 +3,14 @@
 	<div class="card mb-2">
 		<div class="card-header text-muted">
 			<div class="float-left">
-    		Commented by: <%= comment.user.name %><br/>
-    		<small>Posted: <%= comment.created_at.strftime("%d-%m-%Y") %></small>
+    		<%= t ".commented" %>: <%= comment.user.name %><br/>
+    		<small><%= t ".posted" %>: <%= comment.created_at.strftime("%d-%m-%Y") %></small>
     	</div>
     	<div class="float-right">
     		<% if comment.user.id != current_user.id %>
-					<%= link_to "Message #{comment.user.name}", conversations_path(sender_id: current_user.id, recipient_id: comment.user.id), method: "post" %>
+					<%= link_to t(".message"), conversations_path(sender_id: current_user.id, recipient_id: comment.user.id), method: "post" %>
 				<% elsif signed_in? and current_user == comment.user %>
-				<%= link_to 'Delete comment', chatroom_comment_path(@chatroom, comment), method: :delete, remote: true %>
+				<%= link_to t('.delete'), chatroom_comment_path(@chatroom, comment), method: :delete, remote: true %>
 				<% end %>
     	</div>
  		</div>

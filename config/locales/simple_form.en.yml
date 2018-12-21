@@ -5,6 +5,8 @@ en:
         create: "Upload document"
       diyproject:
         create: "Create DIY Project"
+      chatroom: 
+        create: "Save post"
   simple_form:
     placeholders:
       diyproject:
@@ -29,8 +31,8 @@ en:
           vocational_education: "Vocational Education"
       diyproject:
         place:
-          indoors: "indoors"
-          outdoors: "outdoors"
+          indoors: "Indoors"
+          outdoors: "Outdoors"
         age:
           from_6_to_9: "From 6 to 9"
           from_10_to_12: "From 10 to 12"

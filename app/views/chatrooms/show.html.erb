@@ -5,8 +5,8 @@
   <table class="table table-striped table-bordered">
     <thead class="thead-light">
       <tr>
-        <th scope="col">Author</th>
-        <th scope="col">Post</th>
+        <th scope="col"><%= t ".author" %></th>
+        <th scope="col"><%= t ".post" %></th>
       </tr>
     </thead>
 
@@ -15,28 +15,28 @@
       <tr>
         <td class="author-col">
           <% if current_user.id != @chatroom.user_id %>
-        <div><%= @chatroom.user.name %> <small><%= link_to "Send a message", conversations_path(sender_id: current_user.id, recipient_id: @chatroom.user.id), method: 'post' %></small></div>
+        <div><%= @chatroom.user.name %> <small><%= link_to t(".send_a_message"), conversations_path(sender_id: current_user.id, recipient_id: @chatroom.user.id), method: 'post' %></small></div>
         <% else %>
         <%= @chatroom.user.name.capitalize %>
         <% end %>
         </td>
         <td class="post-col d-lg-flex justify-content-lg-between">
-          <div><span class="font-weight-bold">Posted:</span> <%= @chatroom.created_at.strftime("%d-%m-%Y") %></div>
+          <div><span class="font-weight-bold"><%= t ".posted" %>:</span> <%= @chatroom.created_at.strftime("%d-%m-%Y") %></div>
         </td>
       </tr>
 
       <tr>
         <td>
-          <div><span class="font-weight-bold">Joined:</span><br><%= @chatroom.user.created_at.strftime("%d-%m-%Y") %></div>
-          <div><span class="font-weight-bold">Posts:</span><br><%= @chatroom.user.chatrooms.count %></div>
+          <div><span class="font-weight-bold"><%= t ".joined" %>:</span><br><%= @chatroom.user.created_at.strftime("%d-%m-%Y") %></div>
+          <div><span class="font-weight-bold"><%= t ".posts" %>:</span><br><%= @chatroom.user.chatrooms.count %></div>
         </td>
         <td>
           <p><%= simple_format(@chatroom.description) %></p>
           <% if signed_in? && (current_user == @chatroom.user) %>
-          <%= link_to "Delete", chatroom_path(@chatroom), method: :delete, data: { confirm: "Are you sure you want to delete this forum post?" }, class: "btn btn-sm btn-danger" %>
+          <%= link_to t(".delete"), chatroom_path(@chatroom), method: :delete, data: { confirm: "Are you sure you want to delete this forum post?" }, class: "btn btn-sm btn-danger" %>
           <% end %>
            <% if signed_in? && (current_user == @chatroom.user) && !@chatroom.comments.exists? %>
-          <%= link_to "Edit", edit_chatroom_path(@chatroom), class: "btn btn-sm btn-warning" %>
+          <%= link_to t(".edit"), edit_chatroom_path(@chatroom), class: "btn btn-sm btn-warning" %>
           <% end %>
         </td>
       </tr>
@@ -65,9 +65,9 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-      <em><strong><label for="comment">Reply to this post:</label></strong></em>
+      <em><strong><label for="comment"><%= t ".reply" %>:</label></strong></em>
         <%= form_with model: [@chatroom, @comment] do |f| %>
-        <%= f.text_area :body, rows: 8, class: "form-control mb-3", placeholder: "Add your comment here", autofocus: true %>
+        <%= f.text_area :body, rows: 8, class: "form-control mb-3", placeholder: true, autofocus: true %>
         <%= f.submit 'Submit Comment', class: "btn btn-secondary btn-sm mb-5" %>
         <% end %>
       </div>
