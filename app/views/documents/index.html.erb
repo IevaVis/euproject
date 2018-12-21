@@ -9,9 +9,11 @@
     </div>
     <div class="col-md-4">
       <div class="row">
-        <div class="newdoc-button mb-3">
-          <%= link_to t(".new_document"), new_document_path, class: "btn btn-lg btn-custom4" %>
-        </div>
+        <% if signed_in? and current_user.teacher? %>
+          <div class="newdoc-button mb-3">
+            <%= link_to t(".new_document"), new_document_path, class: "btn btn-lg btn-custom4" %>
+          </div>
+        <% end %>
       </div>
       <div class="row">
         <div class="document-search-form col-md-11">

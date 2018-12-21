@@ -118,7 +118,7 @@ lt:
         description: "Aprašymas"
         tags: "Raktažodžiai"
         doc_language: "Dokumento kalba"
-        is_public: "Pažymėkite, jei norite, jog dokumentas būtų privatus ir matomas tik prisijungusiems mokytojams"
+        is_public: "Dokumentas yra VIEŠAS - pažymėjus šį laukelį, jūs sutinkate, jog šis dokumentas būtų matomas visiems registruotiems platformos nariams. Nepažymėjus, dokumentas bus išsaugotas kaip privatus ir matomas tik platformoje registruotiems mokytojams."
       chatroom:
         title: "Pavadinimas"
         description: "Aprašymas"

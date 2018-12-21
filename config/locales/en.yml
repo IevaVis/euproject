@@ -149,7 +149,7 @@ en:
         description: "Description"
         tags: "Keywords"
         doc_language: "Document language"
-        is_public: "Document is private - if you select this checkbox the document will only be visible to logged in teachers"
+        is_public: "Document is PUBLIC - if you select this checkbox the document will be visible to all registered users. Otherwise it will only be visible to registered teachers."
       chatroom:
         title: "Post title"
         description: "Post description"
