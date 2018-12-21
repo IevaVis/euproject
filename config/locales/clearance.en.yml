@@ -39,7 +39,7 @@ en:
   passwords:
     create:
       description: You will receive an email within the next few minutes. It
-        contains instructions for changing your password.
+        contains instructions for changing your password. If you haven't received any email, please check you email security settings and try again.
     edit:
       description: Your password has been reset. Choose a new password below.
       title: Change your password

@@ -38,7 +38,7 @@ lt:
       sign_out: Sign out
   passwords:
     create:
-      description: Kelių minučių laikotarpyje gausite elektroninį laišką į savo pašto dėžutę su instrukcijomis kaip pasikeisti slaptažodį.
+      description: Kelių minučių laikotarpyje gausite elektroninį laišką į savo pašto dėžutę su instrukcijomis kaip pasikeisti slaptažodį. Jei laiško negavote, pasitikrinkite savo el. pašto saugumo nustatymus ir bandykite dar kartą.
     edit:
       description: Pasirinkite naują slaptažodį
       title: Pasikeisti slaptažodį
