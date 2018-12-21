@@ -108,6 +108,8 @@ lt:
       clear: "Išvalyti"
       diy_tips: "Paspaudę ant paveikslėlio apačioje matysite patarimus, kurie gali praversti įkeliant naują 'Pasidaryk pats' projektą"
       download_tips: "Atsisiųsti patarimus"
+    show:
+      download_diy: "Atsisiųsti projektą kaip PDF dokumentą"
     diyproject:
       activity_is_best_for: "Geriausia atlikti"
       best_suitable_for_kids_aged: "Tinkamas atlikti su vaikais"
