@@ -74,6 +74,7 @@ lt:
       enter_keyword: "Įrašykite raktažodį, pvz.: matematika"
       new_document: "Įkelti naują dokumentą"
       clear: "Anuliuoti paiešką"
+      submit: "Ieškoti"
     document:
       uploaded_by: "Dokumentą įkėlė"
       view_file: "Peržiūrėti"

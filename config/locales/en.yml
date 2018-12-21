@@ -87,6 +87,7 @@ en:
       enter_keyword: "Enter keyword, f.ex.: mathematics"
       new_document: Upload new document
       clear: "Clear search"
+      submit: "Search"
     document:
       uploaded_by: "Uploaded by"
       view_file: "View file"

@@ -26,7 +26,7 @@
               <%= text_field_tag :tags, params[:tags], id: "index-search", class: "form-control py-2" %>
             </div>
             <div class="action-buttons">
-              <%= submit_tag("Search", :class => "btn btn-outline-secondary") %>
+              <%= submit_tag t(".submit"), :class => "btn btn-outline-secondary" %>
               <%= link_to t(".clear"), documents_path, class: "btn btn-outline-warning ml-1" %>
             </div>
           <% end %>
