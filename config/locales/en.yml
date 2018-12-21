@@ -34,6 +34,8 @@ en:
     placeholder:
       comment:
         body: "Comment here.."
+      message:
+        body: "Your message"
   outdoors: "Outdoors"
   indoors: "Indoors"
   From 6 to 9: "From 6 to 9 years"
@@ -123,6 +125,16 @@ en:
       posted: "Posted"
       delete: "Delete comment"
       message: "Send private message to comment author"
+  conversations:
+    index:
+      recent_conversations: "Recent conversations"
+      new_messages: "New messages!"
+  messages:
+    index:
+      conversation_between: "Conversation between"
+      and: "and"
+      submit: "Send"
+      back: "Back to all conversations"
   models:
   activerecord:
     attributes:

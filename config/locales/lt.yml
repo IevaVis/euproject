@@ -3,6 +3,8 @@ lt:
     placeholder:
       comment:
         body: "Jūsų komentaras.."
+      message:
+        body: "Jūsų žinutė"
   outdoors: "Lauke"
   indoors: "Namuose"
   From 6 to 9:  "Nuo 6 iki 9 metų"
@@ -63,6 +65,16 @@ lt:
       posted: "Sukurta"
       delete: "Ištrinti komentarą"
       message: "Siųsti žinutę komentaro autoriui"
+  conversations:
+    index:
+      recent_conversations: "Visi susirašinėjimai"
+      new_messages: "Naujos žinutės!"
+  messages:
+    index:
+      conversation_between: "Pokalbis tarp"
+      and: "ir"
+      submit: "Siųsti"
+      back: "Grįžti į visus susirašinėjimus"
   documents:
     form:
       title: "Įkelti naują dokumentą"

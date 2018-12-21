@@ -1,6 +1,6 @@
 <div class="container conversations-container">
 	<div class="recent_heading mb-2">
-		<h4>Recent conversations</h4>
+		<h4><%= t ".recent_conversations" %></h4>
 	</div>	
 		<% @conversations.each do |conversation| %>
 			<% if conversation.messages.exists? %>
@@ -19,7 +19,7 @@
 							<div class="conversation-user ml-5">
 								<%= link_to recipient.name, conversation_messages_path(conversation), class: "conv-user-name" %>
 								<% if !conversation.unread_message_count(current_user).zero? %>
-        					<small class="unread-count">(<%= link_to 'New messages!', conversation_messages_path(conversation), class: "unread-count" %> <%= conversation.unread_message_count(current_user) %>)</small></span>
+        					<small class="unread-count">(<%= link_to t('.new_messages'), conversation_messages_path(conversation), class: "unread-count" %> <%= conversation.unread_message_count(current_user) %>)</small></span>
       					<% end %>
       					<br/>
       				<%= link_to conversation.last_message.body.truncate(40), conversation_messages_path(conversation) %>

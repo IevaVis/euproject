@@ -1,7 +1,7 @@
 
 
 <div class="container messages-index">
-	<h3 style="text-align:center">Message between <%= @conversation.recipient.name %> and <%= @conversation.sender.name %></h3>
+	<h3 style="text-align:center"><%= t ".conversation_between" %> <%= @conversation.recipient.name %> <%= t ".and" %> <%= @conversation.sender.name %></h3>
 <div id="message-box" data-conversation-id="<%= @conversation.id %>">
 	<% @messages.each do |message| %>
 		<% if message.body %>
@@ -13,10 +13,10 @@
 
 	<%= form_for [@conversation, @message] do |f| %>
 		<div class="input-group mb-3">
-			<%= f.text_field :body, placeholder: "Your message", class: "form-control message-field" %>
+			<%= f.text_field :body, placeholder: true, class: "form-control message-field" %>
 			<%= f.text_field :user_id, value: current_user.id, type: "hidden" %>	
 			<div class="input-group-append">
-				<%= f.submit "Send message", class: "btn btn-secondary", data: { disable_with: false } %>
+				<%= f.submit t(".submit"), class: "btn btn-secondary", data: { disable_with: false } %>
 			</div>
 		</div>
 		<div class="message-file mb-5">
@@ -24,7 +24,7 @@
 		</div>
 	<% end %>
 	<div class="mb-5">
-	<%= link_to 'Back to all conversations', conversations_path, class: "btn btn-info" %>
+	<%= link_to t('.back'), conversations_path, class: "btn btn-info" %>
 	</div>
 </div>
 
