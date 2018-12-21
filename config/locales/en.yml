@@ -40,7 +40,7 @@ en:
   indoors: "Indoors"
   From 6 to 9: "From 6 to 9 years"
   From 10 to 12: "From 10 to 12 years"
-  All ages: "All ages"
+  all_ages: "All ages"
   the_links: "I accept Terms of use & Privacy policy"
   global:
     menu:
@@ -70,6 +70,18 @@ en:
       title: "Upload New DIY Project"
     index:
       new_project: "Create DIY project"
+      search_diy: "Search for DIY"
+      place: "Place"
+      age: "Age"
+      indoors: "Indoors"
+      outdoors: "Outdoors"
+      from_6_to_9: "From 6 to 9"
+      from_10_to_12: "From 10 to 12"
+      all_ages: "All ages"
+      submit: "Search"
+      clear: "Clear"
+      diy_tips: "Click on the image to get usefull tips about uploading a new DIY project"
+      download_tips: "Download tips"
     diyproject:
       activity_is_best_for: "Activity is best for"
       best_suitable_for_kids_aged: "Best suitable for kids aged"

@@ -34,8 +34,8 @@ lt:
           indoors: "Namuose"
           outdoors: "Lauke"
         age:
-          from_6_to_9: "Nuo 6 iki 9 metų"
-          from_10_to_12: "Nuo 10 to 12 metų"
+          from_6_to_9: "Nuo 6 iki 9"
+          from_10_to_12: "Nuo 10 to 12"
           all_ages: "Tinkamas visiems"
     labels:
       defaults:

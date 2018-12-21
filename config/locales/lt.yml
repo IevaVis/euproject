@@ -7,9 +7,9 @@ lt:
         body: "Jūsų žinutė"
   outdoors: "Lauke"
   indoors: "Namuose"
-  From 6 to 9:  "Nuo 6 iki 9 metų"
-  From 10 to 12: "Nuo 10 iki 12 metų"
-  All ages: "Tinkamas visiems"
+  from_6_to_9:  "Nuo 6 iki 9"
+  from_10_to_12: "Nuo 10 iki 12"
+  all_ages: "Tinkamas visiems"
   the_links: "Sutinku su taisyklės & privatumo politika"
   global:
     menu:
@@ -96,6 +96,18 @@ lt:
       title: "Sukurti naują 'Pasidaryk pats' projektą"
     index:
       new_project: "Sukurti DIY projektą"
+      search_diy: "Projektų paieška"
+      place: "Vieta"
+      age: "Amžius"
+      indoors: "Namuose"
+      outdoors: "Lauke"
+      from_6_to_9: "Nuo 6 iki 9"
+      from_10_to_12: "Nuo 10 iki 12"
+      all_ages: "Tinkamas visiems"
+      submit: "Ieškoti"
+      clear: "Išvalyti"
+      diy_tips: "Paspaudę ant paveikslėlio apačioje matysite patarimus, kurie gali praversti įkeliant naują 'Pasidaryk pats' projektą"
+      download_tips: "Atsisiųsti patarimus"
     diyproject:
       activity_is_best_for: "Geriausia atlikti"
       best_suitable_for_kids_aged: "Tinkamas atlikti su vaikais"

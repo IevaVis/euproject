@@ -1,7 +1,16 @@
 Rails.application.routes.draw do
 
+resources :passwords, controller: "clearance/passwords", only: [:create, :new]
+  
+  resource :session, controller: "sessions", only: [:create, :destroy]
 
-# scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
+  resources :users, controller: "users" do
+    resource :password,
+      controller: "clearance/passwords",
+      only: [:create, :edit, :update]
+  end
+
+scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
   root "welcome#index"
   get "/terms" => "welcome#terms", as: "terms"
   get "/about" => "welcome#about", as: "about"
@@ -18,16 +27,6 @@ Rails.application.routes.draw do
     resources :messages
   end
 
-  resources :passwords, controller: "clearance/passwords", only: [:create, :new]
-  
-  resource :session, controller: "sessions", only: [:create, :destroy]
-
-  resources :users, controller: "users" do
-    resource :password,
-      controller: "clearance/passwords",
-      only: [:create, :edit, :update]
-  end
-
   resources :notifications do
     collection do
       post :mark_as_read
@@ -37,7 +36,7 @@ Rails.application.routes.draw do
   get "/sign_in" => "clearance/sessions#new", as: "sign_in"
   get "/sign_up" => "clearance/users#new", as: "sign_up"
 
-# end
+end
   
 end
 
