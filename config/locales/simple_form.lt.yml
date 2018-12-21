@@ -3,12 +3,15 @@ lt:
     submit:
       document:
         create: "Įkelti dokumentą"
-      diyprojects:
+        public: "Public"
+      diyproject:
         create: "Sukurti naują projektą"
   simple_form:
     placeholders:
       diyproject:
-        tags: "Įrašykite mažiausiai 1, daugiausiai 5 raktažodžius. Raktažodžiai privalo būti atskirti kableiais, pvz.: dekoravimas, piešimas"
+        tags: "Įrašykite mažiausiai 1, daugiausiai 5 raktažodžius. Raktažodžiai privalo būti atskirti kableliais, pvz.: dekoravimas, piešimas"
+      document:
+        tags: "Įrašykite mažiausiai 1, daugiausiai 5 raktažodžius. Raktažodžiai privalo būti atskirti kableliais, pvz.: matematika, namų darbai"
     required:
       text: 'required'
       mark: '*'
@@ -37,5 +40,8 @@ lt:
       defaults:
         email: "El paštas"
         password: 'Slaptažodis'
+      
+      
+
         
   

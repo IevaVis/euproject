@@ -49,9 +49,9 @@ lt:
       download_file: "Atsisiųsti"
   diyprojects:
     form:
-      title: "Įkelti naują 'Pasidaryk pats' projektą"
+      title: "Sukurti naują 'Pasidaryk pats' projektą"
     index:
-      new_project: "Sukurti DIY"
+      new_project: "Sukurti DIY projektą"
     diyproject:
       activity_is_best_for: "Geriausia atlikti"
       best_suitable_for_kids_aged: "Tinkamas atlikti su vaikais"
@@ -86,6 +86,7 @@ lt:
         description: "Aprašymas"
         tags: "Raktažodžiai"
         doc_language: "Dokumento kalba"
+        is_public: "Pažymėkite, jei norite, jog dokumentas būtų privatus ir matomas tik prisijungusiems mokytojams"
         
  
  

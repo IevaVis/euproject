@@ -9,6 +9,8 @@ en:
     placeholders:
       diyproject:
         tags: "Add minimum 1 and maximum 5 keywords here. Keywords MUST be separated with commas, f.ex. home decoration, painting"
+      document: 
+        tags: "Add minimum 1 and maximum 5 keywords here. Keywords MUST be separated with commas, f.ex. home decoration, painting"
     required:
       text: 'required'
       mark: '*'
@@ -33,11 +35,11 @@ en:
           from_6_to_9: "From 6 to 9"
           from_10_to_12: "From 10 to 12"
           all_ages: "All ages"
-    # Examples
     labels:
       defaults:
         email: "Email"
         password: 'Password'
+
 
         
     #   user:

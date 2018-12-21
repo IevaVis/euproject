@@ -2,20 +2,20 @@
 
 <div class="col-md-6 offset-md-3">
 	<div class="documentupload-form">
-		<h2><%= t ".title" %></h2><br/>
+		<h3><%= t ".title" %></h3><br/>
 		<%= content_for(:the_links) do %>
-    	Accept <a href = "#" data-toggle ="modal" data-target = "#exampleModalLong"> Terms of use </a>
-		<% end %>
+    	<%= link_to t("the_links"), "#", data: {toggle: "modal", target: "#exampleModalLong"} %> 
+			<% end %>
 		<%= simple_form_for @document, :html => { :multipart => true } do |f| %>
 			<div class="form-inputs">
 				<%= f.input :title, required: true, autofocus: true %>
 				<%= f.input :description, required: true %>
-					<a title="Add keywords!" data-toggle="popover" data-trigger="hover" data-content="Keywords are words you assign to the document you are sharing. As a rule of thumb, keep your keywords to two words or less. If you find yourself going over that limit, it may make more sense to create two separate keywords — for example, rather than tagging something as 'Algebra performance task', you could tag it as 'algebra' and 'performance task'" class="explain-tags">How keywords work?</a>
 				<%= f.input :tags, input_html: {value: f.object.tags.join(', ') || ''}, required: true, placeholder: true %>
 				<%= f.input :doc_language, required: true, collection: ["English", "Portuguese", "Lithuanian", "Spanish", "Greek", "Bulgarian", "Croatian", "Czech", "Danish", "Dutch", "Estonian", "Finnish", "French", "German", "Hungarian", "Italian", "Latvian", "Maltese", "Polish", "Romanian", "Slovenian", "Swedish", "Other" ] %>
-				<%= f.file_field :attachment %><br/>
-				<%= f.hint 'Select Document Type' %>
-				<%= f.collection_radio_buttons :is_public, [[true, 'Public'] ,[false, 'Private']], :first, :last %>
+			<div class="mb-3">
+				<%= f.file_field :attachment %>
+			</div>
+				<%= f.input :is_public, as: :boolean, checked_value: true, unchecked_value: false %>
 				<%= f.input :terms, as: :boolean, checked_value: true, unchecked_value: false, :label => content_for(:the_links) %>
 			</div>
 			<div class="form-actions">

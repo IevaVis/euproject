@@ -97,7 +97,7 @@ ActiveRecord::Schema.define(version: 2018_12_14_130202) do
     t.text "tags", default: [], array: true
     t.text "description"
     t.string "doc_language"
-    t.boolean "is_public"
+    t.boolean "is_public", default: false
     t.boolean "terms"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

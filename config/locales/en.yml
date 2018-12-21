@@ -73,6 +73,8 @@ en:
       add_your_image: "Add Your image"
       rate_difficulty: "Rate difficulty!"
   documents:
+    form:
+      title: "Upload new document"
     index:
       new_document: "New document"
       popular_keywords: "Popular keywords"
@@ -110,6 +112,13 @@ en:
         results_and_tips: "Results and tips"
         links_and_resources: "Links and resources"
         tags: "Keywords"
+      document:
+        title: "Title"
+        description: "Description"
+        tags: "Keywords"
+        doc_language: "Document language"
+        is_public: "Document is private - if you select this checkbox the document will only be visible to logged in teachers"
+          
 
 
       
