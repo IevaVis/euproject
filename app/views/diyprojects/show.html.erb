@@ -2,6 +2,7 @@
 	<div align="center">
 		<div class="diy-title">
 			<h1><%= @diyproject.title %></h1>
+			<div class="small text-muted"><%= t ".age" %>: <%= t @diyproject.age %> || <%= t ".done" %>: <%= t @diyproject.place %></div><br/>
 				<%= link_to t('.download_diy'), diyproject_path(@diyproject, :format => :pdf), class: "btn btn-custom5" %>
 		</div>
 		<br/>
@@ -23,12 +24,6 @@
 	</div>
 	<div class="diy-duration">
 		<p><strong><%= Diyproject.human_attribute_name("duration") %></strong></p><%= simple_format(@diyproject.duration) %>
-	</div>
-	<div class="diy-place">
-		<p><strong><%= Diyproject.human_attribute_name("place") %></strong></p><%= simple_format(@diyproject.place) %>
-	</div>
-	<div class="diy-age">
-		<p><strong><%= Diyproject.human_attribute_name("age") %></strong></p><%= simple_format(@diyproject.age) %>
 	</div>
 	<div class="diy-results">
 		<p><strong><%= Diyproject.human_attribute_name("results_and_tips") %></strong></p><%= simple_format(@diyproject.results_and_tips) %>

@@ -8,18 +8,14 @@
 <body>
   <div class='container'>
   	<h1><%= @diyproject.title %></h1>
-  
+  	<div class="place-age">
+  	<div class="small text-muted"><%= t ".age" %>: <%= t @diyproject.age %> || <%= t ".done" %>: <%= t @diyproject.place %></div><br/>
+  </div>
   	<div class="diy-description">
 		<p><strong><%= Diyproject.human_attribute_name("description") %></strong></p><%= simple_format(@diyproject.description) %>
 	</div>
 	<div class="diy-objective">
 		<p><strong><%= Diyproject.human_attribute_name("objective") %></strong></p><%= simple_format(@diyproject.objective) %>
-	</div>
-	<div class="diy-place">
-		<p><strong><%= Diyproject.human_attribute_name("place") %></strong></p><%= @diyproject.place %>
-	</div>
-	<div class="diy-place">
-		<p><strong><%= Diyproject.human_attribute_name("age") %></strong></p><%= @diyproject.age %>
 	</div>
 	<div class="diy-duration">
 		<p><strong><%= Diyproject.human_attribute_name("duration") %></strong></p><%= simple_format(@diyproject.duration) %>

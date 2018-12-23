@@ -82,6 +82,8 @@ en:
       clear: "Clear"
       diy_tips: "Click on the image to get usefull tips about uploading a new DIY project"
       download_tips: "Download tips"
+      age: "Age"
+      done: "Done"
     show:
       download_diy: "Download DIY project as a PDF document"
     diyproject:

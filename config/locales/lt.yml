@@ -110,6 +110,8 @@ lt:
       download_tips: "Atsisiųsti patarimus"
     show:
       download_diy: "Atsisiųsti projektą kaip PDF dokumentą"
+      age: "Amžius"
+      done: "Geriausia atlikti"
     diyproject:
       activity_is_best_for: "Geriausia atlikti"
       best_suitable_for_kids_aged: "Tinkamas atlikti su vaikais"
