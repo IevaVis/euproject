@@ -82,10 +82,11 @@ en:
       clear: "Clear"
       diy_tips: "Click on the image to get usefull tips about uploading a new DIY project"
       download_tips: "Download tips"
-      age: "Age"
-      done: "Done"
     show:
       download_diy: "Download DIY project as a PDF document"
+      age: "Age"
+      done: "Done"
+    report:
     diyproject:
       activity_is_best_for: "Activity is best for"
       best_suitable_for_kids_aged: "Best suitable for kids aged"
@@ -178,6 +179,7 @@ en:
         tags: "Keywords"
         doc_language: "Document language"
         is_public: "Document is PUBLIC - if you select this checkbox the document will be visible to all registered users. Otherwise it will only be visible to registered teachers."
+        terms: "Terms"
       chatroom:
         title: "Post title"
         description: "Post description"

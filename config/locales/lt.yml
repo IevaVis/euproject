@@ -1,4 +1,13 @@
 lt:
+  errors:
+    messages:
+      blank: "- laukelis negali būti paliktas tuščias"
+      invalid: "netinkamas el. paštas"
+      accepted: "- laukelis turi būti pažymėtas"
+      taken: "jau egzistuoja mūsų duomenų bazėje"
+      too_short: "per trumpas"
+      too_long:
+        other: "per ilgas (leidžiama %{count} simbolių)"
   helpers:
     placeholder:
       comment:
@@ -11,6 +20,7 @@ lt:
   from_10_to_12: "Nuo 10 iki 12"
   all_ages: "Tinkamas visiems"
   the_links: "Sutinku su taisyklės & privatumo politika"
+  and: "ir"
   global:
     menu:
       home: "Pradinis"
@@ -112,6 +122,9 @@ lt:
       download_diy: "Atsisiųsti projektą kaip PDF dokumentą"
       age: "Amžius"
       done: "Geriausia atlikti"
+    report:
+      age: "Amžius"
+      done: "Geriausia atlikti"
     diyproject:
       activity_is_best_for: "Geriausia atlikti"
       best_suitable_for_kids_aged: "Tinkamas atlikti su vaikais"
@@ -130,6 +143,7 @@ lt:
         password: "Slaptažodis"
         password_confirmation: "Slaptažodžio patvirtinimas"
         grade_of_teaching: "Mokymo lygis"
+        terms: "Naudojimosi taisyklės"
       diyproject:
         title: "Pavadinimas"
         description: "Aprašymas"
