@@ -27,18 +27,18 @@ class Document < ApplicationRecord
 
   
 def max_tag_size
- errors[:documents] << ": add minimum 1 and maximum 5 keywords separated by commas" if tags.count > 5
+ errors[:tags] << I18n.t('too_many_tags') if tags.count > 5
  self.tags.each do |tag|
-  errors[:documents] << ": Keywords have to be 15 characters maximum each and each keyword has to be separated by comma" if tag.length > 15
+  errors[:tags] << I18n.t('wrong_tags_length')if tag.length > 20
  end
 end
 
   def attachment_type
     if attachment.attached? == false
-      errors[:attachment] << "is missing"
+      errors[:attachment] << I18n.t('attachment_missing')
     end
     if attachment.attached? and !attachment.content_type.in?(%(image/jpg image/jpeg image/png application/pdf application/zip application/vnd.openxmlformats-officedocument.wordprocessingml.document))
-      errors.add(:attachment, 'must be a PDF, DOC, JPG or PNG file')
+      errors[:attachment] << I18n.t('wrong_attachment_type')
     end
   end
 

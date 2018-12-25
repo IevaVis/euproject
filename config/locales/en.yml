@@ -42,6 +42,9 @@ en:
   From 10 to 12: "From 10 to 12 years"
   all_ages: "All ages"
   the_links: "I accept Terms of use & Privacy policy"
+  wrong_tags_length: "have to be 20 characters maximum each and each keyword has to be separated by comma"
+  too_many_tags: " - add minimum 1 and maximum 5 keywords separated by commas"
+  wrong_attachment_type: "must be a PDF, DOC, JPG or PNG file"
   global:
     menu:
       home: "Home"
