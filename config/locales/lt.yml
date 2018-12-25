@@ -24,6 +24,7 @@ lt:
   too_many_tags: "- įrašykite mažiausiai 1, daugiausiai 5 raktažodžius"
   attachment_missing: "neįkeltas"
   wrong_attachment_type: "turi būti PDF, DOC, JPG or PNG formato"
+  images_type: 'turi būti JPG arba PNG formato'
   global:
     menu:
       home: "Pradinis"
@@ -158,6 +159,8 @@ lt:
         results_and_tips: "Rezultatai ir patarimai"
         links_and_resources: "Šaltiniai"
         tags: "Raktažodžiai"
+        terms: "Naudojimosi taisyklės"
+        images: "Paveikslėliai"
       document:
         title: "Pavadinimas"
         description: "Aprašymas"

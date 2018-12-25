@@ -30,15 +30,15 @@ class Diyproject < ApplicationRecord
 		end
 		images.each do |image|
 			if !image.content_type.in?(%(image/jpg image/jpeg image/png'))
-				errors[:images] << 'needs to be a JPG og PNG'
+				errors[:images] << I18n.t('images_type')
 			end
 		end
 	end
 
 	def max_tag_size
- 		errors[:diyprojects] << ": add minimum 1 and maximum 5 keywords separated by commas" if tags.count > 5
+ 		errors[:tags] << I18n.t('too_many_tags') if tags.count > 5 
  		self.tags.each do |tag|
-  		errors[:diyprojects] << ": Keywords have to be 15 characters maximum each and each keyword has to be separated by comma" if tag.length > 15
+  		errors[:tags] << I18n.t('wrong_tags_length')if tag.length > 20
  		end
 	end
 end

@@ -45,6 +45,7 @@ en:
   wrong_tags_length: "have to be 20 characters maximum each and each keyword has to be separated by comma"
   too_many_tags: " - add minimum 1 and maximum 5 keywords separated by commas"
   wrong_attachment_type: "must be a PDF, DOC, JPG or PNG file"
+  images_type: "needs to be a JPG og PNG"
   global:
     menu:
       home: "Home"
@@ -176,6 +177,7 @@ en:
         results_and_tips: "Results and tips"
         links_and_resources: "Links and resources"
         tags: "Keywords"
+        terms: "Terms"
       document:
         title: "Title"
         description: "Description"
