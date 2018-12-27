@@ -30,10 +30,9 @@ class DocumentsController < ApplicationController
 		@document = Document.new(valid_params)
 		@document.user = current_user
 		if @document.save
-			flash[:success] = "Thank You! Your file is uploaded successfully!"
+			flash[:success] = t(:document_uploaded)
 			redirect_to documents_path
 		else 
-			flash[:danger] = "Something went wrong. Try again"
 			render :new
 		end
 	end
@@ -47,9 +46,8 @@ class DocumentsController < ApplicationController
 	def update
 		if @document.update_attributes(valid_params)
 			redirect_to document_path(@document)
-			flash[:success] = "File updated successfully"
+			flash[:success] = t(:information_updated)
 		else
-			flash[:alert] = "Error updating file. Try again"
 			render :edit
 		end
 	end
@@ -73,14 +71,14 @@ class DocumentsController < ApplicationController
 
 		def require_login
 			if !signed_in? or !current_user.teacher?
-				flash[:danger] = "Only logged in teachers can perform this action"
+				flash[:danger] = t(:require_logged_teacher)
 				redirect_back(fallback_location: root_path)
 			end
 		end
 
 		def require_login_for_viewing
 			if !signed_in?
-				flash[:danger] = "You have to be logged in to view the library!"
+				flash[:danger] = t(:require_login_for_viewing)
 				redirect_back(fallback_location: root_path)
 			end
 		end

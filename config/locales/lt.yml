@@ -25,6 +25,15 @@ lt:
   attachment_missing: "neįkeltas"
   wrong_attachment_type: "turi būti PDF, DOC, JPG or PNG formato"
   images_type: 'turi būti JPG arba PNG formato'
+  successful_registration: "Registracija sėkminga!"
+  diy_uploaded: "Ačiū! 'Pasidaryk pats' projektas išsaugotas"
+  information_updated: "Pakeitimai išsaugoti"
+  require_login: "Privalote prisijungti, jei norite tęsti!"
+  require_logged_teacher: "Tik prisijungę mokytojai gali atlikti šį veiksmą"
+  document_uploaded: "Ačiū! Dokumentas išsaugotas"
+  require_login_for_viewing: "Privalote prisijungti, jei norite peržiūrėti biblioteką"
+  conversation_not_found: "Pokalbis nerastas"
+  bad_login_info: "Neteisingas el. paštas, slaptažodis arba vartotojo tipas"
   global:
     menu:
       home: "Pradinis"
@@ -73,6 +82,8 @@ lt:
       delete: "Ištrinti"
       edit: "Redaguoti"
       reply: "Komentuoti šį įrašą"
+    edit:
+      edit_forum_post: "Redaguoti įrašą"
   comments:
     comment:
       commented: "Komentaro autorius"

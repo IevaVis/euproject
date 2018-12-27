@@ -44,14 +44,14 @@ class MessagesController < ApplicationController
 
 	def require_login
 		if !signed_in? or !current_user.teacher?
-			flash[:danger] = "Only logged in teachers can perform this action"
+			flash[:danger] = t(:require_logged_teacher)
 			redirect_back(fallback_location: root_path)
 		end
 	end
 
 	def require_conversation_users
 		if (current_user != @conversation.recipient) and (current_user != @conversation.sender)
-			flash[:danger] = "Conversation not found"
+			flash[:danger] = t(:conversation_not_found)
 			redirect_back(fallback_location: root_path)
 		end
 	end

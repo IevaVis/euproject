@@ -12,7 +12,7 @@ class UsersController < Clearance::UsersController
 		if @user.save
 			UserMailer.with(user: @user).welcome_email.deliver_now
 			sign_in @user
-			flash[:success] = "You have signed up successfully!"
+			flash[:success] = t(:successful_registration)
 			redirect_to root_path
 		else
 			render template: "users/new"

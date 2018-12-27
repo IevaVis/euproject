@@ -5,8 +5,10 @@ lt:
         create: "Įkelti dokumentą"
       diyproject:
         create: "Sukurti naują projektą"
+        update: "Redaguoti projektą"
       chatroom:
         create: "Sukurti įrašą"
+        update: "Redaguoti įrašą"
   simple_form:
     placeholders:
       diyproject:

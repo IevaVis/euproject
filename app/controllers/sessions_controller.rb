@@ -10,7 +10,7 @@ def create
         redirect_to root_path
       else
         sign_out
-        flash[:danger] = I18n.t("flashes.failure_after_create")
+        flash[:danger] = t(:bad_login_info)
         redirect_to sign_in_path(role: @role)
       end
     end

@@ -24,10 +24,9 @@ class DiyprojectsController < ApplicationController
 		@diyproject = Diyproject.new(valid_params)
 		@diyproject.user = current_user
 		if @diyproject.save
-			flash[:success] = "Thank You! Your project is uploaded successfully!"
+			flash[:success] = t(:diy_uploaded)
 			redirect_to diyprojects_path
 		else 
-			flash[:danger] = "Something went wrong. Try again."
 			render:new
 		end
 	end
@@ -46,9 +45,8 @@ class DiyprojectsController < ApplicationController
 	def update
 		if @diyproject.update_attributes(valid_params)
 			redirect_to diyproject_path(@diyproject)
-			flash[:success] = "DIY project updated successfully"
+			flash[:success] = t(:diy_updated)
 		else
-			flash[:alert] = "Error updating DIY Project. Try again"
 			render :edit
 		end
 	end
@@ -71,7 +69,7 @@ class DiyprojectsController < ApplicationController
 
 		def require_login
 			if !signed_in?
-				flash[:danger] = "You must be logged in to continue!"
+				flash[:danger] = t(:require_login)
 				redirect_to root_path
 			end
 		end

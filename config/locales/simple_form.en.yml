@@ -5,8 +5,10 @@ en:
         create: "Upload document"
       diyproject:
         create: "Create DIY Project"
+        update: "Update DIY Project"
       chatroom: 
         create: "Save post"
+        update: "Update post"
   simple_form:
     placeholders:
       diyproject:

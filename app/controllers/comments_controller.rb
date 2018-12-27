@@ -31,7 +31,7 @@ class CommentsController < ApplicationController
 
   def require_login
 		if !signed_in? or !current_user.teacher?
-			flash[:danger] = "Only logged in teachers can perform this action"
+			flash[:danger] = t(:require_logged_teacher)
 			redirect_to root_path
 		end
 	end

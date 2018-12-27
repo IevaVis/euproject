@@ -37,9 +37,8 @@ class ChatroomsController < ApplicationController
 	def update
 		if @chatroom.update_attributes(valid_params)
 			redirect_to chatroom_path(@chatroom)
-			flash[:success] = "Updated successfully"
+			flash[:success] = t(:information_updated)
 		else
-			flash[:alert] = "Error updating chat. Try again"
 			render :edit
 		end
 	end
@@ -62,7 +61,7 @@ class ChatroomsController < ApplicationController
 	def require_teacher_login
 		if !signed_in? or !current_user.teacher?
 				redirect_to root_path
-				flash[:danger] = "Only logged in teachers can perform this action"
+				flash[:danger] = t(:require_logged_teacher)
 			end
 	end
 
