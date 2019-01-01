@@ -1,6 +1,7 @@
 class DiyprojectsController < ApplicationController
 	before_action :set_diyproject, only: [:show, :edit, :update, :destroy]
 	before_action :require_login, only: [:index, :new, :create, :edit, :update, :destroy]
+	before_action :require_same_user, only: [:edit, :update, :destroy]
 	add_breadcrumb "Home", :root_path
 	add_breadcrumb "DIY List", :diyprojects_path
 
@@ -71,6 +72,13 @@ class DiyprojectsController < ApplicationController
 			if !signed_in?
 				flash[:danger] = t(:require_login)
 				redirect_to root_path
+			end
+		end
+
+		def require_same_user
+			if current_user != @diyproject.user
+				flash[:danger] = "You can only edit or delete your own uploads"
+			redirect_to diyprojects_path
 			end
 		end
 

@@ -2,6 +2,7 @@ class DocumentsController < ApplicationController
 	before_action :set_document, only: [:show, :edit, :update, :destroy]
 	before_action :require_login, only: [:new, :create, :edit, :update, :destroy]
 	before_action :require_login_for_viewing, only: [:index]
+	before_action :require_same_user, only: [:edit, :update, :destroy]
 	add_breadcrumb "Home", :root_path
 
 
@@ -45,7 +46,7 @@ class DocumentsController < ApplicationController
 
 	def update
 		if @document.update_attributes(valid_params)
-			redirect_to document_path(@document)
+			redirect_to documents_path
 			flash[:success] = t(:information_updated)
 		else
 			render :edit
@@ -76,10 +77,19 @@ class DocumentsController < ApplicationController
 			end
 		end
 
+
+
 		def require_login_for_viewing
 			if !signed_in?
 				flash[:danger] = t(:require_login_for_viewing)
 				redirect_back(fallback_location: root_path)
+			end
+		end
+
+		def require_same_user
+			if current_user != @document.user
+				flash[:danger] = "You can only edit or delete your own uploads"
+			redirect_to documents_path
 			end
 		end
 

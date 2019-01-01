@@ -20,7 +20,7 @@ class UsersController < Clearance::UsersController
 	end
 
 	def show
-		add_breadcrumb "Profile page", :user_path
+		add_breadcrumb "User profile & Uploads"
 		@user = User.find(params[:id])
 	end
 

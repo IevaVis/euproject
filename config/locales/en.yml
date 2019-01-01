@@ -48,7 +48,7 @@ en:
   images_type: "needs to be a JPG og PNG"
   successful_registration: "You have signed up successfully!"
   diy_uploaded: "Thank You! Your project is uploaded successfully!"
-  information_updated: "DIY project updated successfully"
+  information_updated: "Information updated successfully"
   require_login: "You must be logged in to continue!"
   require_logged_teacher: "Only logged in teachers can perform this action"
   document_uploaded: "Thank You! Your file is uploaded successfully!"

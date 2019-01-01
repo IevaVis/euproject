@@ -1,6 +1,7 @@
 class ChatroomsController < ApplicationController
 	before_action :set_chatroom, only: [:show, :edit, :update, :destroy]
 	before_action :require_teacher_login, only: [:index, :new, :show, :create, :edit, :update, :destroy]
+	before_action :require_same_user, only: [:edit, :update, :destroy]
 	add_breadcrumb "Home", :root_path
 	add_breadcrumb "Teachers' Forum", :chatrooms_path
 
@@ -56,6 +57,13 @@ class ChatroomsController < ApplicationController
 
 	def set_chatroom
 		@chatroom = Chatroom.find(params[:id])
+	end
+
+	def require_same_user
+		if current_user != @chatroom.user
+			flash[:danger] = "You can only edit or delete your own forum posts"
+		redirect_to chatrooms_path
+		end
 	end
 
 	def require_teacher_login
