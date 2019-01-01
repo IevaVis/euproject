@@ -1,3 +1,11 @@
+<div class="container mb-2">
+	<% if (signed_in? and current_user.family?) and (current_user != @diyproject.user) %>
+	<%= link_to t(".share_your_image"), new_diyproject_diyextraimage_path(@diyproject), class: "btn btn-secondary" %>
+	<% end %>
+	<%= link_to t(".go_back_to_index"), diyprojects_path, class: "btn btn-secondary" %>
+</div>
+
+
 <div class="container diyproject-showpage">
 	<div align="center">
 		<div class="diy-title">
@@ -43,6 +51,33 @@
 	<hr>
 </div>
 
-<% if (signed_in? and current_user.family?) and (current_user != @diyproject.user) %>
-<%= render "upload_image" %>
+<div class="container mb-5">
+	<% if (signed_in? and current_user.family?) and (current_user != @diyproject.user) %>
+		<%= link_to t(".share_your_image"), new_diyproject_diyextraimage_path(@diyproject), class: "btn btn-secondary" %>
+	<% end %>
+	<%= link_to t(".go_back_to_index"), diyprojects_path, class: "btn btn-secondary" %>
+</div>
+
+
+<% if @diyproject.diyextraimages.exists? %>
+<div class="container">
+	<div class="diyextraimage-explain mb-3">
+		<h5>Below you can view photos of results of this DIY project uploaded by the parents of this platform:</h5>
+	</div>
+	<div class="row">
+		<% @diyproject.diyextraimages.each do |diyextraimage| %>
+			<div class="col-md-4">
+				<div class="card diyextraimages">
+						<%= image_tag diyextraimage.image.variant(resize: "400x400").processed %>
+				<div class="diyextra-user">
+					Photo uploaded by: <%= diyextraimage.user.name %><br/>
+					Country: <%= diyextraimage.user.country %>	
+				</div>
+			</div>
+		</div>
+		<% end %>
+	</div>
+</div>
 <% end %>
+
+	

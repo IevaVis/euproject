@@ -1,6 +1,7 @@
 class Diyproject < ApplicationRecord
 	ratyrate_rateable 'difficulty_degree'
 	belongs_to :user
+	has_many :diyextraimages, dependent: :destroy
 	has_many_attached :images
 	validates :title, presence: true, length: { maximum: 100}
 	validates :description, presence: true, length: { maximum: 1000}

@@ -17,7 +17,9 @@ scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
   get "/contacts" => "welcome#contacts", as: "contacts"
   post '/rate' => 'rater#create', :as => 'rate'
   resources :documents
-  resources :diyprojects
+  resources :diyprojects do
+    resources :diyextraimages
+  end
 
   resources :chatrooms do
     resources :comments, only: [:create, :destroy]

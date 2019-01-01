@@ -97,13 +97,15 @@ en:
       download_tips: "Download tips"
     show:
       download_diy: "Download DIY project as a PDF document"
+      share_your_image: "Share your image for this DIY project"
+      go_back_to_index: "Go back to DIY projects list"
       age: "Age"
       done: "Done"
     report:
     diyproject:
       activity_is_best_for: "Activity is best for"
       best_suitable_for_kids_aged: "Best suitable for kids aged"
-      see_all_images: "See all images"
+      see_full_info: "See full description and images"
       edit_project: "Edit project"
       delete_project: "Delete project"
       add_your_image: "Add Your image"

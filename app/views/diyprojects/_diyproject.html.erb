@@ -11,13 +11,13 @@
         </p>
       		<% if signed_in? && (current_user == diyproject.user) %>
       			<div class="diyproject-actions mb-3">
-               <%= link_to t(".see_all_images"), diyproject_path(diyproject), class: "btn btn-sm btn-custom3" %>
+               <%= link_to t(".see_full_info"), diyproject_path(diyproject), class: "btn btn-sm btn-custom3" %>
       				<%= link_to t(".edit_project"), edit_diyproject_path(diyproject), class: "btn btn-sm btn-custom4" %>
          			<%= link_to t(".delete_project"), diyproject_path(diyproject), method: :delete, data: { confirm: "Are you sure you want to delete this activity?" }, class: "btn btn-sm btn-danger" %>
          		</div>
              <% elsif signed_in? and current_user.family? %>
              <div class="diyproject-actions mb-3">
-              <%= link_to t(".see_all_images"), diyproject_path(diyproject), class: "btn btn-sm btn-custom3" %>
+              <%= link_to t(".see_full_info"), diyproject_path(diyproject), class: "btn btn-sm btn-custom3" %>
               <%= link_to t(".add_your_image"), diyproject_path(diyproject), class: "btn btn-sm btn-custom5" %>
             </div>
             <% elsif signed_in? %>

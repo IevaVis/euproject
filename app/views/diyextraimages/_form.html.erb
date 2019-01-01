@@ -1,4 +1,4 @@
-<%= render 'shared/errors', obj: @diyproject %>
+<%= render 'shared/errors', obj: @diyextraimage %>
 
 <div class="col-md-6 offset-md-3">
 	<div class="diyupload-form">
@@ -7,15 +7,16 @@
 				If You liked this DIY project and You made it at home with Your kids, upload an image of the final result of the project and share it with other website's users!<br/>N.B. Please do not upload any image with children in it! Such images will be deleted by our administrators without any additional notice.
 			</p>
 
-				<%= simple_form_for @diyproject, :html => { :multipart => true } do |f| %>
+				<%= simple_form_for [@diyproject, @diyextraimage], :html => { :multipart => true } do |f| %>
 					<div class="form-inputs" name="diy-image" id="diy-image">
-						<%= f.file_field :images, multiple: true %>
+						<%= f.file_field :image %>
 					</div>
 					<div class="form-actions" id="upload-button">
 						<%= f.button :submit, class: "btn-custom" %>
 					</div>
 				<% end %>
 			<%= link_to "Go back to DIY list", diyprojects_path %>
+		</div>
 	</div>
 </div>
 
@@ -36,5 +37,3 @@ function manageButton(){
 }
 
 </script>
-
-
