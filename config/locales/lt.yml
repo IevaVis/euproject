@@ -150,6 +150,13 @@ lt:
       delete_project: "Ištrinti"
       add_your_image: "Pridėti nuotrauką"
       rate_difficulty: "Įvertink sunkumą!"
+      rating_description: "1 - labai lengvas, 5 - labai sunkus"
+      total_votes: "Iš viso balsavo"
+  diyextraimages:
+    form:
+      title: "Įkelkite savo nuotrauką"
+      explanation: "Jeigu Jums patiko šis DIY projektas ir Jūs atlikote jį namuose kartu su vaikais, galite pasidalinti nuotrauka su projekto rezultatu su platformos nariais. Prašome nekelti jokių nuotraukų su vaikais - tokios nuotraukos bus trinamos administratorių be papildomo įspėjimo"
+      go_back_to_index: "Grįžti į DIY projektų sąrašą"
   models:
   activerecord:
     attributes:

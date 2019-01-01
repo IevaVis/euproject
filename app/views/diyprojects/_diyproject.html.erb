@@ -28,10 +28,10 @@
           <div class="rating">
             <% if current_user %>
               <%= t (".rate_difficulty") %>
-                <small class="text-muted">1 - very easy, 5 - very hard</small>
+                <small class="text-muted"><%= t ".rating_description" %></small>
               <%= rating_for diyproject, "difficulty_degree" %>
             <% end %>
-            <small class="text-muted">Total votes: <%= diyproject.rates("difficulty_degree").count %></small>
+            <small class="text-muted"><%= t ".total_votes" %>: <%= diyproject.rates("difficulty_degree").count %></small>
           </div>
         </div>
         <div class="float-right">

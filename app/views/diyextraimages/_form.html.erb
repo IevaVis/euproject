@@ -4,7 +4,7 @@
 	<div class="diyupload-form">
 		<h2><%= t ".title" %></h2><br/>
 			<p>
-				If You liked this DIY project and You made it at home with Your kids, upload an image of the final result of the project and share it with other website's users!<br/>N.B. Please do not upload any image with children in it! Such images will be deleted by our administrators without any additional notice.
+				<%= t ".explanation" %>
 			</p>
 
 				<%= simple_form_for [@diyproject, @diyextraimage], :html => { :multipart => true } do |f| %>
@@ -15,7 +15,8 @@
 						<%= f.button :submit, class: "btn-custom" %>
 					</div>
 				<% end %>
-			<%= link_to "Go back to DIY list", diyprojects_path %>
+				<br/>
+			<%= link_to t(".go_back_to_index"), diyprojects_path %>
 		</div>
 	</div>
 </div>

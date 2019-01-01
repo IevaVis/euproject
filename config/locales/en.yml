@@ -110,6 +110,13 @@ en:
       delete_project: "Delete project"
       add_your_image: "Add Your image"
       rate_difficulty: "Rate difficulty!"
+      rating_description: "1 - very easy, 5 - very hard"
+      total_votes: "Total votes"
+  diyextraimages:
+    form:
+      title: "Upload Your image"
+      explanation: "If You liked this DIY project and You made it at home with Your kids, upload an image of the final result of the project and share it with other website's users! Please do not upload any image with children in it! Such images will be deleted by our administrators without any additional notice."
+      go_back_to_index: "Go back to DIY projects list"
   documents:
     form:
       title: "Upload new document"
