@@ -137,6 +137,21 @@ en:
     index:
       log_in: "Log In"
       sign_up: "Register new user"
+    contacts:
+      contact_information: "Contact Information"
+      contact_description: "To contact us please do it by filling the contact form in our Project website or write directly to project coordinator Maria Guimarães Mentortec maria.guimaraes@mentortec.eu"
+      contact_us: "Contact Us"
+  users:
+    show:
+      user_information: "User profile information"
+      edit_profile: "Edit profile"
+      my_uploads: "My activity in the platform"
+      virtual_library: "Virtual Library"
+      diy_projects: "DIY Projects"
+      forum_posts: "Forum Posts"
+      view: "View"
+      edit: "Edit"
+      delete: "Delete"
   chatrooms:
     index:
       forum_title: "Teachers' Forum and Chat"

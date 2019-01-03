@@ -1,11 +1,11 @@
 <div class="container">
 	<div class="jumbotron mb-5">
-		<h2 class="short-info mb-4">Contact Information</h2>
+		<h2 class="short-info mb-4"><%= t ".contact_information" %></h2>
 		<div class="mb-3">
-			To contact us please do it by filling the contact form in our Project website or write directly to project coordinator Maria Guimarães Mentortec maria.guimaraes@mentortec.eu
+			<%= t ".contact_description" %>
 		</div>
 		<div class="to-createskills mb-5">
-			<%= link_to "Contact Us", "http://createskills.eu/contact", class: "btn btn-lg btn-custom5", :target => "_blank" %>
+			<%= link_to t(".contact_us"), "http://createskills.eu/contact", class: "btn btn-lg btn-custom5", :target => "_blank" %>
 		</div>
 	</div>
 </div>

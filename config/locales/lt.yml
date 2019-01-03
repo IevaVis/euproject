@@ -61,6 +61,21 @@ lt:
     index:
       log_in: "Prisijungti"
       sign_up: "Registruotis"
+    contacts:
+      contact_information: "Kontaktinė informacija"
+      contact_description: "Jei turite klausimų ir norite susisiekti su mumis, užpildykite kontaktinę formą mūsų projekto internetiniame puslapyje arba rašykite tiesiogiai projekto koordinatorei Maria Guimarães Mentortec maria.guimaraes@mentortec.eu"
+      contact_us: "Susisiekite su mumis"
+  users:
+    show:
+      user_information: "Informacija apie narį"
+      edit_profile: "Redaguoti"
+      my_uploads: "Mano veikla platformoje"
+      virtual_library: "Virtuali biblioteka"
+      diy_projects: "DIY projektai"
+      forum_posts: "Forumo įrašai"
+      view: "Peržiūrėti"
+      edit: "Redaguoti"
+      delete: "Ištrinti"
   chatrooms:
     index:
       forum_title: "Mokytojų pokalbiai"

@@ -3,56 +3,48 @@
     <div class="card col-5">
       <img class="card-img-top" src="/assets/teacher-icon.png/">
       <div class="card-body">
-        <h5 class="card-title">User profile information</h5>
+        <h5 class="card-title"><%= t ".user_information" %></h5>
         <p class="card-text">
-          Name: <%= @user.name %><br/>
-          Country: <%= @user.country %><br/>
-          Email: <%= @user.email %><br/>
-          <% if @user.teacher? %>
-            Grade of teaching: <%= @user.grade_of_teaching %>
-          <% end %>
+          <%= User.human_attribute_name("name") %>: <%= @user.name %><br/>
+          <%= User.human_attribute_name("country") %>: <%= @user.country %><br/>
+          <%= User.human_attribute_name("email") %>: <%= @user.email %><br/>
         </p>
         <%= link_to t(".edit_profile"), edit_user_path(current_user), class: "btn btn-secondary" %>
       </div>
     </div>
     <div class="card col-7">
       <div class="card-body">
-        <h5 class="card-title">My uploads</h5>
+        <h5 class="card-title"><%= t ".my_uploads" %></h5>
         <hr>
         <% if @user.documents.present? %>
-          <h5>Virtual Library</h5>
+          <h5><%= t ".virtual_library" %></h5>
           <% @user.documents.each do |document| %>
-            <%= document.title.truncate(65) %>
-            <%= link_to "Edit", edit_document_path(document) %> ||
-            <%= link_to "Delete", document_path(document), method: :delete, data: { confirm: "Are you sure you want to delete this document?" } %><br/>
-        <% end %>
+            <em><%= document.title.truncate(65) %></em>
+          <%= link_to t(".edit"), edit_document_path(document) %> ||
+          <%= link_to t(".delete"), document_path(document), method: :delete, data: { confirm: "Are you sure you want to delete this document?" } %><br/>
+          <% end %>
         <hr>
         <% end %>
-        
         <% if @user.diyprojects.present? %>
-          <h5>DIY projects</h5>
+          <h5><%= t ".diy_projects" %></h5>
           <% @user.diyprojects.each do |diyproject| %>
-            <%= diyproject.title.truncate(65) %>
-            <%= link_to "View", diyproject_path(diyproject) %> ||
-            <%= link_to "Edit", edit_diyproject_path(diyproject) %> ||
-            <%= link_to "Delete", diyproject_path(diyproject), method: :delete, data: { confirm: "Are you sure you want to delete this diy project?" } %><br/>
-        <% end %>
+            <em><%= diyproject.title.truncate(65) %></em>
+          <%= link_to t(".view"), diyproject_path(diyproject) %> ||
+          <%= link_to t(".edit"), edit_diyproject_path(diyproject) %> ||
+          <%= link_to t(".delete"), diyproject_path(diyproject), method: :delete, data: { confirm: "Are you sure you want to delete this diy project?" } %><br/>
+          <% end %>
         <hr>
         <% end %>
-        
         <% if @user.chatrooms.present? %>
-          <h5>Forum Posts</h5>
+          <h5><%= t ".forum_posts" %></h5>
           <% @user.chatrooms.each do |chatroom| %>
-            <%= chatroom.title.truncate(65) %>
-            <%= link_to "View", chatroom_path(chatroom) %> ||
-            <%= link_to "Edit", edit_chatroom_path(chatroom) %> ||
-            <%= link_to "Delete", chatroom_path(chatroom), method: :delete, data: { confirm: "Are you sure you want to delete this forum post?" } %><br/>
-        <% end %>
+           <em> <%= chatroom.title.truncate(65) %></em>
+          <%= link_to t(".view"), chatroom_path(chatroom) %> ||
+          <%= link_to t(".edit"), edit_chatroom_path(chatroom) %> ||
+          <%= link_to t(".delete"), chatroom_path(chatroom), method: :delete, data: { confirm: "Are you sure you want to delete this forum post?" } %><br/>
+          <% end %>
         <hr>
         <% end %>
-        
-
-
       </div>
     </div>
   </div>
