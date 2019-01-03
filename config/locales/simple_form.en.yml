@@ -14,15 +14,13 @@ en:
       diyproject:
         tags: "Add minimum 1 and maximum 5 keywords here. Keywords MUST be separated with commas, f.ex. home decoration, painting"
       document: 
-        tags: "Add minimum 1 and maximum 5 keywords here. Keywords MUST be separated with commas, f.ex. home decoration, painting"
+        tags: "Add minimum 1 and maximum 5 keywords here. Keywords MUST be separated with commas, f.ex. mathematics, homework"
     required:
-      text: 'required'
+      text: 'privalomas'
       mark: '*'
       # You can uncomment the line below if you need to overwrite the whole required html.
       # When using html, text and mark won't be used.
       # html: '<abbr title="required">*</abbr>'
-    error_notification:
-      default_message: "Please review the problems below:"
     options:
       user:
         grade_of_teaching:

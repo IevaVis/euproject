@@ -1,9 +1,7 @@
 <%= render 'shared/errors', obj: @user %>
-<div class="col-md-6 offset-md-3">
 
-	<div class="signup-form">
 
-		<h2><%= t ".title" %></h2><br/>
+
 		<%= content_for(:the_links) do %>
     	<%= link_to t("the_links"), terms_path %> 
 			<% end %>
@@ -25,5 +23,5 @@
 <%= form.button :submit, class: "btn-custom" %>
 </div>
 
-</div>
+
 

@@ -142,6 +142,11 @@ en:
       contact_description: "To contact us please do it by filling the contact form in our Project website or write directly to project coordinator Maria Guimarães Mentortec maria.guimaraes@mentortec.eu"
       contact_us: "Contact Us"
   users:
+    new:
+      family_registration: "Parent Registration"
+      student_registration: "Student Registration"
+      teacher_registration: "Teacher Registration"
+      registration_language_change: "You have changed Your default language. Please choose Your User type again if you want to continue registration. Click on Register and choose User type"
     show:
       user_information: "User profile information"
       edit_profile: "Edit profile"
