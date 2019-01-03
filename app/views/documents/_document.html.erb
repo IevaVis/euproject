@@ -15,7 +15,9 @@
 			<% end %>
 			<div class="attachment-actions">
 				<%= link_to t('.view_file'), document.attachment %> ||
-				<%= link_to t('.download_file'), document.attachment, download: '' %>
+				<%= link_to( t(".download_file"),
+          rails_blob_path( document.attachment, disposition: "attachment" )
+        ) %>
 				<span></span>
 			</div>
 		</div>
