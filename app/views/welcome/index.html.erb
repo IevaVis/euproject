@@ -2,8 +2,8 @@
 <div class="container">
   <div class= "jumbotron">
     <div class="container">
-      <h1 class="short-info mb-1">Social Learning For STEM In Primary Education</h1>
-      <h6 class="mb-3">Supports teachers, students and their parents in creating unique teaching methods and resources of STEM.<br/> Shares and implements it within communities of interest.</h6>
+      <h1 class="short-info mb-1"><%= t ".title" %></h1>
+      <h6 class="mb-3"><%= t ".jumbotron_description" %></h6>
       <% if !signed_in? %>
       <div class="btn-group">
         <button class="btn btn-custom5 shadow p-2 mb-1 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -35,9 +35,11 @@
       <div class="row mb-4">
         <div class="col-12 col-md-6 col-lg-4 col-xl-4 mb-3">
           <div class="card">
-            <div class="card-header">Virtual Library</div>
+            <div class="card-header"><%= t ".virtual_library" %></div>
             <div class="card-body">
-              <p class="card-text">A place dedicated to keep relevant documents, research studies, articles and other sorts of information regarding STEM learning. Where teachers can upload/download (free of charge) teaching tools and materials.</p>
+              <p class="card-text">
+              <%= t ".virtual_library_description" %>
+              </p>
               <%= link_to "/assets/Documents.png", 'data-lightbox': 'image' do %>
               <img class="card img-bottom" src="/assets/Documents.png">
               <% end %>
@@ -47,9 +49,11 @@
         </div>
         <div class="col-12 col-md-6 col-lg-4 col-xl-4 mb-3">
           <div class="card">
-            <div class="card-header">Virtual Teacher’s Room</div>
+            <div class="card-header"><%= t ".virtual_teachers_room" %></div>
             <div class="card-body">
-              <p class="card-text">Where teachers from all EU can directly connect with each other not only to share teaching materials and practices but also their thoughts, ideas and experiences. Where teachers can engage in the discussions of teaching theories and methods for STEM learning of young students.</p>
+              <p class="card-text">
+                <%= t ".virtual_teachers_room_description" %>
+              </p>
               <%= link_to "/assets/Forum.jpg", 'data-lightbox': 'image' do %>
               <img class="card img-bottom" src="/assets/Forum.jpg">
               <% end %>
@@ -59,9 +63,11 @@
         </div>
         <div class="col-12 col-md-6 col-lg-4 col-xl-4 mb-3">
           <div class="card">
-            <div class="card-header">DIY photo gallery</div>
+            <div class="card-header"><%= t ".diy_photo_gallery" %></div>
             <div class="card-body">
-              <p class="card-text">Photo Gallery for parents from all EU countries to share their home activities and Do It Yourself (DIY) projects. List of activities and DIY projects available for parents to experiment at home with their children and siblings.</p>
+              <p class="card-text">
+                <%= t ".diy_photo_gallery_description" %>
+              </p>
               <%= link_to "/assets/DIY", 'data-lightbox': 'image' do %>
               <img class="card img-bottom" src="/assets/DIY">
               <% end %>
@@ -77,8 +83,9 @@
               <img src="assets/whatwedo.jpeg" style="width:220px; height:220px;"  class="img-fluid rounded-circle mb-4 mb-lg-0">
             </div>
             <div class="col-12 col-sm-6">
-              <h2>What we do</h2>
-              <p>This project is dedicated for sharing knowledge and experience between teachers, parents and students studying or interested in education field. Through hands-on activities and based on the logic of the Social Learning Theory, “CREATEskills” will contribute to the development of the 21st century skills among students. </p>
+              <h2><%= t ".what_we_do" %></h2>
+              <p>
+                <%= t ".what_we_do_description" %></p>
             </div>
           </div>
         </div>
@@ -88,8 +95,10 @@
               <img src="assets/whoweare.jpeg", style="width:220px; height:220px" class="img-fluid rounded-circle mb-4 mb-lg-0">
             </div>
             <div class="col-12 col-sm-6">
-              <h2>Who we are</h2>
-              <p>The “CREATEskills” project is designed to develop and implement innovative practices, tools and methodologies in primary schools for the establishment of STEM studio (Science, Technology, Engineering and Mathematics) classrooms, improving the quality and relevance of the learning process in primary education.</p>
+              <h2><%= t ".who_we_are" %></h2>
+              <p>
+              <%= t ".who_we_are_description" %>
+            </p>
             </div>
           </div>
         </div>
