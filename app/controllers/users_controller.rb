@@ -1,5 +1,6 @@
 class UsersController < Clearance::UsersController
 	before_action :require_login, except: :create
+	before_action :authorize_user, only: [:show, :edit, :update, :destroy]
 	add_breadcrumb "Home", :root_path
 
 	def new
@@ -56,5 +57,10 @@ class UsersController < Clearance::UsersController
 			redirect_to root_path
 		end
 	end
+
+	def authorize_user 
+      @user = User.find(params[:id])
+      redirect_to root_url unless current_user == @user
+    end
 
 end
