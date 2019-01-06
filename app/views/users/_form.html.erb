@@ -1,23 +1,34 @@
 <%= render 'shared/errors', obj: @user %>
+	<div class="col-md-6 offset-md-3">
+		<div class="signup-form">
+			<% if params[:role] == "teacher" || current_user&.teacher? %>
+					<h2><%= t ".teacher_registration" %></h2><br/>
+				<% elsif params[:role] == "family" || current_user&.family?  %>
+					<h2><%= t ".family_registration" %></h2><br/>
+				<% elsif params[:role] == "student" || current_user&.student?  %>
+					<h2><%= t ".student_registration" %></h2><br/>
+ 			<% end %>
+			<%= content_for(:the_links) do %>
+   		 <%= link_to t("the_links"), terms_path %> 
+			<% end %>
+		<div class="form-inputs">
+			<%= form.hidden_field :role, value: form.object.role || params[:role] %>
+			<%= form.input :name, required: true, autofocus: true %>
+			<%= form.input :country, required: true, collection: [ "Portugal", "Lithuania", "Spain", "Greece", "Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Hungary", "Ireland", "Italy", "Latvia", "Luxembourg", "Malta", "Netherlands", "Poland", "Romania", "Slovakia", "Slovenia", "Sweden", "United Kingdom", "Other"  ] %>
+			<% if params[:role] == "teacher" || current_user&.teacher? %>
+			<%= form.input :grade_of_teaching, required: true,  collection: [:preschool, :primary, :secondary, :vocational_education, :university] %>
+			<% end %>
+			<%= form.input :email, required: true %>
+			<%= form.input :password, required: true %>
+			<%= form.input :password_confirmation, required: true %>
+			<%= form.input :terms, as: :boolean, checked_value: true, unchecked_value: false, :label => content_for(:the_links) %>
+		</div>
+		<div class="form-actions">
+			<%= form.button :submit, class: "btn-custom" %>
+		</div>
+	</div>
+</div>
 
-	<%= content_for(:the_links) do %>
-    <%= link_to t("the_links"), terms_path %> 
-	<% end %>
-	<div class="form-inputs">
-		<%= form.hidden_field :role, value: form.object.role || params[:role] %>
-		<%= form.input :name, required: true, autofocus: true %>
-		<%= form.input :country, required: true, collection: [ "Portugal", "Lithuania", "Spain", "Greece", "Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Hungary", "Ireland", "Italy", "Latvia", "Luxembourg", "Malta", "Netherlands", "Poland", "Romania", "Slovakia", "Slovenia", "Sweden", "United Kingdom", "Other"  ] %>
-		<% if params[:role] == "teacher" || current_user&.teacher? %>
-		<%= form.input :grade_of_teaching, required: true,  collection: [:preschool, :primary, :secondary, :vocational_education, :university] %>
-		<% end %>
-		<%= form.input :email, required: true %>
-		<%= form.input :password, required: true %>
-		<%= form.input :password_confirmation, required: true %>
-		<%= form.input :terms, as: :boolean, checked_value: true, unchecked_value: false, :label => content_for(:the_links) %>
-	</div>
-	<div class="form-actions">
-		<%= form.button :submit, class: "btn-custom" %>
-	</div>
 
 
 

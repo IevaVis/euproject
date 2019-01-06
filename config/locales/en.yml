@@ -160,7 +160,7 @@ en:
       description_3: "To learn more please visit our Project website."
       visit_createskills: "Visit CREATEskills"
   users:
-    new:
+    form:
       family_registration: "Parent Registration"
       student_registration: "Student Registration"
       teacher_registration: "Teacher Registration"

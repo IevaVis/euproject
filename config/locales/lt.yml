@@ -84,7 +84,7 @@ lt:
       contact_description: "Jei turite klausimų ir norite susisiekti su mumis, užpildykite kontaktinę formą mūsų projekto internetiniame puslapyje arba rašykite tiesiogiai projekto koordinatorei Maria Guimarães Mentortec maria.guimaraes@mentortec.eu"
       contact_us: "Susisiekite su mumis"
   users:
-    new:
+    form:
       family_registration: "Tėvų registracija"
       student_registration: "Studento registracija"
       teacher_registration: "Mokytojo registracija"

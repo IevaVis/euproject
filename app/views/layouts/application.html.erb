@@ -10,12 +10,15 @@
   <%= javascript_include_tag 'application' %>
 </head>
 <body>
-  <%= render "shared/navigation" %>
+  <% if content_for? :nav %>
+    <%= content_for :nav %>
+  <% else %>
+    <%= render 'shared/navigation' %>
+  <% end %>
   <div class="container mb-1">
     <%= render_breadcrumbs :separator => ' / ' %>
   </div>
   <%= render "shared/alerts" %>
-
   <%= yield %>
   <%= render 'shared/footer' %>
 </body>

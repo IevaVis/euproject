@@ -1,20 +1,6 @@
-<div class="col-md-6 offset-md-3">
-	<div class="signup-form">
-		<div id="clearance" class="sign-up">
-			<%= simple_form_for @user do |form| %>
-  			<% if params[:role] == "teacher" || current_user&.teacher? %>
-					<h2><%= t ".teacher_registration" %></h2><br/>
-					<%= render partial: '/users/form', object: form %>
-				<% elsif params[:role] == "family" || current_user&.family?  %>
-					<h2><%= t ".family_registration" %></h2><br/>
-					<%= render partial: '/users/form', object: form %>
-				<% elsif params[:role] == "student" || current_user&.student?  %>
-					<h2><%= t ".student_registration" %></h2><br/>
-					<%= render partial: '/users/form', object: form %>
-				<% else %>
-				<h6><%= t ".registration_language_change" %></h6>
-				<% end %>
- 			<% end %>
-		</div>
-	</div>
-</div>
+<% content_for :nav, render('shared/custom_navbar') %>
+
+<div id="clearance" class="sign-up">
+	<%= simple_form_for @user do |form| %>
+  	<%= render partial: '/users/form', object: form %>
+ <% end %>

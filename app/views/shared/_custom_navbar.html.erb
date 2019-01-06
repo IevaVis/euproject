@@ -1,0 +1,85 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand"><%= image_tag "Logo.png", class: "homepage-logo" %></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to t("global.menu.home"), root_path, :class => 'nav-link' %><span class="sr-only">(current)</span>
+      </li>
+      <li class="nav-item">
+        <%= link_to t("global.menu.about_us"), about_path, class: 'nav-link' %>
+      </li>
+       <li class="nav-item">
+        <%= link_to t("global.menu.contacts"), contacts_path, class: 'nav-link' %>
+      </li>
+      <% if signed_in? and current_user.teacher? %>
+     <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= t ("global.menu.chatroom") %>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+             <%= link_to t("global.menu.forum"), chatrooms_path, class: 'dropdown-item' %>
+            <%= link_to t("global.menu.private"), conversations_path, class: 'dropdown-item' %>
+            </div>
+          </li>
+        <% end %>
+       <% if signed_in? %>
+        <li class="nav-item">
+          <%= link_to t("global.menu.library"), documents_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to t("global.menu.diyprojects"), diyprojects_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= current_user.name %>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%= link_to t("global.menu.my_uploads"), user_path(current_user), class: 'dropdown-item' %>
+             <%= link_to t("global.menu.edit_profile"), edit_user_path(current_user), class: 'dropdown-item' %>
+            <%= link_to t("global.menu.delete_profile"), current_user, method: :delete, data: { confirm: 'Are you sure you want to delete Your profile? All Your documents, DIY projects, forums posts will be permanently deleted.' }, class: 'dropdown-item' %>
+            <div class="dropdown-divider"></div>
+            <%= link_to t("global.menu.sign_out"), session_path, method: :delete, class: 'dropdown-item' %>
+            </div>
+          </li>
+        <% else %>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= t ("global.menu.log_in") %>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+             <%= link_to t("global.menu.teacher"), sign_in_path(role: "teacher"), class: 'dropdown-item' %>
+            <%= link_to t("global.menu.family"), sign_in_path(role: "family"), class: 'dropdown-item' %>
+            <%= link_to t("global.menu.student"), sign_in_path(role: "student"), class: 'dropdown-item' %>
+            </div>
+          </li>
+         <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= t ("global.menu.sign_up") %>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <%= link_to t("global.menu.teacher"), sign_up_path(role: "teacher"), class: 'dropdown-item' %>
+         <%= link_to t("global.menu.family"), sign_up_path(role: "family"), class: 'dropdown-item' %>
+         <%= link_to t("global.menu.student"), sign_up_path(role: "student"), class: 'dropdown-item' %>
+        </div>
+      </li>
+      <% end %>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <% if signed_in? and current_user.teacher? %>
+      <li class="nav-item btn-group dropleft" data-behavior="notifications">
+        <a class="nav-link dropdown-toggle" href="#" data-behavior="notifications-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="fas fa-bell"></span>&nbsp;<span data-behavior="unread-count"></span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown" data-behavior="notification-items">
+        </div>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</nav>
+
+    
