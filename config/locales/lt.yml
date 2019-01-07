@@ -2,7 +2,7 @@ lt:
   errors:
     messages:
       blank: "- laukelis negali būti paliktas tuščias"
-      invalid: "netinkamas el. paštas"
+      invalid: "- netinkamas el. paštas"
       accepted: "- laukelis turi būti pažymėtas"
       taken: "jau egzistuoja mūsų duomenų bazėje"
       too_short: "per trumpas"

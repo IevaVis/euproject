@@ -35,7 +35,11 @@
       <div class="row mb-4">
         <div class="col-12 col-md-6 col-lg-4 col-xl-4 mb-3">
           <div class="card">
-            <div class="card-header"><%= t ".virtual_library" %></div>
+            <% if signed_in? %> 
+              <div class="card-header"><%= link_to t(".virtual_library"), documents_path %></div>
+            <% else %>
+              <div class="card-header"><%= t ".virtual_library" %></div>
+            <% end %>
             <div class="card-body">
               <p class="card-text">
               <%= t ".virtual_library_description" %>
@@ -49,7 +53,11 @@
         </div>
         <div class="col-12 col-md-6 col-lg-4 col-xl-4 mb-3">
           <div class="card">
-            <div class="card-header"><%= t ".virtual_teachers_room" %></div>
+            <% if signed_in? and current_user.teacher? %> 
+              <div class="card-header"><%= link_to t(".virtual_teachers_room"), chatrooms_path %></div>
+            <% else %>
+              <div class="card-header"><%= t ".virtual_teachers_room" %></div>
+            <% end %>
             <div class="card-body">
               <p class="card-text">
                 <%= t ".virtual_teachers_room_description" %>
@@ -63,7 +71,11 @@
         </div>
         <div class="col-12 col-md-6 col-lg-4 col-xl-4 mb-3">
           <div class="card">
-            <div class="card-header"><%= t ".diy_photo_gallery" %></div>
+            <% if signed_in? %> 
+              <div class="card-header"><%= link_to t(".diy_photo_gallery"), diyprojects_path %></div>
+            <% else %>
+              <div class="card-header"><%= t ".diy_photo_gallery" %></div>
+            <% end %>
             <div class="card-body">
               <p class="card-text">
                 <%= t ".diy_photo_gallery_description" %>

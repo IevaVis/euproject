@@ -9,6 +9,7 @@ class UsersController < Clearance::UsersController
 	end
 
 	def create
+		@role = params[:user][:role]
 		@user = User.new(valid_params)
 		if @user.save
 			UserMailer.with(user: @user).welcome_email.deliver_now
@@ -16,7 +17,8 @@ class UsersController < Clearance::UsersController
 			flash[:success] = t(:successful_registration)
 			redirect_to root_path
 		else
-			render template: "users/new"
+			redirect_to sign_up_path(role: @role)
+			flash[:danger] = @user.errors.full_messages.join(', ') 
 		end
 	end
 

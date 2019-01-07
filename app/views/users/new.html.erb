@@ -1,6 +1,4 @@
 <% content_for :nav, render('shared/custom_navbar') %>
-
-<div id="clearance" class="sign-up">
 	<%= simple_form_for @user do |form| %>
   	<%= render partial: '/users/form', object: form %>
  <% end %>

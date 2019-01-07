@@ -9,7 +9,7 @@
 					<h2><%= t ".student_registration" %></h2><br/>
  			<% end %>
 			<%= content_for(:the_links) do %>
-   		 <%= link_to t("the_links"), terms_path %> 
+   		 <%= link_to t("the_links"), terms_path, target: :_blank %> 
 			<% end %>
 		<div class="form-inputs">
 			<%= form.hidden_field :role, value: form.object.role || params[:role] %>
