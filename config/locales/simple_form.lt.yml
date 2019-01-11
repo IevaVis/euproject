@@ -33,6 +33,7 @@ lt:
         place:
           indoors: "Namuose"
           outdoors: "Lauke"
+          indoors_and_outdoors: "Namuose & Lauke"
         age:
           from_6_to_9: "Nuo 6 iki 9"
           from_10_to_12: "Nuo 10 to 12"

@@ -2,12 +2,12 @@
 <div class="container">	
 	<%= will_paginate @diyprojects, list_classes: %w(pagination justify-content-center) %>
 	<div class="row">
-		<div class="col-md-10">
+		<div class="col-md-9">
 			<div class="row">
 				<%= render 'diyproject', obj: @diyprojects %>
 			</div>	
 		</div>
-		<div class="right-side col-md-2">
+		<div class="right-side col-md-3">
 			<div class="row">
 				<div class="newdiy-button col-md-12">
 					<%= link_to t('.new_project'), new_diyproject_path, class: "btn btn-lg btn-custom3" %>
@@ -24,7 +24,9 @@
 							<%= radio_button_tag(:place, ["indoors"]) %>
 							<%= label_tag(:place, t('.indoors')) %><br/>
 							<%= radio_button_tag(:place, ["outdoors"]) %>
-							<%= label_tag(:place, t('.outdoors')) %>
+							<%= label_tag(:place, t('.outdoors')) %><br/>
+							<%= radio_button_tag(:place, ["indoors_and_outdoors"]) %>
+							<%= label_tag(:place, t('.indoors_and_outdoors')) %>
 						</div>
 						<div class="diy-search-title">
 							<small><%= t ".age" %>:</small><br/>

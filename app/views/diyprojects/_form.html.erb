@@ -10,7 +10,7 @@
 			<div class="form-inputs">
 				<%= f.input :title, required: true, autofocus: true %>
 				<%= f.input :description, as: :text, input_html: {rows: 5}, required: true %>
-				<%= f.input :place, as: :radio_buttons, collection: [:indoors , :outdoors] %>
+				<%= f.input :place, as: :radio_buttons, collection: [:indoors , :outdoors, :indoors_and_outdoors] %>
 				<%= f.input :age, as: :radio_buttons, collection: [:from_6_to_9, :from_10_to_12, :all_ages ] %>
 			<div class="mb-2">
 				<%= f.file_field :attachment %>

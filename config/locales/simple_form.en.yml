@@ -33,6 +33,7 @@ en:
         place:
           indoors: "Indoors"
           outdoors: "Outdoors"
+          indoors_and_outdoors: "Indoors & Outdoors"
         age:
           from_6_to_9: "From 6 to 9"
           from_10_to_12: "From 10 to 12"
