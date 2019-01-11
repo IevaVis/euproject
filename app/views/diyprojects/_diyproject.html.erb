@@ -1,47 +1,24 @@
+
 <% obj.each do |diyproject| %>
-	<div class="card card-body diy-card bg-light mb-3">
-		<div class="clearfix">
-			<div class="float-left col-md-8">
-				<h4 class="card-title"><%= link_to diyproject.title.capitalize, diyproject_path(diyproject) %></h4>
-					<p class="card-text"><%= truncate(diyproject.description.capitalize, length: 100, omission: '...') %></p>
-					<p>
-					<span class="quiet"><small><%= t(".activity_is_best_for") 
-          %>: <em><%= t diyproject.place %></em><br/>
-          <%= t(".best_suitable_for_kids_aged") %> : <em><%= t diyproject.age %></em></small></span>
-        </p>
-      		<% if signed_in? && (current_user == diyproject.user) %>
-      			<div class="diyproject-actions mb-3">
-               <%= link_to t(".see_full_info"), diyproject_path(diyproject), class: "btn btn-sm btn-custom3" %>
-      				<%= link_to t(".edit_project"), edit_diyproject_path(diyproject), class: "btn btn-sm btn-custom4" %>
-         			<%= link_to t(".delete_project"), diyproject_path(diyproject), method: :delete, data: { confirm: "Are you sure you want to delete this activity?" }, class: "btn btn-sm btn-danger" %>
-         		</div>
-             <% elsif signed_in? and current_user.family? %>
-             <div class="diyproject-actions mb-3">
-              <%= link_to t(".see_full_info"), diyproject_path(diyproject), class: "btn btn-sm btn-custom3" %>
-              <%= link_to t(".add_your_image"), diyproject_path(diyproject), class: "btn btn-sm btn-custom5" %>
-            </div>
-            <% elsif signed_in? %>
-            <div class="diyproject-actions mb-3">
-            <%= link_to t(".see_more_images"), diyproject_path(diyproject), class: "btn btn-sm btn-custom3" %>
-            </div> 
-          <% end %>
-          <div class="rating">
-            <% if current_user %>
-              <%= t (".rate_difficulty") %>
-                <small class="text-muted"><%= t ".rating_description" %></small>
-              <%= rating_for diyproject, "difficulty_degree" %>
-            <% end %>
-            <small class="text-muted"><%= t ".total_votes" %>: <%= diyproject.rates("difficulty_degree").count %></small>
-          </div>
-        </div>
-        <div class="float-right">
-          <div class="diyproject-image">
-            <a href="/diyprojects/<%= diyproject.id %>">
-      	     <%= image_tag diyproject.images.first.variant(resize: "300x200").processed, class: "rounded" %>
-            </a>
-          </div>
-        </div>
-      </div>
-		</div>
-  <br/>
+  <div class="diy-space col-5 mb-1 shadow p-3 mb-5 rounded">
+    <h4 class="document-title"><%= link_to diyproject.title.capitalize, diyproject_path(diyproject) %></h4>
+    <div><%= truncate(diyproject.description.capitalize, length: 100, omission: '...') %></div>
+    <span class="small text-muted"><%= t(".uploaded_by") %>:</span><small> <%= diyproject.user.name %></small>
+    <br/>
+    <div class="diyattachment-actions mb-1">
+      <%= link_to t('.view_file'), diyproject.attachment, class: "badge badge-info" %>
+      <%= link_to( t(".download_file"), 
+          rails_blob_path( diyproject.attachment, disposition: "attachment"), class: "badge badge-info"
+      ) %> 
+      <%= link_to t(".see_more_images"), diyproject_path(diyproject), class: "badge badge-info" %>
+    </div>
+    <div class="rating">
+      <% if current_user %>
+        <%= t (".rate_difficulty") %>
+          <small class="text-muted"><%= t ".rating_description" %></small>
+            <%= rating_for diyproject, "difficulty_degree" %>
+      <% end %>
+      <small class="text-muted"><%= t ".total_votes" %>: <%= diyproject.rates("difficulty_degree").count %></small>
+    </div>
+  </div>
 <% end %>

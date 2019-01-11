@@ -10,16 +10,10 @@
 			<div class="form-inputs">
 				<%= f.input :title, required: true, autofocus: true %>
 				<%= f.input :description, as: :text, input_html: {rows: 5}, required: true %>
-				<%= f.input :objective, as: :text, input_html: {rows: 3}, required: true %>
-				<%= f.input :duration, required: true %>
-				<%= f.input :materials, as: :text, input_html: {rows: 5}, required: true %>
-				<%= f.input :results_and_tips, as: :text, input_html: {rows: 5}, required: true %>
-				<%= f.input :links_and_resources, as: :text, input_html: {rows: 3}, required: true %>
-				<%= f.input :tags, input_html: {value: f.object.tags.join(', ') || ''}, required: true %>
 				<%= f.input :place, as: :radio_buttons, collection: [:indoors , :outdoors] %>
 				<%= f.input :age, as: :radio_buttons, collection: [:from_6_to_9, :from_10_to_12, :all_ages ] %>
 			<div class="mb-2">
-				<%= f.file_field :images, multiple: true %>
+				<%= f.file_field :attachment %>
 			</div>
 				<%= f.input :terms, as: :boolean, checked_value: true, unchecked_value: false, :label => content_for(:the_links) %>
 			</div>

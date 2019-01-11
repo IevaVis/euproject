@@ -37,7 +37,7 @@ end
     if attachment.attached? == false
       errors[:attachment] << I18n.t('attachment_missing')
     end
-    if attachment.attached? and !attachment.content_type.in?(%(image/jpg image/jpeg image/png application/pdf application/msword application/zip application/vnd.openxmlformats-officedocument.wordprocessingml.document))
+    if attachment.attached? and !attachment.content_type.in?(%(application/pdf))
       errors[:attachment] << I18n.t('wrong_attachment_type')
     end
   end

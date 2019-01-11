@@ -1,4 +1,4 @@
-<div class="container mb-2">
+<div class="container mb-4">
 	<% if (signed_in? and current_user.family?) and (current_user != @diyproject.user) %>
 	<%= link_to t(".share_your_image"), new_diyproject_diyextraimage_path(@diyproject), class: "btn btn-secondary" %>
 	<% end %>
@@ -15,44 +15,13 @@
 		</div>
 		<br/>
 	</div>
-	<% if @diyproject.images.attached? %>
-		<div class="card-columns">
-			<% @diyproject.images.each do |image| %>
-				<%= link_to image, 'data-lightbox': 'image' do %>
-  				<%= image_tag image.variant(resize: "400x400").processed, class: "card diy-image" %>
-  			<% end %>
-  		<% end %>
-  	</div>
-	<% end %>
 	<div class="diy-description">
 		<p><strong><%= Diyproject.human_attribute_name("description") %></strong></p><%= simple_format(@diyproject.description) %>
 	</div>
-	<div class="diy-objective">
-		<p><strong><%= Diyproject.human_attribute_name("objective") %></strong></p><%= simple_format(@diyproject.objective) %>
-	</div>
-	<div class="diy-duration">
-		<p><strong><%= Diyproject.human_attribute_name("duration") %></strong></p><%= simple_format(@diyproject.duration) %>
-	</div>
-	<div class="diy-results">
-		<p><strong><%= Diyproject.human_attribute_name("results_and_tips") %></strong></p><%= simple_format(@diyproject.results_and_tips) %>
-	</div>
-	<div class="diy-materials">
-		<p><strong><%= Diyproject.human_attribute_name("materials") %></strong></p><%= simple_format(@diyproject.materials) %>
-	</div>
-	<div class="diy-links">
-		<p><strong><%= Diyproject.human_attribute_name("links_and_resources") %></strong></p><%= simple_format(@diyproject.links_and_resources) %>
-	</div>
-	<div class="diy-keywords">
-		<p><strong><%= Diyproject.human_attribute_name("tags") %></strong></p>
-		<% @diyproject.tags.each do |tag| %>
- 			<%= link_to "#{tag}", {controller: "diyprojects", action: "index", tag:tag}, class: "badge badge-custom" %>
-		<% end %>
-	</div>
-	<hr>
 </div>
 
 <div class="container mb-5">
-	<% if (signed_in? and current_user.family?) and (current_user != @diyproject.user) %>
+	<% if (signed_in? and current_user.family?) %>
 		<%= link_to t(".share_your_image"), new_diyproject_diyextraimage_path(@diyproject), class: "btn btn-secondary" %>
 	<% end %>
 	<%= link_to t(".go_back_to_index"), diyprojects_path, class: "btn btn-secondary" %>

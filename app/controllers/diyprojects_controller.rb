@@ -65,7 +65,7 @@ class DiyprojectsController < ApplicationController
           params[:diyproject][:tags][index] = tag.strip.titleize
         end
       end
-				params.require(:diyproject).permit(:title, :description, :place, :age, :terms, :objective, :duration, :materials, :results_and_tips, :links_and_resources, :tags => [], images: [])
+				params.require(:diyproject).permit(:title, :description, :place, :age, :attachment, :terms, :objective, :duration, :materials, :results_and_tips, :links_and_resources, :tags => [])
 		end
 
 		def require_login

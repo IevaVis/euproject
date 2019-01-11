@@ -23,7 +23,7 @@ lt:
   wrong_tags_length: "turi būti neilgesni kaip 20 simbolių ir vienas nuo kito atskirti kableliais"
   too_many_tags: "- įrašykite mažiausiai 1, daugiausiai 5 raktažodžius"
   attachment_missing: "neįkeltas"
-  wrong_attachment_type: "turi būti PDF, DOC, JPG or PNG formato"
+  wrong_attachment_type: "turi būti PDF formato"
   images_type: 'turi būti JPG arba PNG formato'
   successful_registration: "Registracija sėkminga!"
   diy_uploaded: "Ačiū! 'Pasidaryk pats' projektas išsaugotas"
@@ -181,9 +181,7 @@ lt:
       age: "Amžius"
       done: "Geriausia atlikti"
     diyproject:
-      activity_is_best_for: "Geriausia atlikti"
-      best_suitable_for_kids_aged: "Tinkamas atlikti su vaikais"
-      see_full_info: "Peržiūrėti visą aprašymą ir nuotraukas"
+      see_full_info: "Peržiūrėti tėvų įkeltas nuotraukas"
       edit_project: "Redaguoti"
       delete_project: "Ištrinti"
       add_your_image: "Pridėti nuotrauką"
