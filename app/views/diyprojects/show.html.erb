@@ -27,18 +27,11 @@
 	</div>
 </div>
 
-<div class="container mb-5">
-	<% if (signed_in? and current_user.family?) %>
-		<%= link_to t(".share_your_image"), new_diyproject_diyextraimage_path(@diyproject), class: "btn btn-secondary btn-sm" %>
-	<% end %>
-	<%= link_to t(".go_back_to_index"), diyprojects_path, class: "btn btn-secondary btn-sm" %>
-</div>
-
 
 <% if @diyproject.diyextraimages.exists? %>
 <div class="container">
 	<div class="diyextraimage-explain mb-3">
-		<h5>Below you can view photos of results of this DIY project uploaded by the parents of this platform:</h5>
+		<h5><%= t ".diyextraimage_explain" %></h5>
 	</div>
 	<div class="row">
 		<% @diyproject.diyextraimages.each do |diyextraimage| %>
@@ -55,5 +48,12 @@
 	</div>
 </div>
 <% end %>
+
+<div class="container mb-5">
+	<% if (signed_in? and current_user.family?) %>
+		<%= link_to t(".share_your_image"), new_diyproject_diyextraimage_path(@diyproject), class: "btn btn-secondary btn-sm" %>
+	<% end %>
+	<%= link_to t(".go_back_to_index"), diyprojects_path, class: "btn btn-secondary btn-sm" %>
+</div>
 
 	

@@ -181,6 +181,7 @@ lt:
       done: "Geriausia atlikti"
       view_file: "Peržiūrėti DIY projektą"
       download_file: "Atsisiųsti DIY projektą"
+      diyextraimage_explain: "Apačioje galite peržiūrėti nuotraukas, įkeltas tėvų, su šio DIY projekto rezultatu:"
     diyproject:
       go_to_gallery: "Peržiūrėti nuotraukas"
       add_your_image: "Pridėti nuotrauką"
