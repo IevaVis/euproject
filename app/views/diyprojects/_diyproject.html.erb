@@ -10,7 +10,7 @@
       <%= link_to( t(".download_file"), 
           rails_blob_path( diyproject.attachment, disposition: "attachment"), class: "badge badge-info"
       ) %> 
-      <%= link_to t(".see_more_images"), diyproject_path(diyproject), class: "badge badge-info" %>
+      <%= link_to t(".go_to_gallery"), diyproject_path(diyproject), class: "badge badge-info" %>
     </div>
     <div class="rating">
       <% if current_user %>

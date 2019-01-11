@@ -1,8 +1,8 @@
 <div class="container mb-4">
-	<% if (signed_in? and current_user.family?) and (current_user != @diyproject.user) %>
-	<%= link_to t(".share_your_image"), new_diyproject_diyextraimage_path(@diyproject), class: "btn btn-secondary" %>
+	<% if (signed_in? and current_user.family?) %>
+	<%= link_to t(".share_your_image"), new_diyproject_diyextraimage_path(@diyproject), class: "btn btn-secondary btn-sm" %>
 	<% end %>
-	<%= link_to t(".go_back_to_index"), diyprojects_path, class: "btn btn-secondary" %>
+	<%= link_to t(".go_back_to_index"), diyprojects_path, class: "btn btn-secondary btn-sm" %>
 </div>
 
 
@@ -10,21 +10,28 @@
 	<div align="center">
 		<div class="diy-title">
 			<h1><%= @diyproject.title %></h1>
-			<div class="small text-muted"><%= t ".age" %>: <%= t @diyproject.age %> || <%= t ".done" %>: <%= t @diyproject.place %></div><br/>
-				<%= link_to t('.download_diy'), diyproject_path(@diyproject, :format => :pdf), class: "btn btn-custom5" %>
 		</div>
+		<div class="small text-muted"><%= t ".age" %>: <%= t @diyproject.age %> || <%= t ".done" %>: <%= t @diyproject.place %>
+		</div><br/>
+		<div class="diy-description">
+			<%= simple_format(@diyproject.description) %>
+		</div>
+		<div class="diyattachment-actions mb-1">
+      <%= link_to t('.view_file'), @diyproject.attachment, class: "btn btn-info" %>
+      <%= link_to( t(".download_file"), 
+          rails_blob_path( @diyproject.attachment, disposition: "attachment"), class: "btn btn-info"
+      ) %> 
+    </div>
+			
 		<br/>
-	</div>
-	<div class="diy-description">
-		<p><strong><%= Diyproject.human_attribute_name("description") %></strong></p><%= simple_format(@diyproject.description) %>
 	</div>
 </div>
 
 <div class="container mb-5">
 	<% if (signed_in? and current_user.family?) %>
-		<%= link_to t(".share_your_image"), new_diyproject_diyextraimage_path(@diyproject), class: "btn btn-secondary" %>
+		<%= link_to t(".share_your_image"), new_diyproject_diyextraimage_path(@diyproject), class: "btn btn-secondary btn-sm" %>
 	<% end %>
-	<%= link_to t(".go_back_to_index"), diyprojects_path, class: "btn btn-secondary" %>
+	<%= link_to t(".go_back_to_index"), diyprojects_path, class: "btn btn-secondary btn-sm" %>
 </div>
 
 

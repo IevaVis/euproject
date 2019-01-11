@@ -49,6 +49,7 @@ en:
   images_type: "needs to be a JPG og PNG"
   successful_registration: "You have signed up successfully!"
   diy_uploaded: "Thank You! Your project is uploaded successfully!"
+  diy_updated: "DIY project updated successfully"
   information_updated: "Information updated successfully"
   require_login: "You must be logged in to continue!"
   require_logged_teacher: "Only logged in teachers can perform this action"
@@ -98,17 +99,14 @@ en:
       diy_tips: "Click on the image to get usefull tips about uploading a new DIY project"
       download_tips: "Download tips"
     show:
-      download_diy: "Download DIY project as a PDF document"
       share_your_image: "Share your image for this DIY project"
       go_back_to_index: "Go back to DIY projects list"
       age: "Age"
       done: "Done"
-    report:
+      view_file: "View DIY project"
+      download_file: "Download DIY project"
     diyproject:
-      see_full_info: "See images uploaded by parents"
-      edit_project: "Edit project"
-      delete_project: "Delete project"
-      add_your_image: "Add Your image"
+      go_to_gallery: "View photo gallery"
       rate_difficulty: "Rate difficulty!"
       rating_description: "1 - very easy, 5 - very hard"
       total_votes: "Total votes"
@@ -178,7 +176,7 @@ en:
       delete: "Delete"
   chatrooms:
     index:
-      forum_title: "Teachers' Forum and Chat"
+      forum_title: "Teachers' Forum"
       new_forum_post: "New Forum Post"
       last_post_author: "Last post created by"
       forum_statistics: "Forum statistics"

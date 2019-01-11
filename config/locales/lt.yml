@@ -28,6 +28,7 @@ lt:
   images_type: 'turi būti JPG arba PNG formato'
   successful_registration: "Registracija sėkminga!"
   diy_uploaded: "Ačiū! 'Pasidaryk pats' projektas išsaugotas"
+  diy_updated: "DIY projekto pakeitimai išsaugoti"
   information_updated: "Pakeitimai išsaugoti"
   require_login: "Privalote prisijungti, jei norite tęsti!"
   require_logged_teacher: "Tik prisijungę mokytojai gali atlikti šį veiksmą"
@@ -102,7 +103,7 @@ lt:
       delete: "Ištrinti"
   chatrooms:
     index:
-      forum_title: "Mokytojų pokalbiai"
+      forum_title: "Mokytojų forumas"
       new_forum_post: "Sukurti naują įrašą"
       last_post_author: "Paskutinį įrašą sukūrė"
       forum_statistics: "Forumo statistika"
@@ -174,18 +175,14 @@ lt:
       diy_tips: "Paspaudę ant paveikslėlio apačioje matysite patarimus, kurie gali praversti įkeliant naują 'Pasidaryk pats' projektą"
       download_tips: "Atsisiųsti patarimus"
     show:
-      download_diy: "Atsisiųsti projektą kaip PDF dokumentą"
-      share_your_image: "Pasidalinkite šio projekto rezultatu"
+      share_your_image: "Pasidalinkite šio projekto nuotrauka"
       go_back_to_index: "Grįžti į DIY projektų sąrašą"
       age: "Amžius"
       done: "Geriausia atlikti"
-    report:
-      age: "Amžius"
-      done: "Geriausia atlikti"
+      view_file: "Peržiūrėti DIY projektą"
+      download_file: "Atsisiųsti DIY projektą"
     diyproject:
-      see_full_info: "Peržiūrėti tėvų įkeltas nuotraukas"
-      edit_project: "Redaguoti"
-      delete_project: "Ištrinti"
+      go_to_gallery: "Peržiūrėti nuotraukas"
       add_your_image: "Pridėti nuotrauką"
       rate_difficulty: "Įvertink sunkumą!"
       rating_description: "1 - labai lengvas, 5 - labai sunkus"
