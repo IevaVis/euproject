@@ -1,0 +1,217 @@
+es:
+  helpers:
+    placeholder:
+      comment:
+        body: "Comente aquí.."
+      message:
+        body: "Tu mensaje"
+  outdoors: "Exterior"
+  indoors: "Interior"
+  From 6 to 9: "Desde 6 a 9 años"
+  From 10 to 12: "Desde 10 a 12 años"
+  indoors_and_outdoors: "Interior & Exterior"
+  all_ages: "Todas las edades"
+  the_links: "Acepto los términos de uso y la política de privacidad"
+  wrong_tags_length: " - cómo máximo 20 caracteres y separados cada uno de ellos por una coma"
+  too_many_tags: " - añade mínimo 1 y máximo 5 palabras clave, separados por una coma"
+  wrong_attachment_type: "debe ser un archivo PDF"
+  images_type: "necesita ser JPG o PNG"
+  successful_registration: "Se ha registrado satisfactoriamente"
+  diy_uploaded: "¡Gracias! Su proyecto ha sido subido satisfactoriamente"
+  diy_updated: "Información incorporada satisfactoriamente"
+  information_updated: "Información incorporada satisfactoriamente"
+  require_login: "Debe iniciar sesión para continuar"
+  require_logged_teacher: "Sólo profesores registrados pueden realizar esta acción"
+  document_uploaded: "¡Gracias! Su archivo ha sido subido satisfactoriamente"
+  require_login_for_viewing: "Debe iniciar sesión para acceder a la biblioteca"
+  conversation_not_found: "Conversación no encontrada"
+  bad_login_info: "Correo electrónico incorrecto, clave o usuario equivocados"
+  global:
+    menu:
+      home: "Inicio"
+      library: "Biblioteca Virtual"
+      chatroom: "Sala virtual de profesores"
+      diyprojects: "Galería de fotos de actividades 'hazlo tú mismo'"
+      forum: "Foro"
+      private: "Mensajes privados"
+      sign_up: "Registrar nuevo usuario"
+      about_us: "Sobre nosotros"
+      contacts: "Contactos"
+      log_in: "Iniciar sesión"
+      teacher: "Profesores"
+      student: "Alumnos"
+      family: "Padres"
+      sign_out: "Finalizar sesión"
+      delete_profile: "Borrar perfil"
+      edit_profile: "Editar perfil"
+      my_uploads: "Mis recursos subidos"
+      terms: "Términos de uso y política de privacidad"
+      language: "Idioma"
+  diyprojects:
+    form:
+      title: "Sube un nuevo proyecto 'hazlo tú mismo'"
+    index:
+      new_project: "Crear una nueva actividad"
+      search_diy: "Buscar actividades 'hazlo tú mismo'"
+      place: "Lugar"
+      age: "Edad"
+      indoors: "Interior"
+      outdoors: "Exterior"
+      indoors_and_outdoors: "Interior & Exterior"
+      from_6_to_9: "De 6 a 9 años"
+      from_10_to_12: "De 10 a 12 años"
+      all_ages: "Todas las edades"
+      submit: "Buscar"
+      clear: "Limpiar"
+      diy_tips: "Haga clic en la imagen para obtener consejos útiles sobre cómo cargar un nuevo proyecto 'hazlo tú mismo'"
+      download_tips: "Descargar consejos"
+    show:
+      share_your_image: "Compartir tu imagen para este proyecto 'hazlo tú mismo'"
+      go_back_to_index: "Vuelve a la lista de proyectos 'hazlo tú mismo'"
+      age: "Edad"
+      done: "Hecho"
+      view_file: "Ver fichero"
+      download_file: "Descargar fichero"
+      diyextraimage_explain: "Below you can view photos of results of this DIY project uploaded by the parents of this platform:"
+    diyproject:
+      go_to_gallery: "Ver galeria"
+      rate_difficulty: "Nivel de dificultad"
+      rating_description: "1 - muy fácil 5 - muy difícil"
+      total_votes: "Votos totales"
+      uploaded_by: "Subido por"
+  diyextraimages:
+    form:
+      title: "Sube tu imagen"
+      explanation: "Si le gustó este proyecto 'hazlo tu mismo' y lo hizo en casa con sus hijos, cargue una imagen del resultado final del proyecto y compártala con otros usuarios. Por favor, no subas ninguna fotografía en la que aparezcan los niños. Estas imágenes serán eliminadas por nuestros administradores sin ningún aviso adicional."
+      go_back_to_index: "Vuelve a la lista de proyectos 'hazlo tú mismo'"
+  documents:
+    form:
+      title: "Subir un nuevo documento"
+    index:
+      new_document: "Nuevo documento"
+      popular_keywords: "Palabras clave más populares"
+      search_title: "Buscar documentos"
+      language: "Escoge un idioma"
+      enter_keyword: "Incluye palabras clave, por ejemplo: matemáticas"
+      new_document: "Subir un nuevo documento"
+      clear: "Limpiar"
+      submit: "Buscar"
+    document:
+      uploaded_by: "Subido por"
+      view_file: "Ver fichero"
+      download_file: "Descargar fichero"
+  welcome:
+    index:
+      log_in: "Iniciar sesión"
+      sign_up: "Registrar nuevo usuario"
+      title: "Aprendizaje social para STEM en Educación Primaria"
+      jumbotron_description: "Ayuda a los maestros, a los estudiantes y a sus padres a crear métodos de enseñanza y recursos únicos de STEM. Compártelo e implementalo en tu contexto."
+      virtual_library: "Biblioteca virtual"
+      virtual_library_description: "Un espacio dedicado a mantener documentaciñon relevante, investigaciones, artículos y otra clase de información relacionada con el aprendizaje en STEM, donde losp rofesores pueden subir y descargar (gratuitamente) herramientas y materiales para la enseñanza."
+      virtual_teachers_room: "Sala virtual de profesores"
+      virtual_teachers_room_description: "Donde los profesores de toda la Unión Europea pueden conectarse con otros,  únicamente para compartir materiales y prácticas, y también pensamientos, ideas y experiencias. Donde los maestros pueden participar en las discusiones sobre los métodos parala enseñanza y el aprendizaje de las ciencias STEM."
+      diy_photo_gallery: "Galería de fotos 'hazlo tú mismo'"
+      diy_photo_gallery_description: "Galería de fotos para los padres de todos los países de la Unión Europea que quieran compartir las actividades 'hazlo tu mismo' realizadas en casa. Losta de actividades y proyectos 'hazlo tu mismo' disponible para padres para experimentar en casa con sus hijos."
+      what_we_do: "Qué hacemos"
+      what_we_do_description: "Este proyecto está dedicado a compartir los conocimientos y experiencias entre profesores, padres y alumnado interesado en el campo educativo. A través de experimentos prácticos y basados en la lógica del Aprendizaje Social se contribuye al desarrollo de las competencias del siglo XXI entre el alumnado."
+      who_we_are: "Quienes somos"
+      who_we_are_description: "El proyecto 'CREATEskills' está diseñado para desarrollar e implementar prácticas, herramientas y metodologías innovadoras en las escuelas de Educación Primaria para la mejroa de la enseñanza y el aprendizaj de las STEM (Ciencia, Tecnología, Ingeniería y Matemáticas), mejorando la calidad y la relevancia del proceso educativo."
+    contacts:
+      contact_information: "Información de contacto"
+      contact_description: "Para contactar con nosotros por favor completa el formulario de nuestro sitio web o escribe directamente a la coordinadora española María Paz Prendes Espinosa pazprend@um.es"
+      contact_us: "Contacte con nosotros"
+    about:
+      title: "Aprendizaje Social de las STEM en Educación Primaria"
+      description_1: "El proyecto 'CREATEskills' está diseñado para desarrollar e implementar prácticas, herramientas y metodologías innovadoras en los colegios de Educación Primaria para la mejora de la enseñanza-aprendizaje de las STEM (asignaturas relacionadas con Ciencias, Tecnología, Ingeniería y Matemáticas), a través de la mejora de la calidad y la relevancia del aprendizaje en Educación Primaria y mejorando la motivación hacia el estudio de las asignaturas de Ciencias Naturales."
+      description_2: "El proyecto va dirigido al alumnado de Educación Primaria (6 a 12 años), profesores de Educación Primaria, padres con hijos que cursan Educación Primaria y directores de centros educativos."
+      description_3: "Para saber más por favor visita la web de nuestro proyecto."
+      visit_createskills: "Visita CREATEskills"
+  users:
+    form:
+      family_registration: "Registro para padres"
+      student_registration: "Registro para alumnos"
+      teacher_registration: "Registro para profesores"
+    show:
+      user_information: "Información de perfil"
+      edit_profile: "Editar perfil"
+      my_uploads: "Mi actividad en la plataforma"
+      virtual_library: "Biblioteca virtual"
+      diy_projects: "Proyectos 'hazlo tu mismo'"
+      forum_posts: "Mensajes del foro"
+      view: "Ver"
+      edit: "Editar"
+      delete: "Eliminar"
+  chatrooms:
+    index:
+      forum_title: "Foro de profesores"
+      new_forum_post: "Nueva entrada en el foro"
+      last_post_author: "Última entrada creada por"
+      forum_statistics: "Estadísticas del foro"
+      total_posts: "Entradas totales"
+      total_comments: "Comentarios totales"
+      total_users: "Total de usuarios del foro"
+      post_created: "Entrada creada por"
+      user_country: "País"
+    show:
+      author: "Autor"
+      post: "Entrada"
+      send_a_message: "Enviar un mensaje"
+      posted: "Publicado"
+      joined: "Datos"
+      posts: "Entradas"
+      delete: "Eliminar"
+      edit: "Editar"
+      reply: "Responder a esta entrada"
+    edit:
+      edit_forum_post: "Editar un mensaje en el foro"
+  comments:
+    comment: 
+      commented: "Comentado por"
+      posted: "Publicado"
+      delete: "Eliminar comentario"
+      message: "Enviar un mensaje privado al autor"
+  conversations:
+    index:
+      recent_conversations: "Conversaciones recientes"
+      new_messages: "Nuevos mensajes"
+  messages:
+    index:
+      conversation_between: "Conversación entre"
+      and: "y"
+      submit: "Enviar"
+      back: "Volver a todas las conversaciones"
+  models:
+  activerecord:
+    attributes:
+      user:
+        name: "Nombre de usuario"
+        country: "País"
+        email: "Correo electrónico"
+        password: "Contraseña"
+        password_confirmation: "Confirmación de la contraseña"
+        grade_of_teaching: "Nivel en el que enseña"
+      diyproject:
+        title: "Título"
+        description: "Descripción"
+        place: "Lugar"
+        age: "Edad"
+        terms: "Términos"
+      document:
+        title: "Título"
+        description: "Description"
+        tags: "Palabras clave"
+        doc_language: "Idioma del documento"
+        is_public: "Este documento es público - si selecciona esta opción el documento será visible para todos los usuarios registrados. De otra manera, sólo será visible para los profesores registrados."
+        terms: "Términos"
+      chatroom:
+        title: "Título de la entrada"
+        description: "Descripción de la entrada"
+          
+
+
+      
+
+
+
+
+  

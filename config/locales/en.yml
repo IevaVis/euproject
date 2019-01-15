@@ -76,8 +76,6 @@ en:
       delete_profile: "Delete Profile"
       edit_profile: "Edit Profile"
       my_uploads: "My Uploads"
-      new-project: "Upload DIY"
-      new_document: "Upload Document"
       terms: "Terms of use & Privacy policy"
       language: "Language"
   diyprojects:
@@ -126,7 +124,7 @@ en:
       search_title: "Search for documents"
       language: "Choose Language"
       enter_keyword: "Enter keyword, f.ex.: mathematics"
-      new_document: Upload new document
+      new_document: "Upload new document"
       clear: "Clear search"
       submit: "Search"
     document:
