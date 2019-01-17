@@ -1,0 +1,56 @@
+gr:
+  clearance:
+    models:
+      clearance_mailer:
+        change_password: Αλλαγή κωδικού
+  clearance_mailer:
+    change_password:
+      closing: Εάν δεν το αιτηθήκατε, αγνοήστε το email. Ο κωδικός σας
+        sδεν έχει αλλάξει.
+      link_text: Αλλαγή κωδικού
+      opening: "Κάποιος, ευχόμαστε εσείς, αιτήθηκε να σας στείλουμε σύνδεσμο για αλλαγή κωδικού:"
+  flashes:
+    failure_after_create: Λάθος email ή κωδικός.
+    failure_after_update: Ο κωδικός δεν μπορεί να είναι κενος.
+    failure_when_forbidden: Παρακαλώ ελέγξτε ξανά το URL ή προσπαθήστε να υποβάλλετε τη φόρμα ξανα.
+    failure_when_not_signed_in: Παρακαλώ συνδεθείτε για να συνεχίσετε.
+  helpers:
+    label:
+      password:
+        email: Διέυθυνση email
+        password: Κωδικός
+      password_reset:
+        password: Επιλέξτε κωδικό
+    submit:
+      password:
+        submit: Αναίρεση κωδικού
+      password_reset:
+        submit: Αποθήκευση κωδικού
+      session:
+        submit: Είσοδος
+      user:
+        create: Δημιουργία Χρήστη
+  layouts:
+    application:
+      sign_in: Είσοδος
+      sign_out: Έξοδος
+  passwords:
+    create:
+      description: Θα λάβετε email εντός των επόμενων λεπτών.
+        Περιέχει οδηγίες για αλλαγή του κωδικού σας. Εάν δεν λάβατε κανένα email, παρακαλούμε ελέγξτε τις ρυθμίσεις ασφάλειας email και προσπαθήστε ξανά.
+    edit:
+      description: Ο κωδικός σας έχει αναιρεθεί. Επιλέξτε έναν νέο κωδικό παρακάτω.
+      title: Αλλαγή κωδικού
+    new:
+      description: Για αποστολή email για επαναφορά κωδικού, παρακαλώ εισάγετε
+        το email σας.
+      title: Αναίρεση κωδικού
+  sessions:
+    form:
+      forgot_password: Ξέχασα τον κωδικό
+      title: Είσοδος
+  users:
+    form:
+      sign_in: Σύνδεση
+    edit: 
+      title: Επεξεργασία πληροφοριών χρήστη

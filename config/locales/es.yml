@@ -79,6 +79,8 @@ es:
       rating_description: "1 - muy fácil 5 - muy difícil"
       total_votes: "Votos totales"
       uploaded_by: "Subido por"
+      view_file: "Ver fichero"
+      download_file: "Descargar fichero"
   diyextraimages:
     form:
       title: "Sube tu imagen"

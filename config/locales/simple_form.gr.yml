@@ -1,0 +1,49 @@
+gr:
+  helpers:
+    submit:
+      document:
+        create: "Μεταφόρτωση εγγράφου"
+      diyproject:
+        create: "Δημιουργία 'Κάντο Μόνος Σου'"
+        update: "Ανανέωση 'Κάντο Μόνος Σου'"
+      chatroom:
+        create: "Αποθήκευση ανάρτησης"
+        update: "Ανανέωση ανάρτησης"
+  simple_form:
+    placeholders:
+      diyproject:
+        tags: "Προσθέστε το ελάχιστο 1 και το μέγιστο 5 λέξεις κλειδιά εδώ. Οι λέξεις κλειδιά ΠΡΕΠΕΙ να χωρίζονται με κόμμα, π.χ. διακόσμηση σπιτιού, ζωγραφιά"
+      document:
+        tags: "Προσθέστε το ελάχιστο 1 και το μέγιστο 5 λέξεις κλειδιά εδώ. Οι λέξεις κλειδιά ΠΡΕΠΕΙ να χωρίζονται με κόμμα, π.χ. μαθηματικά, εργασία"
+    required:
+      text: 'απαιτείται'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    options:
+      user:
+        grade_of_teaching:
+          preschool: "Προσχολική"
+          primary: "Πρωτοβάθμια"
+          secondary: "Δευτεροβάθμια"
+          university: "Πανεπιστήμιο"
+          vocational_education: "Επαγγελματική Εκπαίδευση"
+      diyproject:
+        place:
+          indoors: "Εσωτερικά"
+          outdoors: "Εξωτερικά"
+          indoors_and_outdoors: "Εσωτερικά & Εξωτερικά"
+        age:
+          from_6_to_9: "Από 6 έως 9"
+          from_10_to_12: "Από 10 έως 12"
+          all_ages: "Όλες οι ηλικίες"
+    labels:
+      defaults:
+        email: "Email"
+        password: 'Κωδικός'
+
+      
+
+        
+  
