@@ -1,0 +1,57 @@
+---
+pt:
+  clearance:
+    models:
+      clearance_mailer:
+        change_password: Alteração de password
+  clearance_mailer:
+    change_password:
+      closing: Se não solicitou nova password, por favor ignore este email. A sua palavra-chave não foi alterada.
+      link_text: Aletração da password
+      opening: "Alguém requesitou que enviássemos o link para alterar a password:"
+  flashes:
+    failure_after_create: Email ou password errados
+    failure_after_update: Este campo tem de ser preenchido
+    failure_when_forbidden: Por favor confirma o URL ou tente submeter o formulário novamente
+    failure_when_not_signed_in: Por favor inicie sessão para continuar
+  helpers:
+    label:
+      password: 
+        email: Endereço de email
+        password: Password
+      password_reset:
+        password: Escolher password
+    submit:
+      password:
+        submit: Aletrar password
+      password_reset:
+        submit: Guardar password
+      session:
+        submit: Entrar
+      user:
+        create: Criar Utilizador
+        update: Atualizar informação
+  layouts:
+    application:
+      sign_in: Entrar
+      sign_out: Terminar sessão
+  passwords:
+    create:
+      description: Irá receber um email nos próximos minutos com instruções para alterar a sua password. Se não recebeu nenhum email, por favor verifique as configurações de segurança do seu email e tente novamente.
+    edit:
+      description: A sua password foi alterada. Escolha uma nova password e insira em baixo.
+      title: Altere a sua password
+    new:
+      description: Para ser enviado o link para alteração da password, por favor coloque o seu endereço de email.
+      title: Altere a sua password
+  sessions:
+    form:
+      forgot_password: Esqueceu-se da password
+      title: Entrar
+  users:
+    form:
+      sign_in: Entrar
+      title: Registar novo utilizador
+    edit:
+      title: Edição das informações do utilizador
+   

@@ -1,0 +1,49 @@
+pt:
+  helpers:
+    submit:
+      document:
+        create: "Carregar documento"
+      diyproject:
+        create: "Criar Projeto 'Faça Você Mesmo'"
+        update: "Carregar Projeto 'Faça Você Mesmo'"
+      chatroom:
+        create: "Carregar publicação"
+        update: "Guardar publicação"
+  simple_form:
+    placeholders:
+      diyproject:
+        tags: "Acrescente no mínimo 1 e no máximo 5 palavras-passe. Devem estar separadas por vírgulas, por exemplo decoração da casa, pintura"
+      document:
+        tags: "Acrescente no mínimo 1 e no máximo 5 palavras-passe. Devem estar separadas por vírgulas, por exemplo matemática, trabalhos de casa"
+    required:
+      text: 'Necessário'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    options:
+      user:
+        grade_of_teaching:
+          preschool: "Pré-escolar"
+          primary: "Ensino Primário"
+          secondary: "Ensino Secundário"
+          university: "Ensino Superior"
+          vocational_education: "Educação Vocacional"
+      diyproject:
+        place:
+          indoors: "Interior"
+          outdoors: "Exterior"
+          indoors_and_outdoors: "Interior & Exterior"
+        age:
+          from_6_to_9: "Dos 6 aos 9"
+          from_10_to_12: "Dos 10 aos 12"
+          all_ages: "Todas as idades"
+    labels:
+      defaults:
+        email: "Email"
+        password: "Password"
+
+      
+
+        
+  
