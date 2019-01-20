@@ -83,13 +83,11 @@
           <%= t ("global.menu.language") %>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <div align="center">
-          <%= link_to flag_icon(:lt), locale: "lt" %>
-          <%= link_to flag_icon(:gb), locale: "en" %>
-          <%= link_to flag_icon(:es), locale: "es" %>
-          <%= link_to flag_icon(:gr), locale: "gr" %>
-          <%= link_to flag_icon(:pt), locale: "pt" %>
-        </div>
+          <%= link_to "Lithuanian", { :locale=>"lt" }, class: 'dropdown-item'  %>
+          <%= link_to "English", { :locale => "en" }, class: 'dropdown-item' %>
+          <%= link_to "Spanish", { :locale => "es" }, class: 'dropdown-item' %>
+          <%= link_to "Greek", { :locale => "gr" }, class: 'dropdown-item' %>
+          <%= link_to "Portuguese", { :locale => "pt" }, class: 'dropdown-item' %>
       </div>
         </li>
     </ul>

@@ -26,7 +26,6 @@ gem 'clearance', '~> 1.16', '>= 1.16.1'
 gem 'bootstrap', '~> 4.1', '>= 4.1.1'
 gem 'jquery-rails'
 gem 'simple_form'
-gem 'flag-icons-rails'
 gem 'figaro'
 gem "aws-sdk-s3", require: false
 gem 'ratyrate'
