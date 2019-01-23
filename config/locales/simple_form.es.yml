@@ -1,0 +1,49 @@
+es:
+  helpers:
+    submit:
+      document:
+        create: "Subir un documento"
+      diyproject:
+        create: "Crear un proyecto 'hazlo tu mismo'"
+        update: "Editar un proyecto 'hazlo tu mismo'"
+      chatroom:
+        create: "Guardar publicación"
+        update: "Subir publicación"
+  simple_form:
+    placeholders:
+      diyproject:
+        tags: "Añade un mínimo de 1 un máximo de 5 palabras clave aquí. Las palabras clave deben ser separadas con comas, por ejemplo: decoración, pintura."
+      document:
+        tags: "Añade un mínimo de 1 y un máximo de 5 palabras clave aquí. Las palabras clave deben ser separadas con comas. Por ekemplo: matemáticas, trabajos de casa."
+    required:
+      text: 'Necesario'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    options:
+      user:
+        grade_of_teaching:
+          preschool: "Educación Infantil"
+          primary: "Educación Primaria"
+          secondary: "Educación Secundaria"
+          university: "Universidad"
+          vocational_education: "Formación Profesional"
+      diyproject:
+        place:
+          indoors: "Interior"
+          outdoors: "Exterior"
+          indoors_and_outdoors: "Interior & Exterior"
+        age:
+          from_6_to_9: "De 6 a 9 años"
+          from_10_to_12: "De 10 a 12 años"
+          all_ages: "Todas las edades"
+    labels:
+      defaults:
+        email: "Correo electrónico"
+        password: "Contraseña"
+
+      
+
+        
+  

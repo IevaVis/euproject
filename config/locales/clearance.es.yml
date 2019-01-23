@@ -1,0 +1,56 @@
+---
+es:
+  clearance:
+    models:
+      clearance_mailer:
+        change_password: Cambio de contraseña
+  clearance_mailer:
+    change_password:
+      closing: Si no solicitó esto, olvide este correo electrónico. Su contraseña no ha sido cambiada.
+      link_text: Cambiar mi contraseña
+      opening: "Alguien ha solicitado que le enviemos un enlace para restablecer su contraseña:"
+  flashes:
+    failure_after_create: Correo electrónico o contraseña incorrectos.
+    failure_after_update: La contraseña no puede estar en blanco.
+    failure_when_forbidden: Por favor, comprueba el enlace o trata de enviar el formulario de nuevo.
+    failure_when_not_signed_in: Por favor, inicie sesión para continuar.
+  helpers:
+    label:
+      password: 
+        email: Cuenta de correo electrónico
+        password: Contraseña
+      password_reset:
+        password: Escoge una contraseña
+    submit:
+      password:
+        submit: Reiniciar contraseña
+      password_reset:
+        submit: Guardar contraseña
+      session:
+        submit: Entrar
+      user:
+        create: Crear usuario
+        update: Editar información
+  layouts:
+    application:
+      sign_in: Entrar
+      sign_out: Finalizar sesión
+  passwords:
+    create:
+      description: Usted recibirá un correo electrónico en los próximos minutos. Contendrá las instrucciones para cambiar la contraseña. Si usted no ha recibido ningún correo, pro favor, consulte sus opciones de correo y SPAM y prueba de nuevo.
+    edit:
+      description: Su contraseña ha sido modificada. Por favor, incluya una nueva a continuación.
+      title: Cambie su contraseña
+    new:
+      description: Para recibir un correo electrónico con un enlace para restablecer su contraseña, por favor, incluya su correo electrónico.
+      title: Restablezca su contraseña
+  sessions:
+    form:
+      forgot_password: Olvidé mi contraseña
+      title: Iniciar sesión
+  users:
+    form:
+      sign_in: Iniciar sesión
+    edit:
+      title: Editar información de usuario
+   
