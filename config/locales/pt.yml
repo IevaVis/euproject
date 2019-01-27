@@ -73,6 +73,7 @@ pt:
       view_file: "Ver fichero"
       download_file: "Descargar fichero"
       diyextraimage_explain: "Below you can view photos of results of this DIY project uploaded by the parents of this platform:"
+      photo_uploaded_by: "Imagem carregado por"
     diyproject:
       go_to_gallery: "Ver galeria"
       rate_difficulty: "Nível de dificuldade"

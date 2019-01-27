@@ -73,6 +73,7 @@ gr:
       view_file: "Προεπισκόπηση αρχείου"
       download_file: "Κατέβασμα αρχείου"
       diyextraimage_explain: "Below you can view photos of results of this DIY project uploaded by the parents of this platform:"
+      photo_uploaded_by: "Μεταφορτώθηκε από"
     diyproject:
       go_to_gallery: "Συλλογή Εικόνων"
       rate_difficulty: "Αξιολόγησε τη δυσκολία!"

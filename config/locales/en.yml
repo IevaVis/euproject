@@ -104,6 +104,7 @@ en:
       view_file: "View DIY project"
       download_file: "Download DIY project"
       diyextraimage_explain: "Below you can view photos of results of this DIY project uploaded by the parents of this platform:"
+      photo_uploaded_by: "Photo uploaded by"
     diyproject:
       go_to_gallery: "View photo gallery"
       rate_difficulty: "Rate difficulty!"

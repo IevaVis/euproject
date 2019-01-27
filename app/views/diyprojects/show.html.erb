@@ -39,8 +39,8 @@
 				<div class="card diyextraimages">
 						<%= image_tag diyextraimage.image.variant(resize: "400x400").processed %>
 				<div class="diyextra-user">
-					Photo uploaded by: <%= diyextraimage.user.name %><br/>
-					Country: <%= diyextraimage.user.country %>	
+					<%= t(".photo_uploaded_by") %>: <%= diyextraimage.user.name %><br/>
+					<%= User.human_attribute_name("country") %>: <%= diyextraimage.user.country %>	
 				</div>
 			</div>
 		</div>
