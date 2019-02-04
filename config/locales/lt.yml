@@ -189,6 +189,8 @@ lt:
       rate_difficulty: "Įvertink sunkumą!"
       rating_description: "1 - labai lengvas, 5 - labai sunkus"
       total_votes: "Iš viso balsavo"
+      view_file: "Peržiūrėti"
+      download_file: "Atsisiųsti"
   diyextraimages:
     form:
       title: "Įkelkite savo nuotrauką"
