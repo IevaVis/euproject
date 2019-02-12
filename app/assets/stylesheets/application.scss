@@ -146,28 +146,14 @@ i.fab {
 	margin-right: 2%;
 }
 
-.document-space {
-	margin-top: 2%;
-	margin-right: 7%
-
+.document-title {
+	font-weight: bolder;
 }
 
 .badge-custom {
 	background-color: rgb(247, 147, 30);
 	color: white;
 	margin-right: 3px;
-}
-
-.attachment-actions {
-  text-decoration: none;
- 
-}
-
-.attachment-actions span {
-    display:block;
-    border-bottom:1px solid rgba(247, 147, 30, 0.5);
-    width: 100%;
-    padding-bottom: 4px;
 }
 
 .btn-custom2 {
@@ -270,7 +256,7 @@ img.raty-cancel {
 }
 
 .chat-form, 
-.card-footer, 
+.chatroom-footer, 
 .chatroom-statistics {
 	width: 350px;
 }

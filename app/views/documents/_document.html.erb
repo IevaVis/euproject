@@ -1,25 +1,29 @@
 <% obj.each do |document| %>
 	<% if (signed_in? && current_user.teacher?) || document.is_public? %>
-		<div class="document-space col-5 mb-1">
-			<h6 class="document-title"><%= document.title %></h6>
-			
-	
-			<span class="small text-muted"><%= Document.human_attribute_name("description") %>:</span> <small><%= document.description %></small><br/>
-			<span class="small text-muted"><%= Document.human_attribute_name("doc_language")%>:</span> <small><%= document.doc_language %></small>
-			<br/>
-			<span class="small text-muted"><%= t(".uploaded_by") %></span><small> <%= document.user.name %></small>
-			<br/>
-			
-			<% document.tags.each do |tag| %>
+		<div class="card mb-3">
+			<div class="card-body">
+				<h6 class="document-title mb-3"><%= document.title %></h6>
+				<span class="small text-muted"><%= Document.human_attribute_name("doc_language")%>:</span> <small><%= document.doc_language %></small>
+				<div class="documet-description mb-1"><em><%= document.description %></div></em>
+				<% document.tags.each do |tag| %>
  					<%= link_to "#{tag}", {controller: "documents", action: "index", tag:tag}, class: "badge badge-custom" %>
-			<% end %>
-			<div class="attachment-actions">
-				<%= link_to t('.view_file'), document.attachment %> ||
-				<%= link_to( t(".download_file"),
-          rails_blob_path( document.attachment, disposition: "attachment" )
-        ) %>
-				<span></span>
+				<% end %>
+				<br/>
+			</div>
+			<div class="card-footer">
+				<div class="clearfix">
+					<div class="float-left">
+						<i class="fas fa-info-circle"></i>&nbsp<span class="small"><%= t(".uploaded_by") %>&nbsp<%= document.user.name %>: <%= document.created_at.strftime("%d-%m-%Y") %></span>
+					</div>
+					<div class="float-right">
+						<%= link_to t('.view_file'), document.attachment %> ||
+						<%= link_to( t(".download_file"),
+          		rails_blob_path( document.attachment, disposition: "attachment" )
+        		) %>
+      		</div>
+				</div>
 			</div>
 		</div>
 	<% end %>
 <% end %>
+

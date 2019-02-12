@@ -46,7 +46,7 @@
 		  	<%= render 'form' %>
 			</div>
 			<% if @chatrooms.exists? %>
-				<div class="card-footer mb-4">
+				<div class="card-footer chatroom-footer mb-4">
 				<dl>
 					<dt><%= t ".last_post_author" %>:</dt>
 					<dd><%= Chatroom.last.user.name %> || <%= Chatroom.last.user.country %> </dd>
