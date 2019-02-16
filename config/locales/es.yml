@@ -36,7 +36,7 @@ es:
       private: "Mensajes privados"
       sign_up: "Registrar nuevo usuario"
       about_us: "Sobre nosotros"
-      contacts: "Contactos"
+      contacts: "Contacto"
       log_in: "Iniciar sesión"
       teacher: "Profesores"
       student: "Alumnos"
