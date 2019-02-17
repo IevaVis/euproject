@@ -41,7 +41,7 @@ lt:
       home: "Pradinis"
       library: "Biblioteka"
       chatroom: "Pokalbiai"
-      diyprojects: "Pasidaryk pats"
+      diyprojects: "Pasidaryk pats projektai"
       forum: "Forumas"
       private: "Žinutės"
       about_us: "Apie Projektą"
@@ -175,7 +175,7 @@ lt:
       diy_tips: "Paspaudę ant paveikslėlio apačioje matysite patarimus, kurie gali praversti įkeliant naują 'Pasidaryk pats' projektą"
       download_tips: "Atsisiųsti patarimus"
     show:
-      share_your_image: "Pasidalinkite šio projekto nuotrauka"
+      share_your_image: "Įkelti nuotrauką"
       go_back_to_index: "Grįžti į DIY projektų sąrašą"
       age: "Amžius"
       done: "Geriausia atlikti"
@@ -183,6 +183,7 @@ lt:
       download_file: "Atsisiųsti DIY projektą"
       diyextraimage_explain: "Apačioje galite peržiūrėti nuotraukas, įkeltas tėvų, su šio DIY projekto rezultatu:"
       photo_uploaded_by: "Nuotrauką įkėlė"
+      extra_explanation: "Jeigu Jums patiko šis DIY projektas ir Jūs atlikote jį namuose kartu su vaikais, galite pasidalinti nuotrauka su projekto rezultatu su platformos nariais. Prašome nekelti jokių nuotraukų su vaikais - tokios nuotraukos bus trinamos administratorių be papildomo įspėjimo"
     diyproject:
       go_to_gallery: "Peržiūrėti nuotraukas"
       add_your_image: "Pridėti nuotrauką"
@@ -194,7 +195,7 @@ lt:
   diyextraimages:
     form:
       title: "Įkelkite savo nuotrauką"
-      explanation: "Jeigu Jums patiko šis DIY projektas ir Jūs atlikote jį namuose kartu su vaikais, galite pasidalinti nuotrauka su projekto rezultatu su platformos nariais. Prašome nekelti jokių nuotraukų su vaikais - tokios nuotraukos bus trinamos administratorių be papildomo įspėjimo"
+      extra_explanation: "Jeigu Jums patiko šis DIY projektas ir Jūs atlikote jį namuose kartu su vaikais, galite pasidalinti nuotrauka su projekto rezultatu su platformos nariais. Prašome nekelti jokių nuotraukų su vaikais - tokios nuotraukos bus trinamos administratorių be papildomo įspėjimo"
       go_back_to_index: "Grįžti į DIY projektų sąrašą"
   models:
   activerecord:

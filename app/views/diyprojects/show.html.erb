@@ -1,6 +1,9 @@
 <div class="container mb-4">
 	<% if (signed_in? and current_user.family?) %>
-	<%= link_to t(".share_your_image"), new_diyproject_diyextraimage_path(@diyproject), class: "btn btn-secondary btn-sm" %>
+	<%= link_to new_diyproject_diyextraimage_path(@diyproject), class: "btn btn-secondary btn-sm" do %>
+			<%= t(".share_your_image") %>
+			<i class="fas fa-info-circle"></i>
+		<% end %>
 	<% end %>
 	<%= link_to t(".go_back_to_index"), diyprojects_path, class: "btn btn-secondary btn-sm" %>
 </div>
@@ -51,9 +54,18 @@
 
 <div class="container mb-5">
 	<% if (signed_in? and current_user.family?) %>
-		<%= link_to t(".share_your_image"), new_diyproject_diyextraimage_path(@diyproject), class: "btn btn-secondary btn-sm" %>
+		<%= link_to new_diyproject_diyextraimage_path(@diyproject), class: "btn btn-secondary btn-sm" do %>
+			<%= t(".share_your_image") %>
+			<i class="fas fa-info-circle"></i>
+		<% end %>
 	<% end %>
 	<%= link_to t(".go_back_to_index"), diyprojects_path, class: "btn btn-secondary btn-sm" %>
+</div>
+
+<div class="container mb-2">
+<div class="extra-explanation small">
+	<i class="fas fa-info-circle"> <%= t(".extra_explanation") %></i>
+</div>
 </div>
 
 	

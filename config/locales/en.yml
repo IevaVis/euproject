@@ -105,6 +105,7 @@ en:
       download_file: "Download DIY project"
       diyextraimage_explain: "Below you can view photos of results of this DIY project uploaded by the parents of this platform:"
       photo_uploaded_by: "Photo uploaded by"
+      extra_explanation: "If You liked this DIY project and You made it at home with Your kids, upload an image of the final result of the project and share it with other website's users! Please do not upload any image with children in it! Such images will be deleted by our administrators without any additional notice."
     diyproject:
       go_to_gallery: "View photo gallery"
       rate_difficulty: "Rate difficulty!"
@@ -114,7 +115,7 @@ en:
   diyextraimages:
     form:
       title: "Upload Your image"
-      explanation: "If You liked this DIY project and You made it at home with Your kids, upload an image of the final result of the project and share it with other website's users! Please do not upload any image with children in it! Such images will be deleted by our administrators without any additional notice."
+      extra_explanation: "If You liked this DIY project and You made it at home with Your kids, upload an image of the final result of the project and share it with other website's users! Please do not upload any image with children in it! Such images will be deleted by our administrators without any additional notice."
       go_back_to_index: "Go back to DIY projects list"
   documents:
     form:

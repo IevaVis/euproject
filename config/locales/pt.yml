@@ -74,6 +74,7 @@ pt:
       download_file: "Descargar fichero"
       diyextraimage_explain: "Below you can view photos of results of this DIY project uploaded by the parents of this platform:"
       photo_uploaded_by: "Imagem carregado por"
+      extra_explanation: "Se gostou deste projeto 'Faça Você Mesmo' e realizou-o em casa com os seus filhos, carregue uma imagem do resultado final do projeto e partilhe com outros. Por favor, não carregue imagens com as crianças! Caso aconteça essas imagens serão apagadas pelos administradores sem aviso prévio."
     diyproject:
       go_to_gallery: "Ver galeria"
       rate_difficulty: "Nível de dificuldade"
@@ -85,7 +86,7 @@ pt:
   diyextraimages:
     form:
       title: "Caregar imagens"
-      explanation: "Se gostou deste projeto 'Faça Você Mesmo' e realizou-o em casa com os seus filhos, carregue uma imagem do resultado final do projeto e partilhe com outros. Por favor, não carregue imagens com as crianças! Caso aconteça essas imagens serão apagadas pelos administradores sem aviso prévio."
+      extra_explanation: "Se gostou deste projeto 'Faça Você Mesmo' e realizou-o em casa com os seus filhos, carregue uma imagem do resultado final do projeto e partilhe com outros. Por favor, não carregue imagens com as crianças! Caso aconteça essas imagens serão apagadas pelos administradores sem aviso prévio."
       go_back_to_index: "Voltar para a lista de projetos 'Faça você mesmo'"
   documents:
     form:
