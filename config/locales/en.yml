@@ -150,15 +150,19 @@ en:
       who_we_are: "Who we are"
       who_we_are_description: "The “CREATEskills” project is designed to develop and implement innovative practices, tools and methodologies in primary schools for the establishment of STEM studio (Science, Technology, Engineering and Mathematics) classrooms, improving the quality and relevance of the learning process in primary education."
     contacts:
+      home: "Home"
       contact_information: "Contact Information"
       contact_description: "To contact us please do it by filling the contact form in our Project website or write directly to project coordinator Rita Sousa Mentortec rita.sousa@mentortec.eu"
       contact_us: "Contact Us"
     about:
+      home: "Home"
       title: "Social Learning For STEM In Primary Education"
       description_1: "The “CREATEskills” project is designed to develop and implement innovative practices, tools and methodologies in primary schools for the establishment of STEM studio classrooms, improving the quality and relevance of the learning process in primary education, more specifically regarding the attractiveness of STEM (Science, Technology, Engineering and Mathematics) subjects."
       description_2: "The project is dedicated to Primary school students (6-12 years old), Primary education teachers, Parents of primary students and School principals."
       description_3: "To learn more please visit our Project website."
       visit_createskills: "Visit CREATEskills"
+    terms:
+      home: "Home"
   users:
     form:
       family_registration: "Parent Registration"

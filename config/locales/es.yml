@@ -31,7 +31,7 @@ es:
       home: "Inicio"
       library: "Biblioteca Virtual"
       chatroom: "Sala virtual de profesores"
-      diyprojects: "Galería de fotos de actividades 'hazlo tú mismo'"
+      diyprojects: "Galería de actividades"
       forum: "Foro"
       private: "Mensajes privados"
       sign_up: "Registrar nuevo usuario"
@@ -121,15 +121,19 @@ es:
       who_we_are: "Quiénes somos"
       who_we_are_description: "El proyecto 'CREATEskills' está diseñado para desarrollar e implementar prácticas, herramientas y metodologías innovadoras en las escuelas de Educación Primaria para la mejora de la enseñanza y el aprendizaje de las STEM (Ciencia, Tecnología, Ingeniería y Matemáticas), mejorando la calidad y la relevancia del proceso educativo."
     contacts:
+      home: "Inicio"
       contact_information: "Información de contacto"
       contact_description: "Para contactar con nosotros por favor completa el formulario de nuestro sitio web o escribe directamente a Rita Sousa Mentortec rita.sousa@mentortec.eu"
       contact_us: "Contacte con nosotros"
     about:
+      home: "Inicio"
       title: "Aprendizaje Social de las STEM en Educación Primaria"
       description_1: "El proyecto 'CREATEskills' está diseñado para desarrollar e implementar prácticas, herramientas y metodologías innovadoras en los colegios de Educación Primaria para la mejora de la enseñanza-aprendizaje de las STEM (asignaturas relacionadas con Ciencias, Tecnología, Ingeniería y Matemáticas), a través de la mejora de la calidad y la relevancia del aprendizaje en Educación Primaria y mejorando la motivación hacia el estudio de las asignaturas de Ciencias Naturales."
       description_2: "El proyecto va dirigido al alumnado de Educación Primaria (6 a 12 años), profesores de Educación Primaria, padres con hijos que cursan Educación Primaria y directores de centros educativos."
       description_3: "Para saber más por favor visita la web de nuestro proyecto."
       visit_createskills: "Visita CREATEskills"
+    terms:
+      home: "Inicio"
   users:
     form:
       family_registration: "Registro para padres"

@@ -76,15 +76,19 @@ lt:
       who_we_are: "Kas mes esame"
       who_we_are_description: "„CREATEskills“ projektas yra skirtas kurti ir diegti naujoviškas praktikas, priemones ir metodikas pradinėse mokyklose steigiant STEM studiją (Gamtos mokslas, technologijos, inžinerija ir matematika), gerinant mokymosi proceso kokybę ir aktualumą pradiniame ugdyme."
     about:
+      home: "Pradinis"
       title: "STEM (Gamtos mokslų, Technologijų, Inžinerijos, Matematikos) socialinis mokymasis pradiniame ugdyme"
       description_1: "„CREATEskills“ projektas yra skirtas plėtoti ir diegti novatorišką praktiką, priemones ir metodikas pradinėse mokyklose steigiant STEM studijų tipo klases, tobulinant mokymo proceso kokybę ir svarbą pradiniame ugdyme, konkrečiau -skatinti STEM patrauklumą (Gamtos mokslas, technologijos, inžinerija ir matematika)."
       description_2: "Projektas skirtas pradinių klasių mokiniams (6–12 metų), pradinio ugdymo mokytojams, mokinių tėvams ir mokyklos vadovams. "
       description_3: "Jei norite sužinoti daugiau, apsilankykite mūsų projekto svetainėje."
       visit_createskills: "Aplankykite CREATEskills"
     contacts:
+      home: "Pradinis"
       contact_information: "Kontaktinė informacija"
       contact_description: "Jei turite klausimų ir norite susisiekti su mumis, užpildykite kontaktinę formą mūsų projekto internetiniame puslapyje arba rašykite tiesiogiai projekto koordinatorei Rita Sousa Mentortec rita.sousa@mentortec.eu"
       contact_us: "Susisiekite su mumis"
+    terms:
+      home: "Pradinis"
   users:
     form:
       family_registration: "Tėvų registracija"
