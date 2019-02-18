@@ -16,7 +16,7 @@ class Document < ApplicationRecord
 
   default_scope {where nil}
   scope :doc_language, -> (name) { where('doc_language iLIKE ?', "%" + name + "%") }
-  scope :tags, -> (tags)  {where('documents.tags @> ARRAY[?]', [tags.capitalize])}
+  scope :tags, -> (tags)  {where('documents.tags @> ARRAY[?]', [tags.titleize])}
 
 
   def self.tag_search(tag)
