@@ -38,9 +38,10 @@
 	</div>
 	<div class="row">
 		<% @diyproject.diyextraimages.each do |diyextraimage| %>
-			<div class="col-md-4">
-				<div class="card diyextraimages">
-						<%= image_tag diyextraimage.image.variant(resize: "400x400").processed %>
+		  <%= link_to diyextraimage.image, 'data-lightbox': 'diyextraimage' do %>
+		  	<div class="card diyextraimages">
+					<%= image_tag diyextraimage.image.variant(resize: "400x400").processed %>
+					<% end %>
 				<div class="diyextra-user">
 					<%= t(".photo_uploaded_by") %>: <%= diyextraimage.user.name %><br/>
 					<%= User.human_attribute_name("country") %>: <%= diyextraimage.user.country %>	

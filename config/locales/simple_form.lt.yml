@@ -9,6 +9,8 @@ lt:
       chatroom:
         create: "Sukurti įrašą"
         update: "Redaguoti įrašą"
+      diyextraimage:
+        create: "Įkelti nuotrauką"
   simple_form:
     placeholders:
       diyproject:

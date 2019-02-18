@@ -9,6 +9,8 @@ pt:
       chatroom:
         create: "Carregar publicação"
         update: "Guardar publicação"
+      diyextraimage:
+        create: "Adicionar imagem"
   simple_form:
     placeholders:
       diyproject:

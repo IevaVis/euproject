@@ -10,7 +10,7 @@ en:
         create: "Save post"
         update: "Update post"
       diyextraimage:
-        create: "Add DIY photo"
+        create: "Upload DIY photo"
   simple_form:
     placeholders:
       diyproject:
