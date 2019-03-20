@@ -37,6 +37,10 @@ gem 'will_paginate-bootstrap4'
 gem "breadcrumbs_on_rails"
 gem 'wicked_pdf', '~> 1.1'
 gem 'wkhtmltopdf-binary'
+gem 'capistrano', '~> 3.11'
+gem 'capistrano-rails', '~> 1.4'
+gem 'capistrano-passenger', '~> 0.2.0'
+gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
 
 
 # Use Redis adapter to run Action Cable in production
