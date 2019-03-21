@@ -2,7 +2,7 @@
 lock "~> 3.11.0"
 
 set :application, "steminschools"
-set :repo_url, "git@github.com:ievavis/euproject.git"
+set :repo_url, "git@github.com:IevaVis/euproject.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
