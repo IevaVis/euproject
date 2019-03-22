@@ -92,21 +92,21 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  config.web_socket_server_url = "wss://createskills.herokuapp.com/cable"
-  config.action_cable.allowed_request_origins = ['https://createskills.herokuapp.com/', 'http://createskills.herokuapp.com/']
+  config.web_socket_server_url = "wss://steminschools.eu/cable"
+  config.action_cable.allowed_request_origins = ['https://steminschools.eu/', 'http://steminschools/']
 
 
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  host = 'https://createskills.herokuapp.com/'
+  host = 'steminschools.eu'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
     :port           => '587',
     :authentication => :plain,
-    :user_name      => ENV['SENDGRID_USERNAME'],
-    :password       => ENV['SENDGRID_PASSWORD'],
-    :domain         => 'heroku.com',
+    :user_name      => ENV['mediusgroupproject'],
+    :password       => ENV['medius123'],
+    :domain         => 'steminschools.eu',
     :enable_starttls_auto => true
   }
 end
