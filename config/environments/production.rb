@@ -101,7 +101,7 @@ Rails.application.configure do
   # host = 'steminschools.eu'
   # config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
-    :address        => 'smtp.gmail.net',
+    :address        => 'smtp.gmail.com',
     :port           => '587',
     :authentication => :plain,
     :user_name      => ENV['mediusgroupproject'],
