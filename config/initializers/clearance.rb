@@ -1,6 +1,10 @@
 Clearance.configure do |config|
   config.allow_sign_up = true
-  config.cookie_domain = ".steminschools.eu"
+  config.cookie_domain = {
+    production: ".steminschools.eu",
+    development: "",
+    test: "",
+  }.fetch(Rails.env.to_sym, nil)
   config.cookie_expiration = lambda { |cookies| 1.year.from_now.utc }
   config.cookie_name = "remember_token"
   config.cookie_path = "/"
