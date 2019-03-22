@@ -104,9 +104,9 @@ Rails.application.configure do
     :address        => 'smtp.gmail.com',
     :port           => '587',
     :authentication => :plain,
-    :user_name => 'mediusgroupproject',
-    :password => 'medius123',
-    :domain         => 'steminschools.eu',
+    :user_name      => 'mediusgroupproject',
+    :password       => 'medius123',
+    :domain         => 'gmail.com',
     :enable_starttls_auto => true
   }
 end
