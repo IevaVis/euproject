@@ -106,7 +106,7 @@ Rails.application.configure do
     :authentication => :plain,
     :user_name      => ENV['mediusgroupproject'],
     :password       => ENV['medius123'],
-    :domain         => 'steminschools.eu',
+    :domain         => 'gmail.com',
     :enable_starttls_auto => true
   }
 end
