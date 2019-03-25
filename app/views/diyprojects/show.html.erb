@@ -63,10 +63,12 @@
 	<%= link_to t(".go_back_to_index"), diyprojects_path, class: "btn btn-secondary btn-sm" %>
 </div>
 
-<div class="container mb-2">
-	<div class="extra-explanation small">
-		<i class="fas fa-info-circle"> <%= t(".extra_explanation") %></i>
+<% if (signed_in? and current_user.family?) %>
+	<div class="container mb-2">
+		<div class="extra-explanation small">
+			<i class="fas fa-info-circle"> <%= t(".extra_explanation") %></i>
+		</div>
 	</div>
-</div>
+<% end %>
 
 	
