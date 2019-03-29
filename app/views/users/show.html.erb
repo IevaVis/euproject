@@ -45,6 +45,14 @@
           <% end %>
         <hr>
         <% end %>
+        <% if @user.diyextraimages.present? %>
+          <h5>DIY extra images</h5>
+          <% @user.diyextraimages.each do |diyextraimage| %>
+            <em> <%= diyextraimage.diyproject.title.truncate(65) %></em>
+          <%= link_to t(".view"), diyextraimage.image  %>
+          <%= link_to t(".delete"), diyextraimage_path(diyextraimage), method: :delete, data: { confirm: "Are you sure you want to delete this image?" } %><br/>
+          <% end %>
+        <% end %>
       </div>
     </div>
   </div>

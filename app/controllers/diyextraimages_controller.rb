@@ -19,6 +19,12 @@ class DiyextraimagesController < ApplicationController
 		end
 	end
 
+	def destroy
+		@diyextraimage = Diyextraimage.find(params[:id])
+		@diyextraimage.destroy
+		redirect_to root_path
+		flash[:success] = t(:information_updated)
+	end
 
 	private
 	def diyextraimage_params

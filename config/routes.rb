@@ -18,7 +18,7 @@ scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
   post '/rate' => 'rater#create', :as => 'rate'
   resources :documents
   resources :diyprojects do
-    resources :diyextraimages
+    resources :diyextraimages, shallow: true
   end
 
   resources :chatrooms do

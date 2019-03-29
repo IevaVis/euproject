@@ -25,33 +25,35 @@
           rails_blob_path( @diyproject.attachment, disposition: "attachment"), class: "btn btn-info"
       ) %> 
     </div>
-			
 		<br/>
 	</div>
 </div>
 
 
+
 <% if @diyproject.diyextraimages.exists? %>
-<div class="container">
-	<div class="diyextraimage-explain mb-3">
-		<h5><%= t ".diyextraimage_explain" %></h5>
-	</div>
-	<div class="row">
-		<% @diyproject.diyextraimages.each do |diyextraimage| %>
-		  <%= link_to diyextraimage.image, 'data-lightbox': 'diyextraimage' do %>
-		  	<div class="card diyextraimages">
-					<%= image_tag diyextraimage.image.variant(resize: "400x400").processed %>
-					<% end %>
-				<div class="diyextra-user">
-					<%= t(".photo_uploaded_by") %>: <%= diyextraimage.user.name %><br/>
-					<%= User.human_attribute_name("country") %>: <%= diyextraimage.user.country %>	
-				</div>
-			</div>
+	<div class="container">
+		<div class="diyextraimage-explain mb-3">
+			<h5><%= t ".diyextraimage_explain" %></h5>
 		</div>
-		<% end %>
+		<div class="card-columns">
+			<% @diyproject.diyextraimages.each do |diyextraimage| %>
+  		<div class="card">
+    		<%= link_to diyextraimage.image, 'data-lightbox': 'diyextraimage' do %>
+  				<%= image_tag diyextraimage.image.variant(resize: "400x400").processed, class: "card-img-top" %>
+  			<% end %>
+    		<div class="card-body">
+      		<p class="card-text diyextra-user">
+      			<%= t(".photo_uploaded_by") %>: <%= diyextraimage.user.name %><br/>
+						<%= User.human_attribute_name("country") %>: <%= diyextraimage.user.country %>
+					</p>
+    		</div>
+  		</div>
+  		<% end %>
+  	</div>
 	</div>
-</div>
 <% end %>
+
 
 <div class="container mb-5">
 	<% if (signed_in? and current_user.family?) %>
@@ -70,5 +72,14 @@
 		</div>
 	</div>
 <% end %>
+
+
+<style>
+
+body {
+ background: linear-gradient(45deg, #4e5f71, #ced5dd);
+}
+
+</style>
 
 	
