@@ -53,6 +53,7 @@ pt:
     index:
       new_project: "Crie um projeto"
       search_diy: "Procure por 'Faça você mesmo'"
+      language: "Escolher o idioma"
       place: "Local"
       age: "Idade"
       indoors: "Interior"
@@ -199,6 +200,7 @@ pt:
         description: "Descrição"
         place: "Local"
         age: "Idade"
+        diy_language: "Idioma do documento"
         terms: "Termos"
       document:
         title: "Título"

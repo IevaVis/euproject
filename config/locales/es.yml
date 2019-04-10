@@ -53,6 +53,7 @@ es:
     index:
       new_project: "Crear una nueva actividad"
       search_diy: "Buscar actividades 'hazlo tú mismo'"
+      language: "Escoge un idioma"
       place: "Lugar"
       age: "Edad"
       indoors: "Interior"
@@ -203,6 +204,7 @@ es:
         description: "Descripción"
         place: "Lugar"
         age: "Edad"
+        diy_language: "Idioma del documento"
         terms: "Términos"
       document:
         title: "Título"

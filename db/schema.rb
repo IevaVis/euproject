@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_29_162951) do
+ActiveRecord::Schema.define(version: 2019_04_10_110157) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -89,12 +89,7 @@ ActiveRecord::Schema.define(version: 2018_12_29_162951) do
     t.boolean "terms"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "objective"
-    t.string "duration"
-    t.string "materials"
-    t.string "results_and_tips"
-    t.string "links_and_resources"
-    t.text "tags", default: [], array: true
+    t.string "diy_language"
     t.index ["user_id"], name: "index_diyprojects_on_user_id"
   end
 

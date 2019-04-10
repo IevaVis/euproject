@@ -84,6 +84,7 @@ en:
     index:
       new_project: "Create DIY project"
       search_diy: "Search for DIY"
+      language: "Choose Language"
       place: "Place"
       age: "Age"
       indoors: "Indoors"
@@ -233,12 +234,7 @@ en:
         description: "Description"
         place: "Place"
         age: "Age"
-        objective: "Objective"
-        duration: "Duration"
-        materials: "Materials"
-        results_and_tips: "Results and tips"
-        links_and_resources: "Links and resources"
-        tags: "Keywords"
+        diy_language: "Document language"
         terms: "Terms"
       document:
         title: "Title"

@@ -12,6 +12,7 @@ class Diyproject < ApplicationRecord
 
 
   default_scope {where nil}
+  scope :diy_language, -> (name) { where('diy_language iLIKE ?', "%" + name + "%") }
   scope :place, -> (name) { where('place iLIKE ?', "%" + name + "%") }
   scope :age, -> (name) { where('age iLIKE ?', "%" + name + "%") }
 

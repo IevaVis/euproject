@@ -53,6 +53,7 @@ gr:
     index:
       new_project: "Δημιουργία Δραστηριότητας"
       search_diy: "Αναζήτηση Δραστηριότητας 'Κάντο Μόνος Σου'"
+      language: "Διαλέξτε Γλώσσα"
       place: "Τοποθεσία"
       age: "Ηλικία"
       indoors: "Εσωτερικά"
@@ -199,6 +200,7 @@ gr:
         description: "Περιγραφή"
         place: "Τοποθεσία"
         age: "Ηλικία"
+        diy_language: "Γλώσσα εγγράφου"
         terms: "Όροι"
       document:
         title: "Τίτλος"

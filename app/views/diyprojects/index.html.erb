@@ -15,8 +15,14 @@
 			</div>
 			<div class="row">
 				<div class="diy-search-form col-md-12 ml-3">
-    			<span class="search-form-title"><%= t ".search_diy" %>:</span><br/>
+    			<span class="search-form-title"><%= t ".search_diy" %>:</span><br/><br/>
 					<%= form_tag(diyprojects_path, method: "get") do %>
+					  <div class="diy-search-language">
+					  	<small><%= t".language" %>:</small>
+					  </div>
+            <div class="mb-1">
+              <%= select_tag(:diy_language, options_for_select([["English"], ["Portuguese"], ["Lithuanian"], ["Spanish"], ["Greek"], ["Bulgarian"], ["Croatian"], ["Czech"], ["Danish"], ["Dutch"], ["Estonian"], ["Finnish"], ["French"], ["German"], ["Hungarian"], ["Italian"], ["Latvian"], ["Maltese"], ["Polish"], ["Romanian"], ["Slovenian"], ["Swedish"], ["Other"]]), id: "index-search", prompt: "", class: "form-control") %>
+            </div>
 						<div class="diy-search-title">
       				<small><%= t ".place" %>:</small>
     				</div>

@@ -166,6 +166,7 @@ lt:
     index:
       new_project: "Sukurti DIY projektą"
       search_diy: "Projektų paieška"
+      language: "Pasirinkite kalbą"
       place: "Vieta"
       age: "Amžius"
       indoors: "Namuose"
@@ -217,12 +218,7 @@ lt:
         description: "Aprašymas"
         place: "Atlikimo vieta"
         age: "Atlikimo amžius"
-        objective: "Tikslas"
-        duration: "Trukmė"
-        materials: "Priemonės"
-        results_and_tips: "Rezultatai ir patarimai"
-        links_and_resources: "Šaltiniai"
-        tags: "Raktažodžiai"
+        diy_language: "Dokumento kalba"
         terms: "Naudojimosi taisyklės"
         images: "Paveikslėliai"
       document:

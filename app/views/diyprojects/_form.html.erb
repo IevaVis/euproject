@@ -10,6 +10,7 @@
 			<div class="form-inputs">
 				<%= f.input :title, required: true, autofocus: true %>
 				<%= f.input :description, as: :text, input_html: {rows: 5}, required: true %>
+				<%= f.input :diy_language, required: true, collection: ["English", "Portuguese", "Lithuanian", "Spanish", "Greek", "Bulgarian", "Croatian", "Czech", "Danish", "Dutch", "Estonian", "Finnish", "French", "German", "Hungarian", "Italian", "Latvian", "Maltese", "Polish", "Romanian", "Slovenian", "Swedish", "Other" ] %>
 				<%= f.input :place, as: :radio_buttons, collection: [:indoors , :outdoors, :indoors_and_outdoors] %>
 				<%= f.input :age, as: :radio_buttons, collection: [:from_6_to_9, :from_10_to_12, :all_ages ] %>
 			<div class="mb-2">

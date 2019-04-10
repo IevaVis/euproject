@@ -6,9 +6,10 @@ class DiyprojectsController < ApplicationController
 	add_breadcrumb "DIY List", :diyprojects_path
 
 	def index
-		@diyprojects = Diyproject.paginate(:page => params[:page], per_page: 15).order('created_at DESC')
-  	@diyprojects = Diyproject.place(params[:place]).paginate(:page => params[:page], per_page: 15).order('created_at DESC') if params[:place].present?
-		@diyprojects = @diyprojects.age(params[:age]).paginate(:page => params[:page], per_page: 15).order('created_at DESC') if params[:age].present?
+		@diyprojects = Diyproject.paginate(:page => params[:page], per_page: 16).order('created_at DESC')
+		@diyprojects = Diyproject.diy_language(params[:diy_language]).paginate(:page => params[:page], per_page: 16).order('created_at DESC') if params[:diy_language].present?
+  	@diyprojects = @diyprojects.place(params[:place]).paginate(:page => params[:page], per_page: 16).order('created_at DESC') if params[:place].present?
+		@diyprojects = @diyprojects.age(params[:age]).paginate(:page => params[:page], per_page: 16).order('created_at DESC') if params[:age].present?
 		respond_to do |format|
 			format.html { 
 				render "index"
@@ -59,13 +60,7 @@ class DiyprojectsController < ApplicationController
 
   private
 		def valid_params
-			if !params[:diyproject][:tags].blank?
-        params[:diyproject][:tags] = params[:diyproject][:tags].split(",")
-        params[:diyproject][:tags].each_with_index do |tag, index|
-          params[:diyproject][:tags][index] = tag.strip.titleize
-        end
-      end
-				params.require(:diyproject).permit(:title, :description, :place, :age, :attachment, :terms, :objective, :duration, :materials, :results_and_tips, :links_and_resources, :tags => [])
+			params.require(:diyproject).permit(:title, :description, :place, :age, :attachment, :terms, :diy_language)
 		end
 
 		def require_login
