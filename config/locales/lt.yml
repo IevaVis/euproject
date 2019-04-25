@@ -197,6 +197,7 @@ lt:
       total_votes: "Iš viso balsavo"
       view_file: "Peržiūrėti"
       download_file: "Atsisiųsti"
+      uploaded_by: "Projektą įkėlė"
   diyextraimages:
     form:
       title: "Įkelkite savo nuotrauką"

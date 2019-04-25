@@ -6,7 +6,21 @@ class DiyprojectsController < ApplicationController
 	add_breadcrumb "DIY List", :diyprojects_path
 
 	def index
-		@diyprojects = Diyproject.paginate(:page => params[:page], per_page: 16).order('created_at DESC')
+		if I18n.locale == :en
+		@diyprojects = Diyproject.where(diy_language: "English").paginate(:page => params[:page], per_page: 16).order('created_at DESC')
+		end
+		if I18n.locale == :pt
+		@diyprojects = Diyproject.where(diy_language: "Portuguese").paginate(:page => params[:page], per_page: 16).order('created_at DESC')
+		end
+		if I18n.locale == :lt
+		@diyprojects = Diyproject.where(diy_language: "Lithuanian").paginate(:page => params[:page], per_page: 16).order('created_at DESC')
+		end
+		if I18n.locale == :es
+		@diyprojects = Diyproject.where(diy_language: "Spanish").paginate(:page => params[:page], per_page: 16).order('created_at DESC')
+		end
+		if I18n.locale == :gr
+		@diyprojects = Diyproject.where(diy_language: "Greek").paginate(:page => params[:page], per_page: 16).order('created_at DESC')
+		end
 		@diyprojects = Diyproject.diy_language(params[:diy_language]).paginate(:page => params[:page], per_page: 16).order('created_at DESC') if params[:diy_language].present?
   	@diyprojects = @diyprojects.place(params[:place]).paginate(:page => params[:page], per_page: 16).order('created_at DESC') if params[:place].present?
 		@diyprojects = @diyprojects.age(params[:age]).paginate(:page => params[:page], per_page: 16).order('created_at DESC') if params[:age].present?
